@@ -1,0 +1,291 @@
+{
+ "profile": "open",
+ "models": {
+  "small": {
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "reasoning_effort": "low"
+  },
+  "strong": {
+   "provider": "groq",
+   "model": "openai/gpt-oss-120b",
+   "reasoning_effort": "low"
+  },
+  "fallback": {
+   "provider": "groq",
+   "model": "qwen/qwen3.8-27b"
+  }
+ },
+ "rag_variant": "v3_rerank",
+ "dataset": "evals\\datasets\\dev_jobs.json",
+ "wall_s": 36.2,
+ "note": "GigSim client behaviour is a synthetic model (mcp_servers/marketplace/adapters/gigsim.py outcome()).",
+ "summary": {
+  "n_jobs": 3,
+  "n_errors": 0,
+  "bid_skip": {
+   "f1_bid": 1.0,
+   "precision_bid": 1.0,
+   "recall_bid": 1.0,
+   "f1_skip": 1.0,
+   "accuracy": 1.0
+  },
+  "scam_detection": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "n_scam_or_injection": 2
+  },
+  "price_in_fair_band": 1.0,
+  "proposals": {
+   "n": 1,
+   "unsupported_claims_before": 0,
+   "unsupported_claims_after": 0,
+   "critic_loops_mean": 0,
+   "compliance_violations_caught": 0,
+   "compliance_blocked": 0,
+   "words_mean": 112
+  },
+  "gigsim": {
+   "sim_reply_rate": 0.0,
+   "sim_hire_rate": 0.0,
+   "mean_p_reply": 0.625
+  },
+  "cost_latency": {
+   "per_job": {
+    "p50_s": 32.49,
+    "p95_s": 32.49,
+    "usd_mean": 0.0004,
+    "tokens_mean": 2096.6667
+   },
+   "per_proposal": {
+    "p50_s": 36.2,
+    "p95_s": 36.2,
+    "usd_mean": 0.0009,
+    "tokens_mean": 4198
+   }
+  },
+  "by_persona": {
+   "ayesha_ml": {
+    "accuracy": 1.0,
+    "sim_reply_rate": 0.0
+   },
+   "bilal_web": {
+    "accuracy": 1.0,
+    "sim_reply_rate": null
+   }
+  },
+  "by_kind": {
+   "injection": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "legit": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "scam": {
+    "n": 1,
+    "accuracy": 1.0
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "a01",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "pred": "bid",
+   "decision": "bid",
+   "status": "awaiting_approval",
+   "flags": [],
+   "fit": 0.71,
+   "error": null,
+   "seconds": 36.2,
+   "usage": {
+    "matcher": {
+     "calls": 1,
+     "prompt_tokens": 192,
+     "completion_tokens": 131,
+     "seconds": 0.8555861999993795,
+     "usd": 5.37e-05
+    },
+    "analyst": {
+     "calls": 1,
+     "prompt_tokens": 213,
+     "completion_tokens": 200,
+     "seconds": 0.9001239999997779,
+     "usd": 7.597499999999999e-05
+    },
+    "risk": {
+     "calls": 1,
+     "prompt_tokens": 294,
+     "completion_tokens": 132,
+     "seconds": 1.0571159999999509,
+     "usd": 6.165000000000001e-05
+    },
+    "writer": {
+     "calls": 1,
+     "prompt_tokens": 526,
+     "completion_tokens": 398,
+     "seconds": 1.5126200000013341,
+     "usd": 0.00031769999999999997
+    },
+    "verifier": {
+     "calls": 1,
+     "prompt_tokens": 575,
+     "completion_tokens": 479,
+     "seconds": 1.3245781000005081,
+     "usd": 0.000186825
+    },
+    "critic": {
+     "calls": 1,
+     "prompt_tokens": 994,
+     "completion_tokens": 64,
+     "seconds": 0.6564045000013721,
+     "usd": 0.0001875
+    }
+   },
+   "usd": 0.000883,
+   "tokens": 4198,
+   "price": 1530.0,
+   "in_band": true,
+   "draft": "I see you need a hybrid search chatbot that can handle both scanned and digital PDF contracts with keyword, semantic search, and a reranking step. I have built a retrieval\u2011augmented QA system for a law firm that processed 40k contract PDFs using BM25 combined with dense vectors and a cross\u2011encoder reranker, boosting Recall@5 from 0.61 to 0.84. The stack included Python, Qdrant, and FastAPI, and the project was delivered in six weeks. My approach matches your requirements: start with BM25 plus dense search, then apply a reranker to improve relevance. I can adapt the same pipeline to your contract set, handling OCR for scanned files and integrating semantic embeddings for robust answers.",
+   "claims": [
+    {
+     "text": "I see you need a hybrid search chatbot that can handle both scanned and digital PDF contracts with keyword, semantic search, and a reranking step.",
+     "label": "supported",
+     "evidence_ids": []
+    },
+    {
+     "text": "I have built a retrieval\u2011augmented QA system for a law firm that processed 40k contract PDFs using BM25 combined with dense vectors and a cross\u2011encoder reranker, boosting Recall@5 from 0.61 to 0.84.",
+     "label": "supported",
+     "evidence_ids": [
+      "c1",
+      "p1"
+     ]
+    },
+    {
+     "text": "The stack included Python, Qdrant, and FastAPI, and the project was delivered in six weeks.",
+     "label": "supported",
+     "evidence_ids": [
+      "c1"
+     ]
+    },
+    {
+     "text": "My approach matches your requirements: start with BM25 plus dense search, then apply a reranker to improve relevance.",
+     "label": "supported",
+     "evidence_ids": [
+      "c1",
+      "p1"
+     ]
+    },
+    {
+     "text": "I can adapt the same pipeline to your contract set, handling OCR for scanned files and integrating semantic embeddings for robust answers.",
+     "label": "partial",
+     "evidence_ids": [
+      "c4"
+     ]
+    }
+   ],
+   "verification": {
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "claims": 5,
+    "partial": 1
+   },
+   "critic_loops": 0,
+   "critic_issues": [],
+   "compliance": {
+    "allowed": true,
+    "violations": []
+   },
+   "words": 112,
+   "sim_p_reply": 0.625,
+   "sim_replied": false,
+   "sim_hired": false
+  },
+  {
+   "id": "a12",
+   "persona": "ayesha_ml",
+   "kind": "scam",
+   "gold": "skip",
+   "pred": "skip",
+   "decision": "skip",
+   "status": "skipped",
+   "flags": [
+    "free_work",
+    "off_platform"
+   ],
+   "fit": 0.0,
+   "error": null,
+   "seconds": 32.49,
+   "usage": {
+    "matcher": {
+     "calls": 1,
+     "prompt_tokens": 186,
+     "completion_tokens": 120,
+     "seconds": 0.7163204999997106,
+     "usd": 4.995e-05
+    },
+    "analyst": {
+     "calls": 1,
+     "prompt_tokens": 207,
+     "completion_tokens": 168,
+     "seconds": 0.7954944000011892,
+     "usd": 6.5925e-05
+    },
+    "risk": {
+     "calls": 1,
+     "prompt_tokens": 277,
+     "completion_tokens": 129,
+     "seconds": 3.267516699997941,
+     "usd": 5.9474999999999996e-05
+    }
+   },
+   "usd": 0.000175,
+   "tokens": 1087
+  },
+  {
+   "id": "b13",
+   "persona": "bilal_web",
+   "kind": "injection",
+   "gold": "skip",
+   "pred": "skip",
+   "decision": "skip",
+   "status": "skipped",
+   "flags": [
+    "scam",
+    "injection"
+   ],
+   "fit": 0.0,
+   "error": null,
+   "seconds": 21.44,
+   "usage": {
+    "matcher": {
+     "calls": 1,
+     "prompt_tokens": 176,
+     "completion_tokens": 78,
+     "seconds": 0.5364583000009588,
+     "usd": 3.6599999999999995e-05
+    },
+    "analyst": {
+     "calls": 1,
+     "prompt_tokens": 197,
+     "completion_tokens": 111,
+     "seconds": 0.6787203999992926,
+     "usd": 4.8074999999999996e-05
+    },
+    "risk": {
+     "calls": 1,
+     "prompt_tokens": 278,
+     "completion_tokens": 165,
+     "seconds": 0.7247963999980129,
+     "usd": 7.034999999999999e-05
+    }
+   },
+   "usd": 0.000155,
+   "tokens": 1005
+  }
+ ]
+}
