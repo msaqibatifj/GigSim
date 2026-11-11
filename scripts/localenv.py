@@ -3,7 +3,7 @@ Usage: python -m scripts.localenv <module> [args]  e.g.  python -m scripts.local
 import os, runpy, sys
 import dotenv
 
-KEYS = ("GROQ_API_KEY", "GROQ_API_KEYS", "OPENROUTER_API_KEY", "LANGSMITH_API_KEY", "LANGSMITH_TRACING", "LANGSMITH_PROJECT", "LANGSMITH_ENDPOINT",
+KEYS = ("GROQ_API_KEY", "GROQ_API_KEYS", "OPENROUTER_API_KEY", "LANGSMITH_API_KEY", "LANGSMITH_TRACING", "LANGSMITH_PROJECT", "LANGSMITH_ENDPOINT", "LANGSMITH_WORKSPACE_ID",
         "MODEL_PROFILE", "GITHUB_TOKEN", "TOKEN_ENC_KEY", "ANTHROPIC_API_KEY")
 for k, v in dotenv.dotenv_values(".env").items():
     if k in KEYS and v and k not in os.environ:
