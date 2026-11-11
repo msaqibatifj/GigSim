@@ -2,6 +2,12 @@
 
 Read-only MCP server that answers "what can this freelancer prove?". Tools: `search_evidence`, `get_case_study`, `list_skills`; resources `portfolio://case/{id}` and `portfolio://proposal/{id}`; prompts `answer_screening_question` and `write_cover_letter`. Retrieval is the RAG variant chosen by evaluation (`agent/config.yaml` -> `rag.variant`).
 
+## Install (documented clone + run command; the server reads the persona data in this repo, so it is not a PyPI package)
+```bash
+git clone https://github.com/msaqibatifj/GigSim.git gigbid && cd gigbid
+uv sync && PORTFOLIO_PERSONA=ayesha_ml uv run python -m mcp_servers.portfolio.server
+```
+
 ## Run
 ```bash
 # from a checkout (stdio, for Claude Desktop / Cursor)
