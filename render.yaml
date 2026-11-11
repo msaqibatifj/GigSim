@@ -1,0 +1,37 @@
+# Render blueprint: ONE web service = API + built React app + MCP servers (stdio) from infra/docker/web.Dockerfile.
+# Without REDIS_URL the API runs graph work in-process (apps/api/dispatch.py); without DATABASE_URL it uses SQLite.
+# The disk keeps SQLite, checkpoints (pending approvals), memory and the audit log across restarts and deploys.
+# shortcut: no separate worker/Postgres/Redis here, so no 4-hourly scheduled scouting on the live URL (the compose file has them); upgrade by adding them.
+services:
+  - type: web
+    name: gigbid
+    runtime: docker
+    plan: starter            # free sleeps after 15 min idle: the hidden run would hit a cold start. Move to standard if it runs out of memory.
+    dockerfilePath: ./infra/docker/web.Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    disk:
+      name: gigbid-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - {key: PORT, value: "8000"}
+      - {key: MODEL_PROFILE, value: open}
+      - {key: COOKIE_SECURE, value: "true"}
+      - {key: APP_DATABASE_URL, value: "sqlite:////data/app.sqlite"}
+      - {key: CHECKPOINT_DB, value: /data/checkpoints.sqlite}
+      - {key: MEMORY_DB, value: /data/memory.sqlite}
+      - {key: MOCK_GIGSIM_STATE, value: /data/gigsim.json}
+      - {key: AUDIT_LOG, value: /data/audit.jsonl}
+      - {key: LANGSMITH_TRACING, value: "true"}
+      - {key: LANGSMITH_PROJECT, value: gigbid}
+      - {key: LANGSMITH_ENDPOINT, value: "https://eu.api.smith.langchain.com"}
+      # secrets: you type these in the Render dashboard (sync: false = never stored in the repo)
+      - {key: GROQ_API_KEY, sync: false}
+      - {key: GROQ_API_KEYS, sync: false}
+      - {key: TOKEN_ENC_KEY, sync: false}
+      - {key: REVIEWER_EMAIL, sync: false}
+      - {key: REVIEWER_PASSWORD, sync: false}
+      - {key: LANGSMITH_API_KEY, sync: false}
+      - {key: LANGSMITH_WORKSPACE_ID, sync: false}
+      - {key: PUBLIC_URL, sync: false}
