@@ -1,0 +1,56 @@
+{
+ "ml_nlp": {
+  "fixed_budget_usd": {
+   "25": 50.0,
+   "50": 150.0,
+   "75": 550.0,
+   "n": 469
+  },
+  "hourly_rate_usd": {
+   "25": 20.0,
+   "50": 35.0,
+   "75": 50.0,
+   "n": 2673
+  },
+  "sources": [
+   "kaggle:asaniczka/upwork-job-postings-dataset-2024-50k-records",
+   "kaggle:asaniczka/freelance-contracts-dataset-1-3-million-entries"
+  ]
+ },
+ "web": {
+  "fixed_budget_usd": {
+   "25": 50.0,
+   "50": 200.0,
+   "75": 600.0,
+   "n": 2313
+  },
+  "hourly_rate_usd": {
+   "25": 15.0,
+   "50": 25.0,
+   "75": 35.0,
+   "n": 15234
+  },
+  "sources": [
+   "kaggle:asaniczka/upwork-job-postings-dataset-2024-50k-records",
+   "kaggle:asaniczka/freelance-contracts-dataset-1-3-million-entries"
+  ]
+ },
+ "data": {
+  "fixed_budget_usd": {
+   "25": 50.0,
+   "50": 155.0,
+   "75": 800.0,
+   "n": 484
+  },
+  "hourly_rate_usd": {
+   "25": 20.0,
+   "50": 35.0,
+   "75": 60.0,
+   "n": 6454
+  },
+  "sources": [
+   "kaggle:asaniczka/upwork-job-postings-dataset-2024-50k-records",
+   "kaggle:asaniczka/freelance-contracts-dataset-1-3-million-entries"
+  ]
+ }
+}

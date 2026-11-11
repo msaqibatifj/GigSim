@@ -1,0 +1,17 @@
+{
+  "name": "Sara Malik",
+  "title": "Data engineer / analyst",
+  "rate": 40,
+  "floor": 25,
+  "skills": [
+    "python",
+    "sql",
+    "airflow",
+    "dbt",
+    "bigquery",
+    "tableau",
+    "pandas",
+    "postgres"
+  ],
+  "category": "data"
+}

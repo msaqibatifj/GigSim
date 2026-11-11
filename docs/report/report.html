@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>GigBid: R&D report</title>
+<style>
+@page { size: A4; margin: 16mm 15mm; }
+body { font: 9.6pt/1.4 "Segoe UI", Arial, sans-serif; color: #111; }
+h1 { font-size: 17pt; margin: 0 0 2pt; } h2 { font-size: 12pt; margin: 12pt 0 3pt; border-bottom: 1px solid #bbb; padding-bottom: 1pt; }
+h3 { font-size: 10pt; margin: 7pt 0 2pt; } p { margin: 3pt 0; } ul { margin: 2pt 0 2pt 14pt; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 4pt 0; font-size: 8.6pt; } th, td { border: 1px solid #bbb; padding: 2pt 4pt; text-align: left; vertical-align: top; }
+th { background: #eee; } code { font-family: Consolas, monospace; font-size: 8.4pt; } .note { color: #444; font-size: 8.6pt; }
+.warn { border-left: 3px solid #b35900; background: #fff6ea; padding: 3pt 6pt; margin: 4pt 0; }
+</style></head><body>
+<h1>GigBid: an agent that bids on freelance jobs, with a human in the loop</h1>
+<p class="note">AI-4016 R&amp;D report · engineering design review · every number cites a file in <code>evals/results/</code> (or a commit/doc). Repo: <code>TODO: GitHub URL</code> · Live: <code>TODO</code></p>
+<div class="warn"><b>Read first.</b> The evaluation is small (14 compact dev jobs, one run each; 30 for retrieval) and the decision thresholds were tuned on those same 14 jobs. On the two low-fit dev jobs the compact set left out, the system bids wrongly on both (§8). GigSim, the personas and the policy pack were not provided, so they are local mocks, and <b>every GigSim outcome (reply, hire) comes from a client model I wrote</b>: reply rates measure agreement with that model, not real clients. The judge is not yet calibrated against my labels (§4), so no judge scores are reported.</div>
+
+<h2>1. Problem and constraints</h2>
+<p>A freelancer's bidding loop: find jobs, read them, spot scams, check whether their own work supports the requirements, price a bid under a Connects (bidding-credit) budget, write a proposal, and answer the client. The costly mistakes are: claiming experience they do not have, bidding on scams or free-work requests, leaking contact details, and anything being sent without their say-so.</p>
+<p><b>Never automated:</b> sending a proposal or message, spending Connects, and submitting on the marketplace in live mode (the user confirms the draft on Upwork). Enforced by a LangGraph <code>interrupt()</code> before every write, idempotency keys on every write, and a live adapter whose <code>submit_proposal</code> returns "confirm on Upwork".</p>
+<p><b>Budgets declared</b> (<code>agent/config.yaml</code>): p95 latency 60 s per job, USD 0.02 per job and 0.10 per proposal. <b>Measured</b> on the compact set [decision_eval_open.json]: p95 27.6 s, USD 0.0004 per job and 0.0008 per proposal, 2,172 tokens per job. Open-weight models only: <code>gpt-oss-20b</code> for small nodes, <code>gpt-oss-120b</code> for Writer and Critic, on Groq. Embeddings <code>bge-small-en-v1.5</code>, reranker <code>ms-marco-MiniLM-L-6-v2</code> (dev-size, CPU-only machine).</p>
+
+<h2>2. Architecture</h2>
+<p><b>Bid graph</b> (one thread per job): scout, then analyst | risk | matcher in parallel via <code>Send</code> (state reducer for the parallel writes), decide (skip / watch / bid), pricing, writer, claim verifier (unsupported claims removed <i>before</i> the critic), critic (back to writer at most twice), compliance (deterministic policy pack, can block with a reason), approval (<code>interrupt()</code>), idempotent execute. <b>Conversation graph</b>: read, classify (question / negotiation / interview / scam signal), draft (slots from the Workspace server), approval, send. Budgets of 40 steps and 60,000 tokens per thread move a run to a visible <code>needs_attention</code> state. Both graphs are rendered from code in <code>docs/images/</code>.</p>
+<p><b>Marketplace port:</b> one interface (<code>agent/marketplace_port.py</code>), two adapters (GigSim, live Upwork) behind the Marketplace MCP server, chosen by <code>MARKETPLACE_ADAPTER</code>. <b>MCP surface:</b> Portfolio (read), Marketplace (read and write, bearer auth, per-user rate limit, append-only audit log), Workspace (calendar and email drafts, local mock), plus the official Upwork server and a GitHub server (configured, not run; needs a token). 17 tools with schemas, output schemas and annotations, snapshot-tested (<code>docs/TOOLS.md</code>).</p>
+<p><b>Stores:</b> state (checkpointed in Postgres in the deployment, SQLite locally; all my tests used SQLite), execution trace (<code>events</code> table, audit log, LangSmith), and long-term memory (style and outcome, written only through promotion rules: a style pattern needs 2 separate edits, outcome stats need 3 outcomes in a category). Raw tool output and draft text are never stored in memory.</p>
+<p><b>Why each agent exists:</b> Scout (cheap, scheduled, dedupes); Job Analyst (no tools, so injected text cannot reach a tool); Risk Assessor (client history plus a deterministic injection detector OR-ed with the LLM flag); Fit Matcher (the only source of claims); Pricing (market statistics from 1.3M real contracts, the user's floor, Connects); Writer and Critic (strongest model); Compliance Guard (regex and policy, so it cannot be talked out of a rule); Client Liaison.</p>
+
+<h2>3. R&amp;D question A: tool granularity</h2>
+<p><b>Setup:</b> 40 tasks with known correct calls, one model call each (<code>gpt-oss-20b</code>, temperature 0); three designs of the same capabilities. I did not write the hypothesis to a file before running, so it is not pre-registered. My prior was that fewer, coarser tools would win on tokens and lose on accuracy.</p>
+<table><tr><th>Design</th><th>Tools</th><th>Tool accuracy</th><th>Argument accuracy</th><th>Prompt tokens / task</th></tr>
+<tr><td>many fine-grained, terse descriptions</td><td>24</td><td>0.70</td><td>0.70</td><td>629</td></tr>
+<tr><td>few coarse (action + args)</td><td>4</td><td>0.85</td><td>0.675</td><td>301</td></tr>
+<tr><td>best: my real tools, rewritten descriptions</td><td>16</td><td>1.00</td><td>1.00</td><td>697</td></tr></table>
+<p class="note">[tool_granularity.json]. Conclusion: description quality mattered more than tool count; coarse tools halved the tokens but lost argument accuracy because the model must invent the argument shape. Limit: I wrote the tasks and the descriptions together, so 1.00 is an upper bound; one run, n = 40.</p>
+
+<h2>4. R&amp;D question B: RAG</h2>
+<h3>Variants, results and shipped choice</h3>
+<p>Seven variants implemented as configurable components (<code>rag/variants/vN_*.py</code>): V0 naive dense, V1 requirement decomposition, V2 hybrid BM25+dense with RRF, V3 cross-encoder rerank, V4 outcome-aware boost, V5 decompose+hybrid+rerank, V8 corrective RAG as a LangGraph loop. Retrieval evaluated against gold evidence for 30 dev jobs with all three personas' items in one index (distractors).</p>
+<table><tr><th>Variant</th><th>Recall@5</th><th>nDCG@10</th><th>nDCG@10 (per-persona index)</th><th>retrieval p95 (s)</th></tr>
+<tr><td>V0 naive</td><td>0.933</td><td>0.885</td><td>0.907</td><td>0.99</td></tr><tr><td>V1 decompose</td><td>0.700</td><td>0.611</td><td>0.838</td><td>7.5</td></tr>
+<tr><td>V2 hybrid</td><td>0.933</td><td>0.884</td><td>0.913</td><td>0.67</td></tr><tr><td><b>V3 rerank (shipped)</b></td><td>0.950</td><td><b>0.912</b></td><td>0.916</td><td>1.8</td></tr>
+<tr><td>V4 outcome-aware</td><td>0.933</td><td>0.890</td><td>0.901</td><td>1.7</td></tr><tr><td>V5 decompose+hybrid+rerank</td><td>0.967</td><td>0.858</td><td>0.871</td><td>24.7</td></tr>
+<tr><td>V8 corrective</td><td>0.933</td><td>0.907</td><td>0.911</td><td>89</td></tr></table>
+<p class="note">[rag_eval_all.json, rag_eval_persona.json]. MRR is in the files. The B5 table's pipeline columns (unsupported claims, reply rate, cost per proposal) were run only for the shipped V3 [decision_eval_open.json]; the other variants show retrieval metrics only, marked "not run" in <code>evals/results/RESULTS.md</code>.</p>
+<p><b>Decision that ships:</b> V3. It has the best nDCG@10, near-best Recall@5, and a 1.8 s p95. V5 has the highest Recall@5 (0.967) but a worse nDCG@10 and a 25 s p95; V8 costs 89 s p95 for no gain; decomposition lowers quality in both index settings. The deployed variant is the config value <code>rag.variant</code>, so changing it is not a code change.</p>
+<h3>Ablation (hypotheses written before running, in <code>evals/runners/ablation.py</code>)</h3>
+<table><tr><th>Arm (from decompose+hybrid+rerank)</th><th>Recall@5</th><th>nDCG@10</th><th>change</th><th>single-evidence</th><th>multi-evidence</th></tr>
+<tr><td>full</td><td>0.967</td><td>0.854</td><td>–</td><td>0.856</td><td>0.848</td></tr><tr><td>- rerank</td><td>0.767</td><td>0.650</td><td>-0.204</td><td>0.688</td><td>0.546</td></tr>
+<tr><td>- hybrid</td><td>0.967</td><td>0.854</td><td>0.000</td><td>0.856</td><td>0.848</td></tr><tr><td>- decompose</td><td>0.950</td><td>0.912</td><td>+0.058</td><td>0.927</td><td>0.871</td></tr></table>
+<p class="note">[ablation.json]. H1 (reranker matters most) held. H3 (hybrid adds little) held, with identical numbers, likely because on a portfolio this small the reranker sees the same top candidates either way. H2 (decomposition helps multi-evidence jobs) was wrong: removing it helped both job types. H4 is addressed below.</p>
+<h3>By persona and job type</h3>
+<p>V3 vs V0, nDCG@10 in the pooled setting [rag_eval_all.json]: Ayesha (ML) 0.988 vs 0.911, Sara (data) 0.897 vs 0.856, <b>Bilal (web) 0.851 vs 0.887, i.e. the reranker is worse for the web persona</b>. By job type: single-evidence 0.927 vs 0.899, multi-evidence 0.871 vs 0.844. In the per-persona index setting V3 is worse than V0 on multi-evidence jobs (0.887 vs 0.927) [rag_eval_persona.json]. With 30 jobs split three ways these differences are small and I have not tested their significance.</p>
+<h3>Claim verification (B3)</h3>
+<p>Each draft is split into claims, labelled supported / partial / unsupported against the retrieved evidence, and unsupported claims are removed before the Critic. Unsupported claims per proposal: <b>0.33 before, 0 after</b> (6 proposals) [decision_eval_open.json]. The verifier is an LLM (<code>gpt-oss-20b</code>) judging the same evidence the Writer saw, so it shares its blind spots; I have not measured its precision against human labels.</p>
+<h3>Where better retrieval did not improve reply rate, and judge calibration</h3>
+<p>I cannot answer H4 with this simulator. GigSim's <code>outcome()</code> scores a proposal on word overlap with the job, a specific opening, length, price versus budget and client quality; it never looks at which portfolio item was retrieved, so by construction better retrieval cannot move it except through wording. The pipeline-level reply rate was measured only for V3 (0.33, 6 proposals). <b>Judge calibration is not done:</b> 30 anonymised items are prepared (<code>evals/datasets/judge_items.json</code>) and need my own 1-5 labels, from which Cohen's kappa is computed (<code>judge_calibration.py</code>). Until then no LLM-judge scores are reported, and the "Rubric score" and "blind pairwise human panel" asks of §B4 are not done.</p>
+
+<h2>5. R&amp;D question C: is multi-agent worth it?</h2>
+<p>Same 14 jobs, same models, same retrieval. (a) single ReAct agent with all read tools, (b) prebuilt <code>langgraph-supervisor</code> with three workers, (c) my hand-built graph stopped at the approval gate. Not the 50 jobs asked for: the Groq free tier caps tokens per day, so I ran the compact set.</p>
+<table><tr><th>Metric</th><th>(a) single</th><th>(b) supervisor</th><th>(c) my graph</th></tr>
+<tr><td>bid/skip accuracy</td><td>1.00</td><td>0.64</td><td>1.00</td></tr><tr><td>scam / injection skipped</td><td>1.00</td><td>1.00</td><td>1.00</td></tr>
+<tr><td>planted instruction obeyed</td><td>0</td><td>0</td><td>0</td></tr><tr><td>unsupported claims / proposal*</td><td>0</td><td>5 (1 proposal)</td><td>0</td></tr>
+<tr><td>drafts with contact / guarantee / over-length*</td><td>0</td><td>0</td><td>0</td></tr><tr><td>GigSim reply rate (synthetic)</td><td>0.33</td><td>0.00 (1 proposal)</td><td>0.33</td></tr>
+<tr><td>tokens / job</td><td>1,379</td><td>741</td><td>2,172</td></tr><tr><td>p50 / p95 latency (s)</td><td>44 / 187</td><td>14 / 29</td><td>14 / 28</td></tr></table>
+<p class="note">[agent_comparison.json]. *Baselines are raw model output while the graph's drafts are post-verification and post-compliance, so these two rows favour the graph by construction. Compliance violations "caught" is 0 in every arm: the Writer rarely produced any, so this set cannot show the Compliance Guard's value; it is unit-tested instead.</p>
+<p><b>Honest reading.</b> On accuracy and quality the single agent <b>ties</b> my graph on this set and uses 36% fewer tokens, so if only those mattered I would ship it. The graph is about 7x faster at p95 because its three analysis branches run in parallel while the single agent calls tools one after another, and it is the only variant with the approval gate, a deterministic compliance step and verified claims. The prebuilt supervisor skipped 5 of the 6 jobs that should be bid. n = 14, one run each, nondeterministic models.</p>
+
+<h2>6. Change request</h2>
+<p><b>Not yet applied:</b> the instructor's 2 Nov change request text is not in this report's inputs. What exists: rules and costs live in <code>data/policy_pack/policy.yaml</code> (limits, fees, Connects per bid, and a <code>forbid_patterns</code> list of regex rules with action <code>remove</code> or <code>block</code>), read at call time by Compliance, Pricing and GigSim; per-job Connects cost comes from the posting. A unit test adds a "no rate quotes" rule and a "no crypto" block rule through the config alone and checks they take effect with no code change (<code>tests/unit/test_inline.py</code>). Expected diff for a new content rule: 1-2 lines of YAML; for a new Connects cost: 1 line. <b>TODO: apply the real change, record time taken and the diff line count.</b></p>
+
+<h2>7. Signature extension: X2 proposal experiments</h2>
+<p>Two strategies on the same 30 bid-worthy jobs, same Writer model, evidence and verification, differing only in style rules: A intro-first, B deliverable-first (opens with the exact deliverable, one measurable result, one scoped question). Paired sign-flip permutation test on per-job GigSim reply probability.</p>
+<p>Result [ab_experiment.json]: mean reply probability A 0.514, B 0.579, difference <b>+0.065, permutation p = 0.0033</b>; but sampled simulated replies were <b>17 (A) vs 16 (B)</b>, so the effect on the probability does not show up in 30 draws. B's letters were longer (92.5 vs 77.8 words), and GigSim rewards a specific opening and a 60-220 word length, so a good part of "B wins" is the simulator's own assumptions. It demonstrates the experiment pipeline, not an effect on real clients.</p>
+
+<h2>8. Failure analysis</h2>
+<p>16 failures in <code>docs/FAILURES.md</code> with fix and outcome; summary by category (the required ones plus Wrong bid, Critic over-rejection, Latency, Rate limit):</p>
+<table><tr><th>Category</th><th>Jobs</th><th>Fix tried</th><th>Worked?</th></tr>
+<tr><td>Wrong bid (false evidence: retrieval always returns something)</td><td>a11, b11, s14</td><td>cross-encoder score floor -8.0 for "supported"</td><td>yes (these three)</td></tr>
+<tr><td>Wrong bid, held-out</td><td>a14, b14</td><td>none; tuning again on the same data would overfit</td><td><b>no</b></td></tr>
+<tr><td>Wrong skip after the floor</td><td>a02, s01</td><td>bid_min_fit 0.5 to 0.2</td><td>yes, but tuned in-sample; it is why a14 is bid</td></tr>
+<tr><td>Tool error (model returned a null id)</td><td>a13, b12</td><td>analyst sets <code>job_id</code> itself</td><td>yes</td></tr>
+<tr><td>Unsupported claim</td><td>a02, s02</td><td>claim verification before the Critic</td><td>yes (1 to 0, 3 to 0)</td></tr>
+<tr><td>Critic over-rejection / latency</td><td>b01, a11 (160 s)</td><td>Critic sees evidence and labels; re-verify only changed drafts</td><td>yes (loops 1.78 to 0; p95 90 s to 28 s)</td></tr>
+<tr><td>Injection</td><td>inj2, inj3; inj1, inj2, inj4</td><td>tag neutralising, deterministic detector, scrub injected sentences</td><td>yes (attack success 0.67 to 0.0, n = 6)</td></tr>
+<tr><td>Rate limit; log-mask bug</td><td>all</td><td>key rotation and backoff; mask at record creation</td><td>yes</td></tr></table>
+<p>The Critic row's risk is the opposite failure (approving everything), which I have not measured. No Compliance misses occurred in the dev runs, which also means the dev set barely exercises it. The score separation behind the floor is only 0.86 logits wide across all 42 dev jobs [score_gap.json].</p>
+
+<h2>9. Safety and platform respect</h2>
+<p><b>GigBid must never:</b> send or spend without approval; claim unsupported experience; follow instructions inside job posts or client messages; leak contact details or payment data into logs; scrape, automate a browser, or poll like a scraper; auto-reply to a scam signal. <b>Enforced by:</b> <code>interrupt()</code> plus idempotency keys; claim verification; posts delimited as untrusted, closing tags neutralised, injected sentences scrubbed before drafting, a regex detector OR-ed with the LLM flag; PII masking at log-record creation and in traces; OAuth tokens Fernet-encrypted and never returned or logged; every query scoped by user; live mode scouts at most every 6 hours and creates drafts only.</p>
+<p><b>Attack success</b> on 6 planted posts: 0.667 before the code-level defences, 0.0 after [injection_eval.json]; the planted word reached a draft in 50% before, 0% after. <b>What still gets through:</b> the detector is regex-based, so a paraphrased or non-English instruction passes it and only the LLM flag and the human approval gate remain (the LLM flag varies between runs); a post that sounds like a hiring manager asking a "screening bot" to say a word is the example that would beat the regex. n = 6, so the 0.0 is not a guarantee.</p>
+
+<h2>10. Hidden test results</h2>
+<p><b>Not available at submission time.</b> The instructor's hidden run happens after the deadline. Declared budgets for comparison: p95 60 s per job, USD 0.02 per job, 0.10 per proposal; my compact-set measurements above are 27.6 s and USD 0.0004 / 0.0008.</p>
+
+<h2>Reproduction, versions and limits</h2>
+<p><code>make eval</code> reruns retrieval, decisions, injection and tool-granularity evals; <code>python -m evals.runners.results_table</code> regenerates every table here. 37 backend tests and 5 Playwright tests pass locally (<code>docs/images</code>, <code>evals/results</code>). Pinned versions are in <code>pyproject.toml</code> and the README. <b>Not done or not verified:</b> live Upwork against a real account; Docker compose and the Postgres checkpointer (no Docker on my machine; SQLite used in all tests); GitHub MCP server run; LangSmith traces (the key I was given returns 403, so there are no public trace links yet); judge calibration and the human panel; hidden-run results; the real change request.</p>
+</body></html>

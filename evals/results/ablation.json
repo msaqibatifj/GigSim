@@ -1,0 +1,147 @@
+{
+ "setting": "pooled distractors (all 3 personas in one index)",
+ "n_jobs": 30,
+ "arms": {
+  "full": {
+   "overall": {
+    "recall5": 0.967,
+    "mrr": 0.842,
+    "ndcg10": 0.854
+   },
+   "single_evidence": {
+    "recall5": 1.0,
+    "mrr": 0.807,
+    "ndcg10": 0.856
+   },
+   "multi_evidence": {
+    "recall5": 0.875,
+    "mrr": 0.938,
+    "ndcg10": 0.848
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.911
+    },
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.742,
+     "ndcg10": 0.779
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.883,
+     "ndcg10": 0.87
+    }
+   }
+  },
+  "-rerank": {
+   "overall": {
+    "recall5": 0.767,
+    "mrr": 0.579,
+    "ndcg10": 0.65
+   },
+   "single_evidence": {
+    "recall5": 0.864,
+    "mrr": 0.602,
+    "ndcg10": 0.688
+   },
+   "multi_evidence": {
+    "recall5": 0.5,
+    "mrr": 0.518,
+    "ndcg10": 0.546
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 0.85,
+     "mrr": 0.651,
+     "ndcg10": 0.709
+    },
+    "bilal_web": {
+     "recall5": 0.8,
+     "mrr": 0.633,
+     "ndcg10": 0.66
+    },
+    "sara_data": {
+     "recall5": 0.65,
+     "mrr": 0.454,
+     "ndcg10": 0.582
+    }
+   }
+  },
+  "-hybrid": {
+   "overall": {
+    "recall5": 0.967,
+    "mrr": 0.842,
+    "ndcg10": 0.854
+   },
+   "single_evidence": {
+    "recall5": 1.0,
+    "mrr": 0.807,
+    "ndcg10": 0.856
+   },
+   "multi_evidence": {
+    "recall5": 0.875,
+    "mrr": 0.938,
+    "ndcg10": 0.848
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.911
+    },
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.742,
+     "ndcg10": 0.779
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.883,
+     "ndcg10": 0.87
+    }
+   }
+  },
+  "-decompose": {
+   "overall": {
+    "recall5": 0.95,
+    "mrr": 0.911,
+    "ndcg10": 0.912
+   },
+   "single_evidence": {
+    "recall5": 1.0,
+    "mrr": 0.902,
+    "ndcg10": 0.927
+   },
+   "multi_evidence": {
+    "recall5": 0.812,
+    "mrr": 0.938,
+    "ndcg10": 0.871
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.988
+    },
+    "bilal_web": {
+     "recall5": 0.95,
+     "mrr": 0.833,
+     "ndcg10": 0.851
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.9,
+     "ndcg10": 0.897
+    }
+   }
+  }
+ },
+ "ndcg10_drop_when_removed": {
+  "-rerank": 0.204,
+  "-hybrid": 0.0,
+  "-decompose": -0.058
+ }
+}

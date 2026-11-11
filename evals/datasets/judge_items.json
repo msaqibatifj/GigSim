@@ -1,0 +1,242 @@
+[
+ {
+  "item": "i0",
+  "arch": "writer_A",
+  "job_id": "b03",
+  "title": "Move our WordPress site to a modern stack",
+  "job": "Our blog is slow; we want a faster site that ranks better.",
+  "draft": "I am a web developer with extensive experience migrating WordPress sites to modern stacks. I recently migrated a marketing site from WordPress to Next.js, boosting Lighthouse performance from 55 to 96 and driving an 18% rise in organic traffic within three months. I can also address any WordPress issues directly, ensuring a smooth transition. A past client highlighted that after my work their site became fast and SEO improved noticeably, confirming the impact of the migration."
+ },
+ {
+  "item": "i1",
+  "arch": "graph",
+  "job_id": "s02",
+  "title": "Why are users leaving?",
+  "job": "Analyse why new users churn and identify groups worth targeting.",
+  "draft": "I see the need to pinpoint why new users drop off and to surface targetable segments. In a recent project I delivered a Tableau churn dashboard and a pandas cohort analysis that revealed a 14% onboarding drop\u2011off (c2). I also applied K\u2011means clustering in pandas and scikit\u2011learn to define five actionable customer groups for focused marketing (c10). My toolkit spans the full data stack, allowing me to start immediately on data extraction, cleaning, and modeling (p5). Additionally, I have experience designing statistically sound A/B tests with power calculations to avoid false\u2011positive decisions (c5), and I can optimize slow queries\u2014cutting a 20\u2011minute Postgres report to 30 seconds through query rewrites and indexing (p4). I look forward to applying these skills to uncover churn drivers and guide retention strategies."
+ },
+ {
+  "item": "i2",
+  "arch": "writer_A",
+  "job_id": "a05",
+  "title": "Recommendations for a small online store",
+  "job": "Suggest products to returning buyers and measure whether it improves clicks.",
+  "draft": "I am a data scientist with experience building recommendation systems for e\u2011commerce. I developed an implicit\u2011feedback ALS recommender for an online shop, integrated with a Redis cache, and achieved a 12% lift in click\u2011through rate in a three\u2011week A/B test, directly aligning with your goal to suggest products to returning buyers and measure impact. My work focused on real\u2011time personalization and rigorous evaluation, ensuring that improvements are quantifiable and sustainable."
+ },
+ {
+  "item": "i3",
+  "arch": "writer_A",
+  "job_id": "s03",
+  "title": "Load partner data every night",
+  "job": "Pull data from partner REST endpoints into our Postgres reliably.",
+  "draft": "I am a data engineer with extensive experience building reliable daily ETL pipelines. I have built daily ETL pipelines pulling data from partner REST APIs into Postgres with retries and data-quality checks, achieving no missed loads in a year. My work ensures that nightly loads run consistently and any transient failures are automatically retried, meeting strict reliability requirements. I also have a track record of optimizing Postgres performance, having rewritten queries and added indexes to reduce a 20\u2011minute report to 30 seconds, which demonstrates my ability to keep the database responsive under load. I am ready to apply these skills to reliably load your partner data each night."
+ },
+ {
+  "item": "i4",
+  "arch": "single",
+  "job_id": "a02",
+  "title": "Sentiment analysis for Urdu comments",
+  "job": "Classify customer comments written in Urdu as positive or negative, deployable on a small GPU.",
+  "draft": "I have built a sentiment classifier for Urdu social posts, fine\u2011tuning XLM\u2011R on 25\u202fk labelled Urdu tweets and achieving a macro\u202fF1 of\u202f0.88. The model was exported to ONNX and deployed on a single GPU for fast inference. My prior client praised the Urdu NLP work and the deployment guidance. I can deliver a robust positive/negative classifier for your customer comments within the budget and ensure it runs efficiently on a small GPU."
+ },
+ {
+  "item": "i5",
+  "arch": "writer_B",
+  "job_id": "b10",
+  "title": "Sales charts for the back office",
+  "job": "Interactive charts and exportable tables inside our React admin.",
+  "draft": "Interactive charts and exportable tables inside our React admin are exactly what I\u2019ll deliver, leveraging my experience building analytics charts for admin panels with Recharts and D3, including CSV export (c10). In a recent booking app project, my implementation of React components contributed to a 22% reduction in no\u2011shows, demonstrating measurable impact (c2). I\u2019m comfortable integrating Tailwind and Storybook for a consistent UI and ensuring accessibility throughout the admin interface (c4). My code includes comprehensive tests, aligning with the client\u2019s expectation for fast and reliable delivery (r2). Could you clarify whether the exportable tables need to support any specific file formats beyond CSV?"
+ },
+ {
+  "item": "i6",
+  "arch": "single",
+  "job_id": "b02",
+  "title": "Appointment booking with card payments",
+  "job": "Customers book slots online, pay by card and receive text reminders.",
+  "draft": "I have built a booking application for clinics that integrates a full booking flow with Stripe card payments and SMS reminders, reducing no\u2011shows by over 20%. This experience aligns directly with your need for an online appointment system with card payments and text reminders. I can deliver a reliable, secure solution tailored to your business."
+ },
+ {
+  "item": "i7",
+  "arch": "graph",
+  "job_id": "a01",
+  "title": "Hybrid search chatbot over our contracts",
+  "job": "Need an assistant that answers questions over scanned and digital PDF contracts, with keyword plus semantic search and a reranking step.",
+  "draft": "I see you need a hybrid search chatbot that can handle both scanned and digital PDF contracts with keyword, semantic search, and a reranking step. I have built a retrieval\u2011augmented QA system for a law firm that processed 40k contract PDFs using BM25 combined with dense vectors and a cross\u2011encoder reranker, boosting Recall@5 from 0.61 to 0.84. The stack included Python, Qdrant, and FastAPI, and the project was delivered in six weeks. My approach matches your requirements: start with BM25 plus dense search, then apply a reranker to improve relevance. I can adapt the same pipeline to your contract set, handling OCR for scanned files and integrating semantic embeddings for robust answers."
+ },
+ {
+  "item": "i8",
+  "arch": "writer_A",
+  "job_id": "a03",
+  "title": "Auto-route support emails",
+  "job": "Incoming support emails must be sorted into queues by an LLM; we use Postgres and want background workers.",
+  "draft": "I am a freelancer with a background in building LLM\u2011driven support ticket triage systems. I have shipped a zero\u2011shot and few\u2011shot LLM routing pipeline that sorted inbound support emails into 12 queues, reducing first\u2011response time by 35%, using Postgres, Redis, and Celery workers (c3). In a related project I identified a similar 12\u2011queue structure for a client\u2019s ticket volume and proposed a pilot on a single queue to validate the approach (p3). My experience aligns directly with your need for background workers to route emails via an LLM on a Postgres backend."
+ },
+ {
+  "item": "i9",
+  "arch": "single",
+  "job_id": "b01",
+  "title": "Admin dashboard with user roles",
+  "job": "A web admin where managers and staff see different data, backed by a SQL database, with automated tests.",
+  "draft": "I have built role\u2011based admin interfaces that match your requirements. In a recent project I delivered an inventory dashboard using Next.js and PostgreSQL with distinct manager and staff views, and a full suite of automated Playwright tests (see case study c1). I also created analytics panels for admin panels in React (case study c10). My experience ensures a secure SQL\u2011backed solution with reliable testing. I look forward to discussing how I can deliver your admin dashboard within the budget."
+ },
+ {
+  "item": "i10",
+  "arch": "writer_A",
+  "job_id": "b09",
+  "title": "Automate regression testing",
+  "job": "Browser-based automated tests that run on every pull request.",
+  "draft": "I am a developer with extensive experience building browser\u2011based automated test suites. I have created a Playwright end\u2011to\u2011end automation framework wired into GitHub Actions that cut regression escapes by two thirds, and the client described the solution as fast and reliable. Additionally, I delivered a Playwright test suite of 40 tests for a Next.js inventory dashboard, ensuring stable releases for daily users. My background in integrating automated tests into CI pipelines aligns directly with the need for regression testing on every pull request."
+ },
+ {
+  "item": "i11",
+  "arch": "writer_B",
+  "job_id": "b04",
+  "title": "Build a reusable, accessible UI kit",
+  "job": "Reusable React components documented in Storybook and usable with keyboard and screen readers.",
+  "draft": "Reusable, accessible UI kit built with React and documented in Storybook is exactly what I delivered for a prior client, creating a component library of 35 fully keyboard\u2011navigable and screen\u2011reader tested components. I leveraged Tailwind CSS and ensured WCAG 2.1 AA compliance, as demonstrated by a remediation project where I audited a public portal, fixed contrast, focus order and form labels, and achieved full AA conformance. My experience includes integrating accessibility testing tools like axe early in the development cycle to catch issues before they reach production. I can structure the kit for easy reuse across your applications and provide thorough documentation for developers and designers. Could you share which existing design tokens or branding guidelines you\u2019d like the kit to align with?"
+ },
+ {
+  "item": "i12",
+  "arch": "writer_B",
+  "job_id": "b08",
+  "title": "Make our portal meet accessibility standards",
+  "job": "Fix contrast, focus and form labelling issues found in an audit.",
+  "draft": "Fix contrast, focus and form labelling issues found in an audit. I have audited a public portal with axe, corrected contrast, focus order and form labels, and achieved WCAG\u202f2.1\u202fAA compliance, demonstrating the exact remediation you need. My prior work on a similar portal resulted in a measurable WCAG\u202f2.1\u202fAA rating, confirming I can deliver the required accessibility standards within your budget. Could you share which pages or components are highest priority for the remediation?"
+ },
+ {
+  "item": "i13",
+  "arch": "writer_B",
+  "job_id": "a04",
+  "title": "Read data from scanned invoices",
+  "job": "Extract vendor, date and total from photographed invoices; mixed layouts.",
+  "draft": "Extract vendor, date and total from photographed invoices using OCR and layout-aware models. I have built an invoice field extraction pipeline that combined Tesseract OCR with LayoutLM, achieving 94% field\u2011level accuracy on a set of 2,000 scanned documents, with regex fallbacks for edge cases. This experience aligns directly with the mixed\u2011layout challenge described in your posting. I can deliver a robust solution within your budget and timeline, and I\u2019m prepared to discuss integration with your existing systems. Could you clarify whether you need the extracted data returned in a specific file format or via an API?"
+ },
+ {
+  "item": "i14",
+  "arch": "writer_A",
+  "job_id": "b05",
+  "title": "Live chat for our marketplace",
+  "job": "Real-time messaging between buyers and sellers with online status.",
+  "draft": "I am a backend developer with extensive experience building real-time communication systems. I recently delivered a Node.js WebSocket chat service that used Redis pub/sub for presence tracking and message history, handling 2,000 concurrent users in load tests, which aligns directly with the live chat functionality you need for your marketplace. My work also includes integrating online status indicators and ensuring reliable message delivery under high load. I can apply these proven techniques to create a robust, scalable chat solution for your buyers and sellers.\n\nI look forward to discussing how my background can meet your project goals."
+ },
+ {
+  "item": "i15",
+  "arch": "writer_B",
+  "job_id": "b06",
+  "title": "Fix double charges at checkout",
+  "job": "Customers are sometimes billed twice; need a robust Stripe payment flow.",
+  "draft": "Fix double charges at checkout by implementing idempotent Stripe webhooks. I built exactly that for a checkout system, achieving zero duplicate charges over a six\u2011month period. My implementation included comprehensive tests and reliable webhook handling, ensuring the payment flow remains robust under load. I can integrate the same pattern into your existing checkout, tailoring it to your specific order logic and monitoring needs. Could you clarify whether the solution should also accommodate alternative payment methods or additional post\u2011checkout actions?"
+ },
+ {
+  "item": "i16",
+  "arch": "writer_A",
+  "job_id": "a09",
+  "title": "PDF question answering, deployed with CI",
+  "job": "Question answering over PDFs, packaged in containers with automated tests and deployment pipeline.",
+  "draft": "I am a Python developer with extensive experience building retrieval\u2011augmented question answering systems for large PDF collections. I built a legal\u2011doc RAG solution that indexed 40k contract PDFs using BM25 and dense vectors, achieving a Recall@5 increase from 0.61 to 0.84, and served the API with FastAPI (c1). I also created a full MLOps pipeline that Dockerised model serving, integrated MLflow tracking, and automated testing and deployment with GitHub Actions, reducing deployment time to 12 minutes (c10). Additionally, I designed an automated evaluation harness for LLM\u2011based chatbots, running regression suites on every release to ensure reliability (c6). These projects demonstrate my ability to deliver a PDF question\u2011answering service packaged in containers with robust CI/CD and automated tests, matching the requirements of this role."
+ },
+ {
+  "item": "i17",
+  "arch": "single",
+  "job_id": "a01",
+  "title": "Hybrid search chatbot over our contracts",
+  "job": "Need an assistant that answers questions over scanned and digital PDF contracts, with keyword plus semantic search and a reranking step.",
+  "draft": "Hi,\n\nI\u2019m experienced in building hybrid retrieval\u2011augmented chatbots for legal documents. In a recent project for a law firm, I created a system that combined BM25 keyword search with dense vector retrieval and used a cross\u2011encoder reranker to answer questions over 40k contract PDFs, achieving a Recall@5 of 0.84. The stack included Python, Qdrant, and FastAPI, and the solution was delivered in six weeks.\n\nI can apply the same approach\u2014BM25 + dense search fused via RRF and a BGE cross\u2011encoder reranker\u2014to your scanned and digital PDFs, ensuring accurate keyword and semantic results with a robust reranking step.\n\nLooking forward to discussing how we can tailor this solution to your contracts.\n\nBest regards."
+ },
+ {
+  "item": "i18",
+  "arch": "writer_B",
+  "job_id": "a06",
+  "title": "Automatically grade our chatbot answers",
+  "job": "We need a repeatable way to score chatbot replies and catch regressions before release, validated against human raters.",
+  "draft": "Automatically grade our chatbot answers is the exact deliverable you need, and I have built a similar evaluation harness that achieved a Cohen kappa of 0.71 against 150 human labels. My prior work includes a client review praising clear communication and solid chatbot evaluation, indicating reliability for repeatable scoring and regression detection. I can set up a calibrated LLM\u2011as\u2011judge rubric and integrate it into your release pipeline to catch regressions early. Would you like the scoring system to output confidence intervals for each regression alert?"
+ },
+ {
+  "item": "i19",
+  "arch": "writer_A",
+  "job_id": "b07",
+  "title": "Secure REST API for deliveries",
+  "job": "Authenticated API with documentation and throttling for our drivers app.",
+  "draft": "I am a backend developer with extensive experience building logistics REST APIs. I recently delivered a Logistics REST API using Express and Postgres that included JWT authentication, OpenAPI documentation, and rate limiting, exactly matching the secure, documented, and throttled API you need for your drivers app. The client praised the solution as fast and reliable, noting the thorough test coverage. My work aligns with your requirements for an authenticated, well\u2011documented, and performant delivery API."
+ },
+ {
+  "item": "i20",
+  "arch": "writer_B",
+  "job_id": "a08",
+  "title": "Transcribe and summarise recorded meetings",
+  "job": "Convert hour-long meeting recordings into text with who-said-what, then a short summary.",
+  "draft": "Convert hour-long meeting recordings into text with who-said-what, then a short summary. I have built a Whisper\u2011based transcription and diarization service that processes a full hour of audio in just six minutes on a single GPU, meeting your speed requirements. The system outputs speaker\u2011attributed transcripts and can be extended to generate concise summaries using the same pipeline. I can integrate this into your workflow via a FastAPI queue for reliable handling of multiple recordings. Could you clarify whether you need the summaries to follow a specific length or format?"
+ },
+ {
+  "item": "i21",
+  "arch": "single",
+  "job_id": "s02",
+  "title": "Why are users leaving?",
+  "job": "Analyse why new users churn and identify groups worth targeting.",
+  "draft": "I have delivered churn analysis projects, including a Tableau dashboard and pandas cohort analysis that identified a 14% onboarding drop\u2011off. My work helped clients understand user attrition and target high\u2011value segments. I can apply similar methods to analyze why new users are leaving and define actionable groups for targeting."
+ },
+ {
+  "item": "i22",
+  "arch": "graph",
+  "job_id": "b02",
+  "title": "Appointment booking with card payments",
+  "job": "Customers book slots online, pay by card and receive text reminders.",
+  "draft": "I see you need a reliable system where customers can book slots, pay by card, and get SMS reminders. I have built a clinic booking app in React that integrated Stripe for payments and sent SMS reminders, reducing no\u2011shows by 22%. In that project I also implemented idempotent Stripe webhooks to ensure zero duplicate charges over six months."
+ },
+ {
+  "item": "i23",
+  "arch": "writer_A",
+  "job_id": "a07",
+  "title": "Predict next month's demand",
+  "job": "Forecast sales for 200 products weekly; current method is a spreadsheet.",
+  "draft": "I am a data scientist with extensive experience in weekly demand forecasting for large product catalogs. I recently delivered a time\u2011series solution using Prophet and LightGBM for 300 SKUs, achieving a MAPE of 11% compared to the 19% error of the client\u2019s spreadsheet approach. This project involved building automated pipelines that ingest weekly sales data, model seasonality and trends, and generate forecasts ready for immediate business use. My work reduced forecasting error by nearly half and streamlined the process, enabling faster decision\u2011making for inventory planning. I can apply the same methodology to your 200\u2011product set, tailoring the model to your data characteristics and delivering reliable weekly forecasts within your budget."
+ },
+ {
+  "item": "i24",
+  "arch": "graph",
+  "job_id": "b01",
+  "title": "Admin dashboard with user roles",
+  "job": "A web admin where managers and staff see different data, backed by a SQL database, with automated tests.",
+  "draft": "I\u2019ve built a role\u2011based admin panel that matches the core of this project: a Next.js dashboard backed by Postgres with distinct manager and staff views and a full Playwright test suite. In a recent inventory dashboard for a retailer, I implemented role\u2011based access for 120 daily users and delivered a Playwright suite of 40 end\u2011to\u2011end tests, integrated into GitHub Actions, which cut regression escapes by two\u2011thirds. The stack aligns directly with your requirements for a SQL\u2011backed admin interface and automated testing, and I can bring that proven approach to your dashboard."
+ },
+ {
+  "item": "i25",
+  "arch": "graph",
+  "job_id": "a02",
+  "title": "Sentiment analysis for Urdu comments",
+  "job": "Classify customer comments written in Urdu as positive or negative, deployable on a small GPU.",
+  "draft": "I have built a sentiment classifier for Urdu social posts by fine\u2011tuning XLM\u2011R on 25 k labelled Urdu tweets, achieving a macro F1 of 0.88 and exporting the model to ONNX for single\u2011GPU serving. Clients have noted the quality of the Urdu NLP work and found the deployment guidance especially helpful. Additionally, I have set up a Docker\u2011based MLOps pipeline with MLflow tracking and GitHub Actions CI/CD, reducing deployment time to under 15 minutes on a modest GPU."
+ },
+ {
+  "item": "i26",
+  "arch": "writer_B",
+  "job_id": "a10",
+  "title": "Smarter helpdesk: routing plus suggested articles",
+  "job": "Route tickets to the right team using an LLM and recommend knowledge-base articles to customers.",
+  "draft": "Route tickets to the right team using an LLM and recommend knowledge-base articles to customers, as described in the project brief. I have built a zero\u2011shot and few\u2011shot LLM routing system that triaged inbound support emails into 12 queues and reduced first\u2011response time by 35%, using Postgres, Redis, and Celery workers. That experience aligns directly with the need to route tickets accurately and surface relevant articles. I would start with a pilot on a single queue to validate the model and integration before scaling to the full helpdesk. Could you share how many knowledge\u2011base articles are currently available and any tagging schema you use for them?"
+ },
+ {
+  "item": "i27",
+  "arch": "supervisor",
+  "job_id": "a02",
+  "title": "Sentiment analysis for Urdu comments",
+  "job": "Classify customer comments written in Urdu as positive or negative, deployable on a small GPU.",
+  "draft": "Hi,\n\nI can build a high\u2011accuracy Urdu sentiment classifier that runs on a single small GPU.\n\n**Deliverables**\n- Data pipeline: clean, tokenize, and label your Urdu comments.\n- Model: fine\u2011tuned multilingual transformer (e.g., XLM\u2011R) trained on a 25k\u2011sample Urdu set, achieving macro\u2011F1 \u2248 0.88 (see my Urdu sentiment case study).\n- Deployment: export to ONNX and wrap in a lightweight FastAPI service ready for a small GPU instance.\n- Testing: test harness and demo dataset for validation.\n- Documentation: step\u2011by\u2011step deployment guide and future fine\u2011tuning instructions.\n\n**Why I\u2019m a fit**\n- Proven experience with Urdu NLP (sentiment classifier case study).\n- Successful deployments on limited GPU resources (meeting transcription service case study).\n- Positive client feedback on deployment support.\n\n**Timeline & budget**\n- 2 weeks total: 1 week for data prep & training, 1 week for deployment & testing.\n- $700 covering all work and a 2\u2011week support window.\n\nLooking forward to discussing any specific requirements.\n\nBest regards."
+ },
+ {
+  "item": "i28",
+  "arch": "graph",
+  "job_id": "s01",
+  "title": "Central reporting database",
+  "job": "Combine data from several systems into one analytics warehouse with transformation models.",
+  "draft": "I have built a sales data warehouse that combined six disparate sources into a unified analytics platform using dbt and BigQuery, then orchestrated the pipelines with Airflow. The resulting reports ran eight times faster, demonstrating the kind of performance gains you\u2019re looking for in a central reporting database. My experience aligns directly with the need to merge multiple systems into a single, efficient warehouse and to create transformation models that support robust analytics."
+ },
+ {
+  "item": "i29",
+  "arch": "single",
+  "job_id": "s01",
+  "title": "Central reporting database",
+  "job": "Combine data from several systems into one analytics warehouse with transformation models.",
+  "draft": "I have built data warehouses that consolidate multiple source systems into a single analytics platform. In a recent project I designed a dbt\u2011based warehouse on BigQuery, integrating six different data sources and orchestrating the workflow with Airflow, which delivered reports eight times faster. I can apply the same approach\u2014robust ETL pipelines, transformation models, and reliable scheduling\u2014to create your central reporting database."
+ }
+]

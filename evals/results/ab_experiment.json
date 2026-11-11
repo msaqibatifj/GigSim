@@ -1,0 +1,440 @@
+{
+ "n_jobs": 30,
+ "mean_p_reply": {
+  "A_intro_first": 0.514,
+  "B_deliverable_first": 0.579
+ },
+ "sim_replies": {
+  "A_intro_first": 17,
+  "B_deliverable_first": 16
+ },
+ "mean_diff_B_minus_A": 0.065,
+ "permutation_p_value": 0.0033,
+ "words_mean": {
+  "A_intro_first": 77.8,
+  "B_deliverable_first": 92.5
+ },
+ "caveat": "GigSim client behaviour is a synthetic model; this demonstrates the experiment pipeline, not real-world effect.",
+ "rows": [
+  {
+   "job": "a01",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 141
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.558,
+    "replied": true,
+    "words": 99
+   }
+  },
+  {
+   "job": "a02",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.489,
+    "replied": true,
+    "words": 69
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 86
+   }
+  },
+  {
+   "job": "a03",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 76
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 83
+   }
+  },
+  {
+   "job": "a04",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": false,
+    "words": 83
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 75
+   }
+  },
+  {
+   "job": "a05",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.275,
+    "replied": true,
+    "words": 54
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 94
+   }
+  },
+  {
+   "job": "a06",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 92
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 88
+   }
+  },
+  {
+   "job": "a07",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.443,
+    "replied": false,
+    "words": 48
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 95
+   }
+  },
+  {
+   "job": "a08",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": false,
+    "words": 88
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 86
+   }
+  },
+  {
+   "job": "a09",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 123
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 95
+   }
+  },
+  {
+   "job": "a10",
+   "persona": "ayesha_ml",
+   "A_intro_first": {
+    "p_reply": 0.455,
+    "replied": false,
+    "words": 110
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.365,
+    "replied": true,
+    "words": 78
+   }
+  },
+  {
+   "job": "b01",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.539,
+    "replied": false,
+    "words": 73
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 108
+   }
+  },
+  {
+   "job": "b02",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 57
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 76
+   }
+  },
+  {
+   "job": "b03",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 71
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 72
+   }
+  },
+  {
+   "job": "b04",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 60
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 104
+   }
+  },
+  {
+   "job": "b05",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": false,
+    "words": 89
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 94
+   }
+  },
+  {
+   "job": "b06",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.425,
+    "replied": true,
+    "words": 55
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 79
+   }
+  },
+  {
+   "job": "b07",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 85
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 109
+   }
+  },
+  {
+   "job": "b08",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 81
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.475,
+    "replied": false,
+    "words": 92
+   }
+  },
+  {
+   "job": "b09",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.389,
+    "replied": true,
+    "words": 50
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.475,
+    "replied": false,
+    "words": 110
+   }
+  },
+  {
+   "job": "b10",
+   "persona": "bilal_web",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 61
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 105
+   }
+  },
+  {
+   "job": "s01",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.475,
+    "replied": false,
+    "words": 83
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.475,
+    "replied": false,
+    "words": 86
+   }
+  },
+  {
+   "job": "s02",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.25,
+    "replied": false,
+    "words": 63
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 118
+   }
+  },
+  {
+   "job": "s03",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 61
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 72
+   }
+  },
+  {
+   "job": "s04",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 112
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 86
+   }
+  },
+  {
+   "job": "s05",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 72
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 90
+   }
+  },
+  {
+   "job": "s06",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.598,
+    "replied": true,
+    "words": 89
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.475,
+    "replied": true,
+    "words": 111
+   }
+  },
+  {
+   "job": "s07",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 71
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 86
+   }
+  },
+  {
+   "job": "s08",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.375,
+    "replied": false,
+    "words": 65
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 107
+   }
+  },
+  {
+   "job": "s09",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 62
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": false,
+    "words": 88
+   }
+  },
+  {
+   "job": "s10",
+   "persona": "sara_data",
+   "A_intro_first": {
+    "p_reply": 0.505,
+    "replied": true,
+    "words": 91
+   },
+   "B_deliverable_first": {
+    "p_reply": 0.625,
+    "replied": true,
+    "words": 103
+   }
+  }
+ ]
+}

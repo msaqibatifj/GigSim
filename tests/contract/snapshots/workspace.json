@@ -1,0 +1,167 @@
+{
+ "create_email_draft": {
+  "ann": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "readOnlyHint": false
+  },
+  "in": {
+   "properties": {
+    "body": {
+     "maxLength": 5000,
+     "minLength": 1,
+     "title": "Body",
+     "type": "string"
+    },
+    "to_thread": {
+     "maxLength": 40,
+     "minLength": 1,
+     "title": "To Thread",
+     "type": "string"
+    }
+   },
+   "required": [
+    "to_thread",
+    "body"
+   ],
+   "title": "create_email_draftArguments",
+   "type": "object"
+  },
+  "out": {
+   "properties": {
+    "body": {
+     "title": "Body",
+     "type": "string"
+    },
+    "status": {
+     "title": "Status",
+     "type": "string"
+    },
+    "thread": {
+     "title": "Thread",
+     "type": "string"
+    }
+   },
+   "required": [
+    "thread",
+    "body",
+    "status"
+   ],
+   "title": "EmailDraft",
+   "type": "object"
+  }
+ },
+ "create_tentative_hold": {
+  "ann": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "readOnlyHint": false
+  },
+  "in": {
+   "properties": {
+    "start": {
+     "pattern": "^\\d{4}-\\d\\d-\\d\\dT",
+     "title": "Start",
+     "type": "string"
+    },
+    "title": {
+     "maxLength": 120,
+     "minLength": 1,
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "start",
+    "title"
+   ],
+   "title": "create_tentative_holdArguments",
+   "type": "object"
+  },
+  "out": {
+   "properties": {
+    "start": {
+     "title": "Start",
+     "type": "string"
+    },
+    "status": {
+     "title": "Status",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    }
+   },
+   "required": [
+    "start",
+    "title",
+    "status"
+   ],
+   "title": "Hold",
+   "type": "object"
+  }
+ },
+ "free_slots": {
+  "ann": {
+   "idempotentHint": true,
+   "readOnlyHint": true
+  },
+  "in": {
+   "properties": {
+    "days": {
+     "default": 3,
+     "maximum": 14,
+     "minimum": 1,
+     "title": "Days",
+     "type": "integer"
+    },
+    "minutes": {
+     "default": 30,
+     "maximum": 120,
+     "minimum": 15,
+     "title": "Minutes",
+     "type": "integer"
+    }
+   },
+   "title": "free_slotsArguments",
+   "type": "object"
+  },
+  "out": {
+   "$defs": {
+    "Slot": {
+     "properties": {
+      "end": {
+       "title": "End",
+       "type": "string"
+      },
+      "start": {
+       "title": "Start",
+       "type": "string"
+      }
+     },
+     "required": [
+      "start",
+      "end"
+     ],
+     "title": "Slot",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "result": {
+     "items": {
+      "$ref": "#/$defs/Slot"
+     },
+     "title": "Result",
+     "type": "array"
+    }
+   },
+   "required": [
+    "result"
+   ],
+   "title": "free_slotsOutput",
+   "type": "object"
+  }
+ }
+}

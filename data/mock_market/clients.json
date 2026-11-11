@@ -1,0 +1,366 @@
+[
+ {
+  "client_id": "c_a01",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a02",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a03",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a04",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a05",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a06",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a07",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a08",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a09",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a10",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a11",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_a12",
+  "total_spent_usd": 0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": []
+ },
+ {
+  "client_id": "c_a13",
+  "total_spent_usd": 250,
+  "hire_rate": 0.2,
+  "payment_verified": true,
+  "reviews": []
+ },
+ {
+  "client_id": "c_a14",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b01",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b02",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b03",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b04",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b05",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b06",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b07",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b08",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b09",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b10",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b11",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_b12",
+  "total_spent_usd": 0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": []
+ },
+ {
+  "client_id": "c_b13",
+  "total_spent_usd": 250,
+  "hire_rate": 0.2,
+  "payment_verified": true,
+  "reviews": []
+ },
+ {
+  "client_id": "c_b14",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s01",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s02",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s03",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s04",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s05",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s06",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s07",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s08",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s09",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s10",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ },
+ {
+  "client_id": "c_s11",
+  "total_spent_usd": 0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": []
+ },
+ {
+  "client_id": "c_s12",
+  "total_spent_usd": 250,
+  "hire_rate": 0.2,
+  "payment_verified": true,
+  "reviews": []
+ },
+ {
+  "client_id": "c_s13",
+  "total_spent_usd": 0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": []
+ },
+ {
+  "client_id": "c_s14",
+  "total_spent_usd": 9000,
+  "hire_rate": 0.75,
+  "payment_verified": true,
+  "reviews": [
+   "Clear brief, paid on time"
+  ]
+ }
+]

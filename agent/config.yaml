@@ -1,0 +1,61 @@
+profiles:
+  open:                       # required; deployed link must run on this
+    small:  {provider: groq, model: openai/gpt-oss-20b, reasoning_effort: low}
+    strong: {provider: groq, model: openai/gpt-oss-120b, reasoning_effort: low}
+    embed:  {model: BAAI/bge-small-en-v1.5}   # dev-size; bge-m3 / Qwen3-Embedding on a GPU host
+    rerank: {model: Xenova/ms-marco-MiniLM-L-6-v2}   # dev-size; bge-reranker-v2-m3 on a GPU host
+    fallback: {provider: groq, model: qwen/qwen3.8-27b}   # cheap nodes only (C7)
+  open_b:                     # second open configuration for the comparison (section 3)
+    small:  {provider: groq, model: qwen/qwen3.8-27b}
+    strong: {provider: groq, model: qwen/qwen3.8-27b}
+    embed:  {model: BAAI/bge-small-en-v1.5}
+    rerank: {model: Xenova/ms-marco-MiniLM-L-6-v2}
+    fallback: {provider: groq, model: openai/gpt-oss-20b}
+  paid:                       # optional
+    small:  {provider: anthropic, model: claude-haiku-5-5}
+    strong: {provider: anthropic, model: claude-sonnet-5-5}
+    embed:  {model: BAAI/bge-small-en-v1.5}   # dev-size; bge-m3 / Qwen3-Embedding on a GPU host
+    rerank: {model: Xenova/ms-marco-MiniLM-L-6-v2}   # dev-size; bge-reranker-v2-m3 on a GPU host
+  offline:                    # deterministic rule-based stand-in: tests/CI/dev only, NOT a result profile
+    small:  {provider: fake, model: rules}
+    strong: {provider: fake, model: rules}
+    embed:  {model: BAAI/bge-small-en-v1.5}   # dev-size; bge-m3 / Qwen3-Embedding on a GPU host
+    rerank: {model: Xenova/ms-marco-MiniLM-L-6-v2}   # dev-size; bge-reranker-v2-m3 on a GPU host
+nodes:                        # model is config, never code
+  scout: small
+  analyst: small
+  risk: small
+  matcher: small
+  pricing: small
+  verifier: small
+  writer: strong
+  judge: strong                # eval only
+  paragraph: strong            # studio: regenerate one paragraph
+  critic: strong
+  compliance: small
+  liaison_intent: small
+  liaison: strong
+# USD per 1M tokens [input, output]. Source: provider pricing pages; re-check before reporting cost.
+prices_usd_per_mtok:
+  openai/gpt-oss-20b: [0.075, 0.30]
+  openai/gpt-oss-120b: [0.15, 0.60]
+  qwen/qwen3.8-27b: [0.29, 0.59]       # unverified: confirm on the provider page before reporting
+  claude-haiku-5-5: [1.0, 5.0]
+  claude-sonnet-5-5: [3.0, 15.0]
+limits: {scout_batch: 10, critic_max_loops: 2, max_steps: 40, max_tokens: 60000}
+budgets: {p95_latency_s_per_job: 60, usd_per_job: 0.02, usd_per_proposal: 0.10}
+# fit = share of requirements with evidence above rag.min_support_score; with that hard floor, 0.2 means "at least a fifth strongly supported".
+# Tuned on the dev set (was 0.5/0.3, which over-skipped a02 and s01): re-check on the hidden run.
+thresholds: {bid_min_fit: 0.2, watch_min_fit: 0.1, max_risk_flags: 0, price_floor_margin: 0.85, assumed_hours: 10}
+policy_file: data/policy_pack/policy.yaml                    # change-request rules/costs go here, not in code
+rag: {min_support_score: {v3_rerank: -8.0},   # evidence below this cross-encoder score is not support (low-fit jobs score -10.3..-10.9, real fits > -5.8)
+     variant: v3_rerank, corrective_threshold: 0.0, chunk_words: 45, chunk_overlap: 10, candidates: 20}
+upwork:                       # live adapter: port method -> Upwork MCP tool name (edit here if upstream renames)
+  tools: {search_jobs: search_jobs, get_job: get_job, get_client_history: get_client, get_connects_balance: get_connects,
+          list_threads: list_rooms, list_messages: list_messages, create_proposal_draft: create_proposal_draft,
+          create_message_draft: create_message_draft}
+  min_scout_hours: 6          # conservative schedule, see docs/RUNBOOK.md
+third_party_mcp:              # servers we did not write (A5); trust rationale in docs/TOOLS.md
+  upwork: {transport: streamable_http, url: "https://mcp.upwork.com/mcp", auth: "per-user OAuth 2.1"}
+  github: {transport: stdio, command: "npx", args: ["-y", "@modelcontextprotocol/server-github@2025.4.8"], env_token: GITHUB_TOKEN}
+ci_thresholds: {min_bid_f1: 0.8, max_unsupported_after: 0.25, min_scam_recall: 0.9}   # eval.yml fails the PR past these

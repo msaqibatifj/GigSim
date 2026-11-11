@@ -1,0 +1,17 @@
+{
+  "name": "Bilal Ahmed",
+  "title": "Full-stack web developer",
+  "rate": 35,
+  "floor": 22,
+  "skills": [
+    "typescript",
+    "react",
+    "nextjs",
+    "node",
+    "postgres",
+    "tailwind",
+    "playwright",
+    "stripe"
+  ],
+  "category": "web"
+}

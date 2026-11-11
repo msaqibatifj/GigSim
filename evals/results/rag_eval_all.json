@@ -1,0 +1,4502 @@
+{
+ "llm_profile": "open",
+ "n_jobs": 30,
+ "note": "decomposition uses the matcher node; under MODEL_PROFILE=offline that is a rule-based splitter, not an LLM",
+ "pool": "all",
+ "variants": {
+  "v0_naive": {
+   "overall": {
+    "recall5": 0.933,
+    "mrr": 0.9,
+    "ndcg10": 0.885
+   },
+   "by_persona": {
+    "bilal_web": {
+     "recall5": 0.9,
+     "mrr": 0.9,
+     "ndcg10": 0.887
+    },
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.911
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.9,
+     "ndcg10": 0.856
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.864,
+     "ndcg10": 0.899
+    },
+    "multi_evidence": {
+     "recall5": 0.75,
+     "mrr": 1.0,
+     "ndcg10": 0.844
+    }
+   },
+   "latency_s": {
+    "p50": 0.866,
+    "p95": 0.991
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/p1",
+      "ayesha_ml/c1",
+      "ayesha_ml/c6",
+      "ayesha_ml/p2",
+      "ayesha_ml/r2",
+      "ayesha_ml/c5",
+      "sara_data/p1",
+      "bilal_web/c9",
+      "bilal_web/c7",
+      "sara_data/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c2",
+      "ayesha_ml/r3",
+      "ayesha_ml/c6",
+      "sara_data/c10",
+      "ayesha_ml/c1",
+      "sara_data/c5",
+      "ayesha_ml/p1",
+      "ayesha_ml/c5",
+      "ayesha_ml/p2",
+      "ayesha_ml/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c3",
+      "bilal_web/c7",
+      "bilal_web/p1",
+      "sara_data/p4",
+      "ayesha_ml/p3",
+      "sara_data/p1",
+      "sara_data/c3",
+      "bilal_web/c1",
+      "sara_data/c8",
+      "ayesha_ml/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c4",
+      "ayesha_ml/c1",
+      "bilal_web/c10",
+      "sara_data/c7",
+      "sara_data/c2",
+      "sara_data/c10",
+      "bilal_web/p1",
+      "bilal_web/p3",
+      "sara_data/p4",
+      "sara_data/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c5",
+      "ayesha_ml/p1",
+      "ayesha_ml/p4",
+      "bilal_web/c1",
+      "bilal_web/r3",
+      "bilal_web/p1",
+      "sara_data/p4",
+      "sara_data/p2",
+      "bilal_web/c3",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c6",
+      "ayesha_ml/p1",
+      "ayesha_ml/r2",
+      "bilal_web/c9",
+      "ayesha_ml/c1",
+      "ayesha_ml/c5",
+      "ayesha_ml/c2",
+      "bilal_web/c5",
+      "sara_data/c5",
+      "ayesha_ml/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/p4",
+      "ayesha_ml/c7",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "bilal_web/c10",
+      "ayesha_ml/c5",
+      "sara_data/c1",
+      "sara_data/c5",
+      "ayesha_ml/p1",
+      "sara_data/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c8",
+      "ayesha_ml/c9",
+      "ayesha_ml/c1",
+      "sara_data/p4",
+      "ayesha_ml/c4",
+      "sara_data/p1",
+      "ayesha_ml/c6",
+      "bilal_web/c10",
+      "sara_data/c1",
+      "sara_data/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/c10",
+      "ayesha_ml/r3",
+      "sara_data/p1",
+      "ayesha_ml/p1",
+      "ayesha_ml/c6",
+      "sara_data/r3",
+      "bilal_web/c9",
+      "bilal_web/c7",
+      "ayesha_ml/c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "sara_data/p1",
+      "sara_data/c10",
+      "ayesha_ml/c5",
+      "ayesha_ml/c6",
+      "bilal_web/c3",
+      "bilal_web/p1",
+      "ayesha_ml/p1",
+      "bilal_web/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/r1",
+      "bilal_web/p1",
+      "sara_data/c2",
+      "sara_data/p3",
+      "ayesha_ml/c6",
+      "sara_data/c7",
+      "bilal_web/p4",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c2",
+      "ayesha_ml/p3",
+      "sara_data/r3",
+      "bilal_web/p3",
+      "bilal_web/c6",
+      "bilal_web/c7",
+      "ayesha_ml/c3",
+      "bilal_web/r2",
+      "ayesha_ml/p4",
+      "ayesha_ml/c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c3",
+      "bilal_web/p2",
+      "sara_data/p4",
+      "bilal_web/r3",
+      "sara_data/c8",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "sara_data/c4",
+      "bilal_web/c9",
+      "sara_data/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c4",
+      "bilal_web/p4",
+      "bilal_web/c10",
+      "bilal_web/p1",
+      "ayesha_ml/c5",
+      "sara_data/p3",
+      "bilal_web/c8",
+      "bilal_web/c1",
+      "ayesha_ml/p1",
+      "ayesha_ml/p2"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c5",
+      "bilal_web/c1",
+      "ayesha_ml/p1",
+      "ayesha_ml/c6",
+      "ayesha_ml/c5",
+      "ayesha_ml/p4",
+      "bilal_web/p1",
+      "ayesha_ml/r2",
+      "sara_data/c7",
+      "bilal_web/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p3",
+      "bilal_web/c6",
+      "bilal_web/c2",
+      "ayesha_ml/p3",
+      "bilal_web/p2",
+      "ayesha_ml/p4",
+      "ayesha_ml/c3",
+      "sara_data/r3",
+      "bilal_web/c7",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c7",
+      "sara_data/c3",
+      "sara_data/r3",
+      "bilal_web/p5",
+      "ayesha_ml/p3",
+      "sara_data/c7",
+      "ayesha_ml/c8",
+      "ayesha_ml/c3",
+      "bilal_web/c5",
+      "ayesha_ml/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "bilal_web/p2",
+      "bilal_web/r1",
+      "bilal_web/c10",
+      "bilal_web/c4",
+      "ayesha_ml/c4",
+      "sara_data/p3",
+      "sara_data/r2",
+      "ayesha_ml/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "bilal_web/c10",
+      "sara_data/c5",
+      "ayesha_ml/c5",
+      "sara_data/p2",
+      "bilal_web/r2",
+      "sara_data/r3",
+      "bilal_web/p1",
+      "bilal_web/c1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.7903864795495061
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/p1",
+      "bilal_web/c4",
+      "bilal_web/c1",
+      "sara_data/c7",
+      "sara_data/p3",
+      "ayesha_ml/p4",
+      "sara_data/c3",
+      "bilal_web/c7",
+      "sara_data/c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c1",
+      "bilal_web/c10",
+      "sara_data/p1",
+      "sara_data/c8",
+      "sara_data/c7",
+      "bilal_web/p1",
+      "sara_data/p4",
+      "ayesha_ml/c4",
+      "sara_data/c2",
+      "bilal_web/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c2",
+      "ayesha_ml/c5",
+      "bilal_web/p1",
+      "bilal_web/c3",
+      "bilal_web/c1",
+      "sara_data/c10",
+      "ayesha_ml/c6",
+      "bilal_web/c9",
+      "sara_data/c4",
+      "sara_data/p1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "bilal_web/c7",
+      "bilal_web/p1",
+      "bilal_web/c1",
+      "sara_data/p4",
+      "bilal_web/c5",
+      "sara_data/c8",
+      "sara_data/p1",
+      "bilal_web/c10",
+      "ayesha_ml/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c4",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "sara_data/p4",
+      "sara_data/c8",
+      "bilal_web/c1",
+      "sara_data/c9",
+      "bilal_web/c9",
+      "bilal_web/c10",
+      "ayesha_ml/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/r2",
+      "sara_data/c5",
+      "ayesha_ml/p4",
+      "ayesha_ml/c5",
+      "bilal_web/c9",
+      "bilal_web/r3",
+      "sara_data/c2",
+      "ayesha_ml/c6",
+      "sara_data/p1",
+      "bilal_web/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c6",
+      "sara_data/r3",
+      "sara_data/c8",
+      "bilal_web/r2",
+      "sara_data/p4",
+      "bilal_web/c10",
+      "sara_data/c5",
+      "sara_data/p5",
+      "ayesha_ml/c6",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c7",
+      "sara_data/p3",
+      "bilal_web/r1",
+      "bilal_web/c10",
+      "sara_data/c2",
+      "sara_data/r2",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "ayesha_ml/c7",
+      "bilal_web/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/p4",
+      "sara_data/c8",
+      "bilal_web/p1",
+      "bilal_web/c1",
+      "sara_data/p1",
+      "sara_data/c1",
+      "ayesha_ml/c10",
+      "sara_data/c3",
+      "ayesha_ml/c3",
+      "ayesha_ml/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c9",
+      "sara_data/p1",
+      "sara_data/c1",
+      "ayesha_ml/c7",
+      "sara_data/p4",
+      "sara_data/c8",
+      "ayesha_ml/c10",
+      "ayesha_ml/p4",
+      "sara_data/c4",
+      "sara_data/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c10",
+      "sara_data/c2",
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "bilal_web/r1",
+      "sara_data/p3",
+      "ayesha_ml/c6",
+      "ayesha_ml/p1",
+      "ayesha_ml/c5"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.6131471927654584
+    }
+   ]
+  },
+  "v1_decompose": {
+   "overall": {
+    "recall5": 0.7,
+    "mrr": 0.552,
+    "ndcg10": 0.611
+   },
+   "by_persona": {
+    "bilal_web": {
+     "recall5": 0.8,
+     "mrr": 0.65,
+     "ndcg10": 0.676
+    },
+    "ayesha_ml": {
+     "recall5": 0.7,
+     "mrr": 0.508,
+     "ndcg10": 0.59
+    },
+    "sara_data": {
+     "recall5": 0.6,
+     "mrr": 0.499,
+     "ndcg10": 0.568
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 0.818,
+     "mrr": 0.537,
+     "ndcg10": 0.639
+    },
+    "multi_evidence": {
+     "recall5": 0.375,
+     "mrr": 0.594,
+     "ndcg10": 0.534
+    }
+   },
+   "latency_s": {
+    "p50": 4.714,
+    "p95": 7.545
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/p1",
+      "sara_data/p4",
+      "bilal_web/p4",
+      "ayesha_ml/c5",
+      "ayesha_ml/c6",
+      "sara_data/p1",
+      "ayesha_ml/r3",
+      "sara_data/p2",
+      "sara_data/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c9",
+      "ayesha_ml/c2",
+      "ayesha_ml/c1",
+      "sara_data/r3",
+      "ayesha_ml/p2",
+      "ayesha_ml/c3",
+      "sara_data/p4",
+      "ayesha_ml/c6",
+      "sara_data/c5",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p1",
+      "ayesha_ml/c3",
+      "sara_data/p1",
+      "bilal_web/c10",
+      "bilal_web/c7",
+      "ayesha_ml/p1",
+      "sara_data/c4",
+      "ayesha_ml/c5",
+      "ayesha_ml/c10",
+      "bilal_web/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c4",
+      "ayesha_ml/c1",
+      "bilal_web/c10",
+      "bilal_web/p1",
+      "sara_data/p2",
+      "sara_data/c2",
+      "bilal_web/p4",
+      "ayesha_ml/p1",
+      "sara_data/c7",
+      "ayesha_ml/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/p4",
+      "sara_data/p4",
+      "ayesha_ml/c5",
+      "bilal_web/r3",
+      "sara_data/c8",
+      "bilal_web/c1",
+      "ayesha_ml/p1",
+      "ayesha_ml/c6",
+      "bilal_web/c10",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c1",
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "ayesha_ml/c5",
+      "ayesha_ml/c2",
+      "sara_data/r3",
+      "sara_data/c10",
+      "sara_data/c5",
+      "bilal_web/c10",
+      "bilal_web/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "sara_data/p1",
+      "sara_data/p4",
+      "sara_data/c8",
+      "bilal_web/p1",
+      "ayesha_ml/c7",
+      "ayesha_ml/p4",
+      "ayesha_ml/c5",
+      "ayesha_ml/c1",
+      "sara_data/c10"
+     ],
+     "recall5": 0.0,
+     "mrr": 0.16666666666666666,
+     "ndcg10": 0.3562071871080222
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c8",
+      "ayesha_ml/c1",
+      "sara_data/p1",
+      "ayesha_ml/p1",
+      "ayesha_ml/c6",
+      "ayesha_ml/c9",
+      "bilal_web/c9",
+      "ayesha_ml/c4",
+      "ayesha_ml/r3",
+      "ayesha_ml/p3"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/r3",
+      "ayesha_ml/c8",
+      "sara_data/p1",
+      "ayesha_ml/c10",
+      "bilal_web/c9",
+      "ayesha_ml/c5",
+      "bilal_web/p1",
+      "bilal_web/c10",
+      "ayesha_ml/c1",
+      "ayesha_ml/c4"
+     ],
+     "recall5": 0.5,
+     "mrr": 0.25,
+     "ndcg10": 0.448643819352159
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/p1",
+      "bilal_web/p1",
+      "ayesha_ml/p3",
+      "bilal_web/c1",
+      "sara_data/r3",
+      "bilal_web/c7",
+      "ayesha_ml/p1",
+      "ayesha_ml/p4",
+      "ayesha_ml/c6",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 0.0,
+     "mrr": 0.0,
+     "ndcg10": 0.0
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "sara_data/c7",
+      "ayesha_ml/c6",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "ayesha_ml/c5",
+      "sara_data/c2",
+      "bilal_web/p4",
+      "bilal_web/r1",
+      "ayesha_ml/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.25,
+     "ndcg10": 0.43067655807339306
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c2",
+      "ayesha_ml/p4",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "ayesha_ml/c8",
+      "ayesha_ml/c5",
+      "ayesha_ml/r3",
+      "sara_data/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/p2",
+      "bilal_web/p2",
+      "bilal_web/r3",
+      "bilal_web/c3",
+      "ayesha_ml/c1",
+      "sara_data/p1",
+      "sara_data/c8",
+      "bilal_web/p4",
+      "bilal_web/c10",
+      "bilal_web/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.25,
+     "ndcg10": 0.43067655807339306
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c4",
+      "bilal_web/c9",
+      "bilal_web/p4",
+      "ayesha_ml/c4",
+      "ayesha_ml/c5",
+      "bilal_web/c8",
+      "ayesha_ml/c1",
+      "ayesha_ml/p1",
+      "bilal_web/p2",
+      "bilal_web/c10"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c5",
+      "bilal_web/c1",
+      "sara_data/r3",
+      "sara_data/c7",
+      "ayesha_ml/p1",
+      "bilal_web/r2",
+      "bilal_web/p1",
+      "bilal_web/r3",
+      "ayesha_ml/c6",
+      "ayesha_ml/p2"
+     ],
+     "recall5": 0.0,
+     "mrr": 0.0,
+     "ndcg10": 0.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p3",
+      "bilal_web/c6",
+      "sara_data/r3",
+      "bilal_web/c9",
+      "bilal_web/c7",
+      "sara_data/p1",
+      "sara_data/p2",
+      "bilal_web/p2",
+      "ayesha_ml/p3",
+      "bilal_web/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c7",
+      "ayesha_ml/c8",
+      "sara_data/r3",
+      "sara_data/c3",
+      "bilal_web/c9",
+      "bilal_web/p4",
+      "bilal_web/c4",
+      "sara_data/p1",
+      "ayesha_ml/c1",
+      "ayesha_ml/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p2",
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "bilal_web/c9",
+      "bilal_web/c10",
+      "ayesha_ml/c4",
+      "ayesha_ml/c5",
+      "sara_data/c8",
+      "bilal_web/r3",
+      "ayesha_ml/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c9",
+      "bilal_web/c10",
+      "sara_data/p2",
+      "bilal_web/r2",
+      "sara_data/p1",
+      "sara_data/r3",
+      "ayesha_ml/p2",
+      "bilal_web/c1",
+      "ayesha_ml/c6",
+      "sara_data/c5"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8065735963827293
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/p1",
+      "bilal_web/c4",
+      "ayesha_ml/c4",
+      "bilal_web/c9",
+      "sara_data/p1",
+      "ayesha_ml/c5",
+      "sara_data/p3",
+      "sara_data/c7",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "sara_data/p1",
+      "bilal_web/p1",
+      "ayesha_ml/c4",
+      "sara_data/c3",
+      "sara_data/c1",
+      "ayesha_ml/c6",
+      "bilal_web/c1",
+      "sara_data/p4",
+      "sara_data/c8"
+     ],
+     "recall5": 0.0,
+     "mrr": 0.16666666666666666,
+     "ndcg10": 0.3562071871080222
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/p4",
+      "ayesha_ml/c7",
+      "sara_data/c2",
+      "sara_data/p1",
+      "ayesha_ml/c5",
+      "sara_data/p4",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "bilal_web/c10",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 0.5,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.3065735963827292
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "bilal_web/c7",
+      "sara_data/p1",
+      "ayesha_ml/c3",
+      "bilal_web/p1",
+      "bilal_web/c5",
+      "bilal_web/c10",
+      "sara_data/r3",
+      "bilal_web/c1",
+      "bilal_web/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/r3",
+      "bilal_web/c9",
+      "sara_data/p1",
+      "bilal_web/p2",
+      "sara_data/c4",
+      "ayesha_ml/c10",
+      "bilal_web/c10",
+      "bilal_web/r2",
+      "bilal_web/p1",
+      "sara_data/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.2,
+     "ndcg10": 0.38685280723454163
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c6",
+      "sara_data/c5",
+      "sara_data/c2",
+      "sara_data/c10",
+      "bilal_web/c10",
+      "sara_data/p1",
+      "bilal_web/c9",
+      "ayesha_ml/c1",
+      "sara_data/p4",
+      "ayesha_ml/p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c6",
+      "bilal_web/r2",
+      "sara_data/r3",
+      "bilal_web/c10",
+      "sara_data/c8",
+      "sara_data/p4",
+      "sara_data/p1",
+      "sara_data/c4",
+      "ayesha_ml/c6",
+      "sara_data/c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c7",
+      "sara_data/p3",
+      "ayesha_ml/c5",
+      "bilal_web/p1",
+      "bilal_web/c1",
+      "sara_data/c2",
+      "sara_data/r3",
+      "bilal_web/c10",
+      "bilal_web/r3",
+      "sara_data/c8"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/p4",
+      "sara_data/c8",
+      "sara_data/p1",
+      "bilal_web/p1",
+      "ayesha_ml/c1",
+      "bilal_web/c1",
+      "ayesha_ml/c5",
+      "bilal_web/c10",
+      "bilal_web/r3",
+      "sara_data/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/p1",
+      "sara_data/p4",
+      "sara_data/c8",
+      "ayesha_ml/c8",
+      "bilal_web/c10",
+      "sara_data/c5",
+      "sara_data/c4",
+      "sara_data/c9",
+      "ayesha_ml/c7",
+      "sara_data/c6"
+     ],
+     "recall5": 0.0,
+     "mrr": 0.125,
+     "ndcg10": 0.31546487678572877
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c10",
+      "sara_data/c2",
+      "ayesha_ml/c6",
+      "bilal_web/p1",
+      "bilal_web/r1",
+      "sara_data/c10",
+      "bilal_web/c1",
+      "ayesha_ml/c5",
+      "ayesha_ml/c1",
+      "ayesha_ml/p1"
+     ],
+     "recall5": 0.0,
+     "mrr": 0.16666666666666666,
+     "ndcg10": 0.21840743681816419
+    }
+   ]
+  },
+  "v2_hybrid": {
+   "overall": {
+    "recall5": 0.933,
+    "mrr": 0.872,
+    "ndcg10": 0.884
+   },
+   "by_persona": {
+    "bilal_web": {
+     "recall5": 0.95,
+     "mrr": 0.85,
+     "ndcg10": 0.879
+    },
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.914
+    },
+    "sara_data": {
+     "recall5": 0.85,
+     "mrr": 0.867,
+     "ndcg10": 0.86
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 0.955,
+     "mrr": 0.848,
+     "ndcg10": 0.887
+    },
+    "multi_evidence": {
+     "recall5": 0.875,
+     "mrr": 0.938,
+     "ndcg10": 0.877
+    }
+   },
+   "latency_s": {
+    "p50": 0.509,
+    "p95": 0.668
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/p1",
+      "ayesha_ml/c1",
+      "sara_data/p1",
+      "ayesha_ml/c5",
+      "ayesha_ml/p2",
+      "ayesha_ml/c6",
+      "ayesha_ml/r1",
+      "ayesha_ml/r2",
+      "ayesha_ml/c4",
+      "bilal_web/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c2",
+      "ayesha_ml/r3",
+      "ayesha_ml/c6",
+      "sara_data/c10",
+      "sara_data/c5",
+      "ayesha_ml/c8",
+      "ayesha_ml/p1",
+      "ayesha_ml/c5",
+      "ayesha_ml/c1",
+      "ayesha_ml/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c3",
+      "bilal_web/p1",
+      "bilal_web/c7",
+      "sara_data/c3",
+      "sara_data/p4",
+      "bilal_web/c10",
+      "sara_data/c8",
+      "ayesha_ml/p3",
+      "ayesha_ml/c5",
+      "bilal_web/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c4",
+      "ayesha_ml/c1",
+      "sara_data/c3",
+      "bilal_web/c10",
+      "sara_data/c2",
+      "sara_data/c1",
+      "sara_data/c10",
+      "sara_data/c8",
+      "sara_data/p5",
+      "sara_data/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c5",
+      "ayesha_ml/p1",
+      "bilal_web/c1",
+      "ayesha_ml/c1",
+      "bilal_web/c10",
+      "bilal_web/p1",
+      "sara_data/p4",
+      "bilal_web/c3",
+      "ayesha_ml/p4",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c6",
+      "ayesha_ml/p1",
+      "ayesha_ml/r2",
+      "ayesha_ml/p2",
+      "ayesha_ml/c1",
+      "bilal_web/c9",
+      "bilal_web/r3",
+      "bilal_web/r1",
+      "ayesha_ml/c5",
+      "sara_data/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/p4",
+      "ayesha_ml/c7",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "bilal_web/c10",
+      "sara_data/c1",
+      "ayesha_ml/c5",
+      "ayesha_ml/p1",
+      "sara_data/c7",
+      "sara_data/c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c8",
+      "ayesha_ml/c9",
+      "sara_data/c3",
+      "ayesha_ml/c1",
+      "sara_data/c1",
+      "bilal_web/c10",
+      "ayesha_ml/c10",
+      "bilal_web/c9",
+      "sara_data/p4",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/c10",
+      "sara_data/p1",
+      "ayesha_ml/r3",
+      "ayesha_ml/c6",
+      "bilal_web/r2",
+      "ayesha_ml/c5",
+      "ayesha_ml/c8",
+      "bilal_web/c1",
+      "bilal_web/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "bilal_web/p1",
+      "ayesha_ml/c5",
+      "bilal_web/c3",
+      "sara_data/p1",
+      "ayesha_ml/c1",
+      "sara_data/p4",
+      "ayesha_ml/c6",
+      "bilal_web/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/r1",
+      "bilal_web/p1",
+      "sara_data/c2",
+      "sara_data/c8",
+      "sara_data/c7",
+      "sara_data/p3",
+      "sara_data/c1",
+      "sara_data/p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c2",
+      "bilal_web/p3",
+      "ayesha_ml/p3",
+      "bilal_web/c7",
+      "ayesha_ml/c8",
+      "bilal_web/r2",
+      "sara_data/c2",
+      "ayesha_ml/c5",
+      "sara_data/r3",
+      "sara_data/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c3",
+      "bilal_web/r3",
+      "bilal_web/p2",
+      "sara_data/p4",
+      "sara_data/p2",
+      "sara_data/c8",
+      "sara_data/p1",
+      "ayesha_ml/c1",
+      "bilal_web/p1",
+      "sara_data/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c4",
+      "bilal_web/p4",
+      "bilal_web/c10",
+      "bilal_web/p1",
+      "bilal_web/p5",
+      "bilal_web/c8",
+      "sara_data/c3",
+      "bilal_web/c1",
+      "sara_data/c2",
+      "bilal_web/r1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c5",
+      "bilal_web/c1",
+      "ayesha_ml/c5",
+      "ayesha_ml/p1",
+      "bilal_web/c10",
+      "bilal_web/r3",
+      "ayesha_ml/c7",
+      "ayesha_ml/p4",
+      "bilal_web/c2",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p3",
+      "bilal_web/c6",
+      "bilal_web/c2",
+      "bilal_web/p2",
+      "ayesha_ml/p1",
+      "bilal_web/c7",
+      "sara_data/c5",
+      "sara_data/p1",
+      "sara_data/c8",
+      "sara_data/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c7",
+      "sara_data/c3",
+      "bilal_web/p5",
+      "bilal_web/c2",
+      "bilal_web/c1",
+      "sara_data/p1",
+      "ayesha_ml/c4",
+      "sara_data/r3",
+      "ayesha_ml/p3",
+      "bilal_web/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "bilal_web/p2",
+      "bilal_web/c10",
+      "bilal_web/r1",
+      "ayesha_ml/c5",
+      "sara_data/r2",
+      "bilal_web/r3",
+      "sara_data/c8",
+      "bilal_web/c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c6",
+      "bilal_web/c9",
+      "bilal_web/c1",
+      "bilal_web/r2",
+      "sara_data/r3",
+      "ayesha_ml/c10",
+      "sara_data/c2",
+      "sara_data/c8",
+      "bilal_web/c10",
+      "sara_data/p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6934264036172708
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "sara_data/c7",
+      "bilal_web/c4",
+      "bilal_web/r1",
+      "ayesha_ml/p4",
+      "bilal_web/c1",
+      "sara_data/c1",
+      "sara_data/p3",
+      "bilal_web/c7",
+      "ayesha_ml/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c1",
+      "bilal_web/c10",
+      "sara_data/c7",
+      "sara_data/p1",
+      "ayesha_ml/c4",
+      "sara_data/c6",
+      "sara_data/p5",
+      "sara_data/c3",
+      "ayesha_ml/c10",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c2",
+      "bilal_web/c1",
+      "sara_data/c10",
+      "bilal_web/r1",
+      "bilal_web/c10",
+      "sara_data/c4",
+      "ayesha_ml/p2",
+      "bilal_web/c2",
+      "sara_data/c8",
+      "ayesha_ml/c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "bilal_web/c7",
+      "bilal_web/c5",
+      "ayesha_ml/c3",
+      "sara_data/p5",
+      "bilal_web/p1",
+      "sara_data/p4",
+      "sara_data/c8",
+      "sara_data/c6",
+      "bilal_web/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c4",
+      "sara_data/c3",
+      "sara_data/c8",
+      "bilal_web/c1",
+      "sara_data/p3",
+      "ayesha_ml/c3",
+      "bilal_web/p1",
+      "ayesha_ml/c6",
+      "sara_data/p1",
+      "sara_data/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/r2",
+      "bilal_web/r3",
+      "ayesha_ml/c5",
+      "ayesha_ml/p4",
+      "sara_data/c2",
+      "sara_data/c5",
+      "ayesha_ml/r2",
+      "bilal_web/r1",
+      "ayesha_ml/r1",
+      "bilal_web/c9"
+     ],
+     "recall5": 0.0,
+     "mrr": 0.16666666666666666,
+     "ndcg10": 0.3562071871080222
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c6",
+      "sara_data/p4",
+      "sara_data/r3",
+      "sara_data/c1",
+      "sara_data/p5",
+      "ayesha_ml/c6",
+      "sara_data/r2",
+      "sara_data/p1",
+      "sara_data/c4",
+      "ayesha_ml/c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c7",
+      "sara_data/p3",
+      "bilal_web/r1",
+      "sara_data/c2",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "bilal_web/p4",
+      "ayesha_ml/p4",
+      "bilal_web/c8",
+      "bilal_web/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/p4",
+      "sara_data/c8",
+      "bilal_web/c1",
+      "ayesha_ml/c8",
+      "bilal_web/p1",
+      "ayesha_ml/c10",
+      "bilal_web/r3",
+      "sara_data/c3",
+      "bilal_web/r2",
+      "bilal_web/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c9",
+      "sara_data/c1",
+      "sara_data/c6",
+      "ayesha_ml/p4",
+      "sara_data/p4",
+      "ayesha_ml/c8",
+      "sara_data/p1",
+      "sara_data/p5",
+      "bilal_web/r3",
+      "ayesha_ml/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c10",
+      "sara_data/c2",
+      "bilal_web/p1",
+      "bilal_web/c1",
+      "bilal_web/r1",
+      "sara_data/p3",
+      "sara_data/c7",
+      "ayesha_ml/p1",
+      "ayesha_ml/c6",
+      "sara_data/p4"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    }
+   ]
+  },
+  "v3_rerank": {
+   "overall": {
+    "recall5": 0.95,
+    "mrr": 0.911,
+    "ndcg10": 0.912
+   },
+   "by_persona": {
+    "bilal_web": {
+     "recall5": 0.95,
+     "mrr": 0.833,
+     "ndcg10": 0.851
+    },
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.988
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.9,
+     "ndcg10": 0.897
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.902,
+     "ndcg10": 0.927
+    },
+    "multi_evidence": {
+     "recall5": 0.812,
+     "mrr": 0.938,
+     "ndcg10": 0.871
+    }
+   },
+   "latency_s": {
+    "p50": 1.513,
+    "p95": 1.835
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/p1",
+      "ayesha_ml/r1",
+      "ayesha_ml/r2",
+      "ayesha_ml/c6",
+      "ayesha_ml/c4",
+      "sara_data/r3",
+      "sara_data/r1",
+      "ayesha_ml/p2",
+      "bilal_web/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c2",
+      "ayesha_ml/r3",
+      "ayesha_ml/c8",
+      "sara_data/r2",
+      "sara_data/c5",
+      "sara_data/c10",
+      "ayesha_ml/c6",
+      "bilal_web/c10",
+      "ayesha_ml/p2",
+      "ayesha_ml/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c3",
+      "bilal_web/c7",
+      "sara_data/c8",
+      "bilal_web/p1",
+      "ayesha_ml/p3",
+      "sara_data/c3",
+      "ayesha_ml/c6",
+      "bilal_web/c1",
+      "sara_data/p4",
+      "sara_data/c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c4",
+      "sara_data/p5",
+      "sara_data/c3",
+      "bilal_web/c10",
+      "sara_data/c8",
+      "sara_data/c1",
+      "sara_data/p4",
+      "sara_data/c6",
+      "bilal_web/p3",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c5",
+      "bilal_web/r3",
+      "bilal_web/c1",
+      "bilal_web/c10",
+      "ayesha_ml/p4",
+      "sara_data/p2",
+      "bilal_web/p2",
+      "bilal_web/c7",
+      "bilal_web/c6",
+      "ayesha_ml/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c6",
+      "ayesha_ml/r2",
+      "ayesha_ml/p1",
+      "bilal_web/c9",
+      "bilal_web/r2",
+      "bilal_web/c5",
+      "sara_data/r2",
+      "bilal_web/r3",
+      "sara_data/p2",
+      "sara_data/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c7",
+      "ayesha_ml/p4",
+      "sara_data/c1",
+      "bilal_web/c3",
+      "sara_data/c5",
+      "bilal_web/c10",
+      "bilal_web/r3",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "sara_data/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c8",
+      "ayesha_ml/c9",
+      "sara_data/c8",
+      "ayesha_ml/c4",
+      "sara_data/p4",
+      "bilal_web/c10",
+      "bilal_web/c9",
+      "ayesha_ml/c1",
+      "ayesha_ml/p1",
+      "bilal_web/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/c10",
+      "bilal_web/c9",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "ayesha_ml/r3",
+      "ayesha_ml/c6",
+      "sara_data/p1",
+      "bilal_web/c7",
+      "bilal_web/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "ayesha_ml/c6",
+      "ayesha_ml/c5",
+      "bilal_web/c7",
+      "bilal_web/r1",
+      "ayesha_ml/p1",
+      "sara_data/c10",
+      "sara_data/p1",
+      "bilal_web/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/r1",
+      "sara_data/p5",
+      "bilal_web/r2",
+      "sara_data/c7",
+      "sara_data/p3",
+      "bilal_web/p1",
+      "bilal_web/c9",
+      "sara_data/c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c2",
+      "bilal_web/p3",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "bilal_web/c6",
+      "bilal_web/c7",
+      "ayesha_ml/c3",
+      "ayesha_ml/c5",
+      "ayesha_ml/p3",
+      "sara_data/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/r3",
+      "bilal_web/p2",
+      "bilal_web/c3",
+      "sara_data/c8",
+      "sara_data/p4",
+      "sara_data/c1",
+      "sara_data/r1",
+      "sara_data/p2",
+      "sara_data/p1",
+      "sara_data/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c4",
+      "bilal_web/p4",
+      "bilal_web/c8",
+      "bilal_web/c10",
+      "sara_data/r1",
+      "bilal_web/p5",
+      "bilal_web/r1",
+      "sara_data/c3",
+      "ayesha_ml/p1",
+      "bilal_web/c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c5",
+      "bilal_web/c1",
+      "sara_data/r2",
+      "bilal_web/r3",
+      "ayesha_ml/p1",
+      "ayesha_ml/r2",
+      "bilal_web/r2",
+      "ayesha_ml/c5",
+      "bilal_web/c10",
+      "sara_data/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p3",
+      "bilal_web/c6",
+      "bilal_web/c2",
+      "bilal_web/p2",
+      "sara_data/r3",
+      "bilal_web/c7",
+      "ayesha_ml/p3",
+      "ayesha_ml/p2",
+      "ayesha_ml/p4",
+      "sara_data/c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c7",
+      "sara_data/c3",
+      "sara_data/r1",
+      "sara_data/r3",
+      "ayesha_ml/c4",
+      "bilal_web/r1",
+      "bilal_web/p1",
+      "bilal_web/c2",
+      "ayesha_ml/p3",
+      "bilal_web/p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "sara_data/r1",
+      "sara_data/r2",
+      "sara_data/c6",
+      "bilal_web/p2",
+      "bilal_web/r3",
+      "bilal_web/c4",
+      "ayesha_ml/c6",
+      "ayesha_ml/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "bilal_web/r2",
+      "sara_data/c5",
+      "bilal_web/c5",
+      "bilal_web/c1",
+      "ayesha_ml/c10",
+      "ayesha_ml/c5",
+      "sara_data/r3",
+      "sara_data/c8"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/c2",
+      "sara_data/c1",
+      "bilal_web/c4",
+      "sara_data/c7",
+      "sara_data/r2",
+      "sara_data/c6",
+      "sara_data/r1",
+      "bilal_web/c1",
+      "bilal_web/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c1",
+      "sara_data/p1",
+      "bilal_web/c10",
+      "sara_data/r1",
+      "sara_data/p5",
+      "ayesha_ml/c10",
+      "ayesha_ml/p1",
+      "sara_data/c3",
+      "sara_data/c7",
+      "sara_data/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c2",
+      "bilal_web/r2",
+      "sara_data/c10",
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/c5",
+      "bilal_web/c9",
+      "ayesha_ml/p2",
+      "bilal_web/r1",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "bilal_web/c7",
+      "sara_data/c8",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "ayesha_ml/c3",
+      "bilal_web/c1",
+      "sara_data/r2",
+      "sara_data/p5",
+      "sara_data/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c4",
+      "sara_data/c3",
+      "sara_data/r2",
+      "sara_data/r1",
+      "sara_data/c8",
+      "bilal_web/r1",
+      "bilal_web/c9",
+      "bilal_web/c10",
+      "sara_data/p4",
+      "ayesha_ml/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/r2",
+      "sara_data/c5",
+      "sara_data/c2",
+      "bilal_web/r3",
+      "bilal_web/r2",
+      "ayesha_ml/c9",
+      "bilal_web/c10",
+      "ayesha_ml/c5",
+      "sara_data/r1",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c6",
+      "sara_data/p4",
+      "sara_data/r3",
+      "sara_data/c3",
+      "sara_data/c8",
+      "sara_data/c4",
+      "sara_data/p5",
+      "bilal_web/r2",
+      "bilal_web/c9",
+      "bilal_web/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/p3",
+      "sara_data/c7",
+      "bilal_web/r1",
+      "bilal_web/p1",
+      "bilal_web/c1",
+      "sara_data/c2",
+      "sara_data/r2",
+      "bilal_web/c10",
+      "sara_data/r3",
+      "sara_data/c10"
+     ],
+     "recall5": 0.5,
+     "mrr": 0.5,
+     "ndcg10": 0.6052602440527057
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c8",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "bilal_web/c7",
+      "sara_data/r1",
+      "sara_data/c1",
+      "bilal_web/c1",
+      "sara_data/c3",
+      "ayesha_ml/c3",
+      "bilal_web/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c9",
+      "sara_data/p5",
+      "sara_data/c1",
+      "sara_data/c6",
+      "sara_data/c4",
+      "ayesha_ml/p2",
+      "bilal_web/r3",
+      "ayesha_ml/r2",
+      "ayesha_ml/c7",
+      "sara_data/c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c10",
+      "sara_data/c2",
+      "bilal_web/r1",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "sara_data/p3",
+      "sara_data/c7",
+      "ayesha_ml/c6",
+      "bilal_web/c10",
+      "ayesha_ml/p1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    }
+   ]
+  },
+  "v4_outcome": {
+   "overall": {
+    "recall5": 0.933,
+    "mrr": 0.886,
+    "ndcg10": 0.89
+   },
+   "by_persona": {
+    "bilal_web": {
+     "recall5": 0.95,
+     "mrr": 0.825,
+     "ndcg10": 0.84
+    },
+    "ayesha_ml": {
+     "recall5": 0.95,
+     "mrr": 1.0,
+     "ndcg10": 0.972
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.833,
+     "ndcg10": 0.857
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.898,
+     "ndcg10": 0.924
+    },
+    "multi_evidence": {
+     "recall5": 0.75,
+     "mrr": 0.854,
+     "ndcg10": 0.796
+    }
+   },
+   "latency_s": {
+    "p50": 1.438,
+    "p95": 1.731
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/p1",
+      "ayesha_ml/r1",
+      "ayesha_ml/r2",
+      "ayesha_ml/c6",
+      "sara_data/p1",
+      "bilal_web/p1",
+      "ayesha_ml/c4",
+      "sara_data/r3",
+      "sara_data/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c2",
+      "ayesha_ml/r3",
+      "ayesha_ml/p4",
+      "sara_data/p1",
+      "ayesha_ml/p1",
+      "ayesha_ml/c8",
+      "sara_data/r2",
+      "sara_data/c5",
+      "sara_data/c10",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c3",
+      "bilal_web/p1",
+      "ayesha_ml/p3",
+      "sara_data/p4",
+      "bilal_web/c7",
+      "sara_data/c8",
+      "bilal_web/p4",
+      "ayesha_ml/p1",
+      "sara_data/p1",
+      "sara_data/p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c4",
+      "sara_data/p4",
+      "bilal_web/p3",
+      "bilal_web/p1",
+      "ayesha_ml/p4",
+      "sara_data/p5",
+      "sara_data/c3",
+      "bilal_web/c10",
+      "sara_data/c8",
+      "sara_data/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c5",
+      "ayesha_ml/p4",
+      "ayesha_ml/p1",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "sara_data/p3",
+      "bilal_web/r3",
+      "bilal_web/c1",
+      "bilal_web/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c6",
+      "ayesha_ml/r2",
+      "ayesha_ml/p1",
+      "bilal_web/c9",
+      "bilal_web/r2",
+      "bilal_web/c5",
+      "sara_data/r2",
+      "bilal_web/r3",
+      "sara_data/p2",
+      "sara_data/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c7",
+      "ayesha_ml/p4",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "sara_data/p4",
+      "ayesha_ml/p1",
+      "sara_data/c1",
+      "bilal_web/c3",
+      "sara_data/c5",
+      "bilal_web/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c8",
+      "sara_data/p4",
+      "ayesha_ml/c9",
+      "ayesha_ml/p1",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "sara_data/c8",
+      "ayesha_ml/c4",
+      "bilal_web/c10",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/c10",
+      "sara_data/p1",
+      "bilal_web/p1",
+      "ayesha_ml/p1",
+      "bilal_web/c9",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "ayesha_ml/r3",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "ayesha_ml/p1",
+      "sara_data/p1",
+      "bilal_web/p4",
+      "ayesha_ml/c6",
+      "bilal_web/p1",
+      "sara_data/p4",
+      "ayesha_ml/c5",
+      "bilal_web/c7"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.7977228895450266
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "sara_data/p3",
+      "bilal_web/p1",
+      "bilal_web/r1",
+      "sara_data/p5",
+      "bilal_web/r2",
+      "sara_data/c7",
+      "bilal_web/p4",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c2",
+      "bilal_web/p3",
+      "ayesha_ml/p3",
+      "bilal_web/p1",
+      "ayesha_ml/p4",
+      "sara_data/p4",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "bilal_web/c6",
+      "bilal_web/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/r3",
+      "sara_data/p4",
+      "bilal_web/p2",
+      "bilal_web/c3",
+      "sara_data/p1",
+      "sara_data/c8",
+      "ayesha_ml/p1",
+      "bilal_web/p1",
+      "ayesha_ml/p4",
+      "sara_data/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.25,
+     "ndcg10": 0.43067655807339306
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c4",
+      "bilal_web/p4",
+      "bilal_web/c8",
+      "ayesha_ml/p1",
+      "bilal_web/p1",
+      "sara_data/p3",
+      "bilal_web/c10",
+      "sara_data/r1",
+      "bilal_web/p5",
+      "bilal_web/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c5",
+      "ayesha_ml/p1",
+      "ayesha_ml/p4",
+      "bilal_web/p1",
+      "bilal_web/c1",
+      "sara_data/r2",
+      "bilal_web/r3",
+      "ayesha_ml/r2",
+      "bilal_web/r2",
+      "ayesha_ml/c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p3",
+      "bilal_web/c6",
+      "bilal_web/c2",
+      "ayesha_ml/p3",
+      "ayesha_ml/p4",
+      "sara_data/p4",
+      "sara_data/p1",
+      "ayesha_ml/p1",
+      "bilal_web/p2",
+      "sara_data/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c7",
+      "sara_data/c3",
+      "bilal_web/p1",
+      "ayesha_ml/p3",
+      "sara_data/p1",
+      "ayesha_ml/p1",
+      "sara_data/r1",
+      "sara_data/r3",
+      "ayesha_ml/c4",
+      "bilal_web/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "bilal_web/p1",
+      "sara_data/p3",
+      "sara_data/r1",
+      "sara_data/r2",
+      "sara_data/c6",
+      "bilal_web/p2",
+      "bilal_web/r3",
+      "bilal_web/c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "bilal_web/p3",
+      "bilal_web/p1",
+      "sara_data/p3",
+      "sara_data/p1",
+      "bilal_web/r2",
+      "sara_data/c5",
+      "bilal_web/c5",
+      "bilal_web/c1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.7903864795495061
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "ayesha_ml/p4",
+      "bilal_web/p1",
+      "sara_data/p3",
+      "ayesha_ml/p1",
+      "bilal_web/c2",
+      "sara_data/c1",
+      "bilal_web/c4",
+      "sara_data/c7",
+      "sara_data/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c1",
+      "sara_data/p1",
+      "ayesha_ml/p1",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "ayesha_ml/p3",
+      "bilal_web/c10",
+      "sara_data/r1",
+      "sara_data/p5",
+      "ayesha_ml/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c2",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "bilal_web/r2",
+      "sara_data/c10",
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/c5",
+      "bilal_web/c9",
+      "ayesha_ml/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "sara_data/p4",
+      "bilal_web/c7",
+      "sara_data/c8",
+      "bilal_web/p1",
+      "ayesha_ml/c3",
+      "bilal_web/c1",
+      "sara_data/p1",
+      "sara_data/r2",
+      "sara_data/p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c4",
+      "sara_data/p4",
+      "sara_data/c3",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "sara_data/p3",
+      "sara_data/r2",
+      "sara_data/r1",
+      "sara_data/c8",
+      "bilal_web/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/r2",
+      "sara_data/c5",
+      "sara_data/c2",
+      "sara_data/p1",
+      "ayesha_ml/p4",
+      "bilal_web/p1",
+      "ayesha_ml/p3",
+      "sara_data/p4",
+      "bilal_web/r3",
+      "bilal_web/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c6",
+      "sara_data/p4",
+      "sara_data/p3",
+      "sara_data/r3",
+      "sara_data/p1",
+      "sara_data/c3",
+      "sara_data/c8",
+      "sara_data/c4",
+      "sara_data/p5",
+      "bilal_web/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/p3",
+      "sara_data/c7",
+      "bilal_web/p1",
+      "bilal_web/p4",
+      "ayesha_ml/p4",
+      "bilal_web/r1",
+      "bilal_web/c1",
+      "sara_data/c2",
+      "sara_data/r2",
+      "bilal_web/c10"
+     ],
+     "recall5": 0.5,
+     "mrr": 0.5,
+     "ndcg10": 0.5802792108518124
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c8",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "bilal_web/c7",
+      "sara_data/r1",
+      "sara_data/c1",
+      "bilal_web/c1",
+      "sara_data/c3",
+      "ayesha_ml/c3",
+      "sara_data/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c9",
+      "ayesha_ml/p4",
+      "sara_data/p4",
+      "sara_data/p1",
+      "sara_data/p5",
+      "bilal_web/p4",
+      "sara_data/c1",
+      "sara_data/c6",
+      "sara_data/c4",
+      "ayesha_ml/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/p1",
+      "sara_data/p3",
+      "sara_data/c10",
+      "sara_data/c2",
+      "bilal_web/r1",
+      "bilal_web/c1",
+      "sara_data/c7",
+      "ayesha_ml/p1",
+      "bilal_web/p4",
+      "sara_data/p1"
+     ],
+     "recall5": 0.5,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5109559939712153
+    }
+   ]
+  },
+  "v5_decompose_hybrid_rerank": {
+   "overall": {
+    "recall5": 0.967,
+    "mrr": 0.847,
+    "ndcg10": 0.858
+   },
+   "by_persona": {
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.742,
+     "ndcg10": 0.779
+    },
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.911
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.9,
+     "ndcg10": 0.884
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.814,
+     "ndcg10": 0.862
+    },
+    "multi_evidence": {
+     "recall5": 0.875,
+     "mrr": 0.938,
+     "ndcg10": 0.848
+    }
+   },
+   "latency_s": {
+    "p50": 13.594,
+    "p95": 24.695
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/p1",
+      "ayesha_ml/c1",
+      "ayesha_ml/c6",
+      "ayesha_ml/r2",
+      "ayesha_ml/c4",
+      "ayesha_ml/r1",
+      "bilal_web/c5",
+      "sara_data/p4",
+      "bilal_web/c8",
+      "bilal_web/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c2",
+      "ayesha_ml/r3",
+      "sara_data/c5",
+      "ayesha_ml/c8",
+      "ayesha_ml/c10",
+      "sara_data/r2",
+      "sara_data/c2",
+      "sara_data/p5",
+      "sara_data/c6",
+      "ayesha_ml/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c3",
+      "sara_data/c8",
+      "bilal_web/c7",
+      "bilal_web/c1",
+      "sara_data/c3",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "ayesha_ml/c6",
+      "ayesha_ml/p3",
+      "ayesha_ml/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c4",
+      "ayesha_ml/c1",
+      "ayesha_ml/p1",
+      "bilal_web/c7",
+      "sara_data/c3",
+      "sara_data/c1",
+      "bilal_web/c10",
+      "bilal_web/r2",
+      "bilal_web/p4",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c5",
+      "sara_data/c8",
+      "sara_data/p4",
+      "sara_data/r1",
+      "bilal_web/c10",
+      "sara_data/c1",
+      "ayesha_ml/c9",
+      "sara_data/c5",
+      "sara_data/c6",
+      "sara_data/c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c6",
+      "ayesha_ml/r2",
+      "ayesha_ml/c10",
+      "ayesha_ml/p1",
+      "bilal_web/c9",
+      "sara_data/p1",
+      "sara_data/r3",
+      "sara_data/c6",
+      "bilal_web/p3",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/p4",
+      "ayesha_ml/c7",
+      "sara_data/c10",
+      "sara_data/c5",
+      "sara_data/p5",
+      "ayesha_ml/p5",
+      "sara_data/c6",
+      "sara_data/r3",
+      "ayesha_ml/c10",
+      "bilal_web/c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c9",
+      "ayesha_ml/c8",
+      "ayesha_ml/p5",
+      "ayesha_ml/c10",
+      "sara_data/c8",
+      "sara_data/p4",
+      "ayesha_ml/c4",
+      "sara_data/p3",
+      "bilal_web/c8",
+      "sara_data/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/c10",
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "ayesha_ml/r3",
+      "sara_data/p1",
+      "sara_data/r3",
+      "sara_data/c5",
+      "bilal_web/r2",
+      "bilal_web/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "ayesha_ml/c6",
+      "ayesha_ml/c10",
+      "ayesha_ml/c5",
+      "sara_data/c10",
+      "bilal_web/c9",
+      "bilal_web/c7",
+      "bilal_web/r3",
+      "bilal_web/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "sara_data/p3",
+      "sara_data/c7",
+      "bilal_web/p1",
+      "sara_data/c5",
+      "sara_data/c8",
+      "bilal_web/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.25,
+     "ndcg10": 0.43067655807339306
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c2",
+      "bilal_web/p3",
+      "ayesha_ml/c5",
+      "bilal_web/c6",
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "bilal_web/c7",
+      "bilal_web/c1",
+      "bilal_web/r3",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/r3",
+      "bilal_web/c3",
+      "sara_data/c1",
+      "ayesha_ml/c1",
+      "sara_data/c4",
+      "bilal_web/p2",
+      "sara_data/p1",
+      "sara_data/r1",
+      "sara_data/p2",
+      "sara_data/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c4",
+      "bilal_web/p4",
+      "bilal_web/c10",
+      "bilal_web/c8",
+      "bilal_web/c2",
+      "sara_data/r1",
+      "bilal_web/c1",
+      "ayesha_ml/c1",
+      "ayesha_ml/c8",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c5",
+      "ayesha_ml/c5",
+      "ayesha_ml/c6",
+      "bilal_web/c1",
+      "ayesha_ml/p1",
+      "ayesha_ml/r2",
+      "bilal_web/c10",
+      "ayesha_ml/c8",
+      "bilal_web/r3",
+      "ayesha_ml/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p3",
+      "bilal_web/c2",
+      "bilal_web/c6",
+      "bilal_web/c7",
+      "sara_data/c3",
+      "sara_data/c8",
+      "bilal_web/r2",
+      "bilal_web/p2",
+      "ayesha_ml/p1",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c7",
+      "sara_data/c3",
+      "bilal_web/p3",
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "ayesha_ml/p3",
+      "ayesha_ml/c10",
+      "ayesha_ml/c4",
+      "bilal_web/p1",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "bilal_web/p2",
+      "bilal_web/c4",
+      "ayesha_ml/c6",
+      "bilal_web/c1",
+      "bilal_web/r3",
+      "bilal_web/r2",
+      "ayesha_ml/c4",
+      "ayesha_ml/p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "bilal_web/r2",
+      "sara_data/c5",
+      "bilal_web/c1",
+      "bilal_web/c5",
+      "ayesha_ml/c5",
+      "ayesha_ml/c10",
+      "bilal_web/c4",
+      "ayesha_ml/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c1",
+      "bilal_web/c4",
+      "bilal_web/c10",
+      "bilal_web/c2",
+      "bilal_web/c3",
+      "bilal_web/p4",
+      "sara_data/c3",
+      "sara_data/c7",
+      "sara_data/c5",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c1",
+      "sara_data/p1",
+      "bilal_web/c10",
+      "sara_data/r1",
+      "ayesha_ml/c10",
+      "sara_data/p4",
+      "sara_data/c8",
+      "ayesha_ml/p1",
+      "sara_data/c7",
+      "sara_data/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c2",
+      "sara_data/c10",
+      "sara_data/p5",
+      "sara_data/p4",
+      "bilal_web/c10",
+      "sara_data/c8",
+      "sara_data/c6",
+      "sara_data/c1",
+      "sara_data/r1",
+      "sara_data/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "sara_data/c8",
+      "bilal_web/c1",
+      "sara_data/p4",
+      "bilal_web/c7",
+      "bilal_web/p1",
+      "ayesha_ml/c3",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "bilal_web/c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c4",
+      "bilal_web/r2",
+      "sara_data/r3",
+      "ayesha_ml/c3",
+      "ayesha_ml/p5",
+      "ayesha_ml/c4",
+      "ayesha_ml/p1",
+      "ayesha_ml/c10",
+      "ayesha_ml/c1",
+      "sara_data/c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c5",
+      "sara_data/r2",
+      "sara_data/c2",
+      "ayesha_ml/c6",
+      "ayesha_ml/c9",
+      "bilal_web/c9",
+      "bilal_web/r2",
+      "bilal_web/c10",
+      "sara_data/p2",
+      "ayesha_ml/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c6",
+      "sara_data/r3",
+      "sara_data/c4",
+      "ayesha_ml/c6",
+      "bilal_web/c9",
+      "bilal_web/r1",
+      "ayesha_ml/c10",
+      "sara_data/p4",
+      "sara_data/c7",
+      "sara_data/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/p3",
+      "sara_data/c7",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "bilal_web/r1",
+      "sara_data/c10",
+      "sara_data/c2",
+      "bilal_web/c10",
+      "bilal_web/p4",
+      "bilal_web/r3"
+     ],
+     "recall5": 0.5,
+     "mrr": 0.5,
+     "ndcg10": 0.5912352048230277
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "sara_data/c8",
+      "bilal_web/c7",
+      "bilal_web/c1",
+      "sara_data/p4",
+      "ayesha_ml/c3",
+      "bilal_web/p1",
+      "bilal_web/r3",
+      "sara_data/p3",
+      "ayesha_ml/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c9",
+      "sara_data/p5",
+      "sara_data/c8",
+      "ayesha_ml/c9",
+      "sara_data/c1",
+      "sara_data/c5",
+      "sara_data/c6",
+      "ayesha_ml/c10",
+      "sara_data/r3",
+      "ayesha_ml/c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c10",
+      "bilal_web/r1",
+      "ayesha_ml/c6",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "sara_data/p3",
+      "sara_data/c5",
+      "sara_data/c1",
+      "bilal_web/r2",
+      "bilal_web/c10"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.6131471927654584
+    }
+   ]
+  },
+  "v8_corrective": {
+   "overall": {
+    "recall5": 0.933,
+    "mrr": 0.911,
+    "ndcg10": 0.907
+   },
+   "by_persona": {
+    "bilal_web": {
+     "recall5": 0.95,
+     "mrr": 0.833,
+     "ndcg10": 0.849
+    },
+    "ayesha_ml": {
+     "recall5": 0.95,
+     "mrr": 1.0,
+     "ndcg10": 0.982
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.9,
+     "ndcg10": 0.891
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.902,
+     "ndcg10": 0.927
+    },
+    "multi_evidence": {
+     "recall5": 0.75,
+     "mrr": 0.938,
+     "ndcg10": 0.853
+    }
+   },
+   "latency_s": {
+    "p50": 60.95,
+    "p95": 88.951
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/p1",
+      "ayesha_ml/r1",
+      "sara_data/p4",
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "ayesha_ml/r2",
+      "ayesha_ml/c6",
+      "ayesha_ml/c4",
+      "sara_data/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c2",
+      "ayesha_ml/r3",
+      "ayesha_ml/c8",
+      "ayesha_ml/c10",
+      "sara_data/c2",
+      "sara_data/p5",
+      "sara_data/r2",
+      "sara_data/c5",
+      "sara_data/c10",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c3",
+      "bilal_web/c7",
+      "sara_data/c8",
+      "sara_data/r3",
+      "bilal_web/p1",
+      "ayesha_ml/p3",
+      "sara_data/c3",
+      "ayesha_ml/c6",
+      "bilal_web/c1",
+      "sara_data/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c4",
+      "sara_data/p5",
+      "sara_data/c3",
+      "ayesha_ml/c9",
+      "ayesha_ml/c7",
+      "sara_data/c2",
+      "bilal_web/c10",
+      "sara_data/c8",
+      "sara_data/c1",
+      "sara_data/p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c5",
+      "bilal_web/r3",
+      "bilal_web/c1",
+      "sara_data/c8",
+      "sara_data/p4",
+      "sara_data/r1",
+      "bilal_web/c10",
+      "ayesha_ml/p4",
+      "sara_data/p2",
+      "bilal_web/p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c6",
+      "ayesha_ml/r2",
+      "ayesha_ml/p1",
+      "ayesha_ml/c10",
+      "sara_data/p1",
+      "sara_data/r3",
+      "bilal_web/c9",
+      "bilal_web/r2",
+      "bilal_web/c5",
+      "sara_data/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "ayesha_ml/c7",
+      "ayesha_ml/p4",
+      "sara_data/c1",
+      "sara_data/c10",
+      "sara_data/p5",
+      "ayesha_ml/p5",
+      "bilal_web/c3",
+      "sara_data/c5",
+      "bilal_web/c10",
+      "bilal_web/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c8",
+      "ayesha_ml/c9",
+      "sara_data/c8",
+      "ayesha_ml/c10",
+      "sara_data/p2",
+      "ayesha_ml/c6",
+      "ayesha_ml/c4",
+      "sara_data/p4",
+      "bilal_web/c10",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c1",
+      "ayesha_ml/c10",
+      "bilal_web/c9",
+      "bilal_web/p1",
+      "ayesha_ml/c8",
+      "sara_data/c1",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "ayesha_ml/r3",
+      "ayesha_ml/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "ayesha_ml/c3",
+      "ayesha_ml/p3",
+      "ayesha_ml/c6",
+      "ayesha_ml/c10",
+      "bilal_web/c9",
+      "bilal_web/r3",
+      "ayesha_ml/c5",
+      "bilal_web/c7",
+      "bilal_web/r1",
+      "ayesha_ml/p1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/r1",
+      "ayesha_ml/c6",
+      "sara_data/c5",
+      "sara_data/c8",
+      "sara_data/p5",
+      "bilal_web/r2",
+      "sara_data/c7",
+      "sara_data/p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c2",
+      "bilal_web/p3",
+      "sara_data/r3",
+      "bilal_web/c1",
+      "bilal_web/r3",
+      "ayesha_ml/c1",
+      "bilal_web/r2",
+      "bilal_web/c6",
+      "bilal_web/c7",
+      "ayesha_ml/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/r3",
+      "bilal_web/p2",
+      "bilal_web/c3",
+      "ayesha_ml/c1",
+      "sara_data/c4",
+      "ayesha_ml/c9",
+      "sara_data/c8",
+      "sara_data/p4",
+      "sara_data/c1",
+      "sara_data/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c4",
+      "bilal_web/p4",
+      "bilal_web/c8",
+      "ayesha_ml/c1",
+      "ayesha_ml/c8",
+      "bilal_web/r2",
+      "bilal_web/c10",
+      "sara_data/r1",
+      "bilal_web/p5",
+      "bilal_web/r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c5",
+      "bilal_web/c1",
+      "sara_data/r2",
+      "ayesha_ml/c6",
+      "ayesha_ml/c8",
+      "ayesha_ml/c3",
+      "bilal_web/r3",
+      "ayesha_ml/p1",
+      "ayesha_ml/r2",
+      "bilal_web/r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/p3",
+      "bilal_web/c6",
+      "bilal_web/c2",
+      "sara_data/c8",
+      "bilal_web/r2",
+      "ayesha_ml/p1",
+      "bilal_web/p2",
+      "sara_data/r3",
+      "bilal_web/c7",
+      "ayesha_ml/p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c7",
+      "sara_data/c3",
+      "sara_data/r1",
+      "bilal_web/p3",
+      "ayesha_ml/c1",
+      "ayesha_ml/c10",
+      "sara_data/r3",
+      "ayesha_ml/c4",
+      "bilal_web/r1",
+      "bilal_web/p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c8",
+      "bilal_web/p4",
+      "sara_data/r1",
+      "bilal_web/c1",
+      "ayesha_ml/p5",
+      "ayesha_ml/r3",
+      "sara_data/r2",
+      "sara_data/c6",
+      "bilal_web/p2",
+      "bilal_web/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "bilal_web/c9",
+      "ayesha_ml/c6",
+      "bilal_web/r2",
+      "bilal_web/c4",
+      "ayesha_ml/c8",
+      "sara_data/c5",
+      "bilal_web/c5",
+      "bilal_web/c1",
+      "ayesha_ml/c10",
+      "ayesha_ml/c5"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8065735963827293
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "bilal_web/c10",
+      "bilal_web/c2",
+      "sara_data/c1",
+      "bilal_web/c3",
+      "bilal_web/p4",
+      "sara_data/c3",
+      "bilal_web/c4",
+      "sara_data/c7",
+      "sara_data/r2",
+      "sara_data/c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c1",
+      "sara_data/p1",
+      "bilal_web/c10",
+      "sara_data/p4",
+      "sara_data/c6",
+      "sara_data/r1",
+      "sara_data/p5",
+      "ayesha_ml/c10",
+      "ayesha_ml/p1",
+      "sara_data/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c2",
+      "bilal_web/r2",
+      "sara_data/c10",
+      "sara_data/c5",
+      "sara_data/p4",
+      "sara_data/r1",
+      "bilal_web/c10",
+      "bilal_web/c1",
+      "bilal_web/c5",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c3",
+      "bilal_web/c7",
+      "sara_data/c8",
+      "sara_data/r3",
+      "bilal_web/r2",
+      "ayesha_ml/r1",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "ayesha_ml/c3",
+      "bilal_web/c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c4",
+      "sara_data/c3",
+      "sara_data/r2",
+      "bilal_web/r2",
+      "sara_data/r3",
+      "ayesha_ml/c3",
+      "sara_data/r1",
+      "sara_data/c8",
+      "bilal_web/r1",
+      "bilal_web/c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/r2",
+      "sara_data/c5",
+      "sara_data/c2",
+      "ayesha_ml/p4",
+      "ayesha_ml/c4",
+      "ayesha_ml/c7",
+      "bilal_web/r3",
+      "bilal_web/r2",
+      "ayesha_ml/c9",
+      "bilal_web/c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c6",
+      "sara_data/p4",
+      "sara_data/r3",
+      "ayesha_ml/c6",
+      "ayesha_ml/c10",
+      "sara_data/c7",
+      "sara_data/c3",
+      "sara_data/c8",
+      "sara_data/c4",
+      "sara_data/p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/p3",
+      "sara_data/c7",
+      "bilal_web/r1",
+      "bilal_web/r3",
+      "sara_data/c3",
+      "ayesha_ml/c5",
+      "bilal_web/p1",
+      "bilal_web/c1",
+      "sara_data/c2",
+      "sara_data/r2"
+     ],
+     "recall5": 0.5,
+     "mrr": 0.5,
+     "ndcg10": 0.5714285040141098
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c8",
+      "sara_data/p4",
+      "bilal_web/p1",
+      "sara_data/p1",
+      "bilal_web/c7",
+      "sara_data/r1",
+      "sara_data/c1",
+      "bilal_web/c1",
+      "sara_data/c3",
+      "ayesha_ml/c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "sara_data/c9",
+      "sara_data/p5",
+      "sara_data/c1",
+      "sara_data/c8",
+      "ayesha_ml/c9",
+      "ayesha_ml/c10",
+      "sara_data/c6",
+      "sara_data/c4",
+      "ayesha_ml/p2",
+      "bilal_web/r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "sara_data/c10",
+      "sara_data/c2",
+      "bilal_web/r1",
+      "sara_data/c5",
+      "sara_data/c1",
+      "bilal_web/r2",
+      "bilal_web/c1",
+      "bilal_web/p1",
+      "sara_data/p3",
+      "sara_data/c7"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.7903864795495061
+    }
+   ]
+  }
+ }
+}

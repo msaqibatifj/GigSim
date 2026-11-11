@@ -1,0 +1,17 @@
+{
+  "name": "Ayesha Khan",
+  "title": "ML/NLP engineer",
+  "rate": 45,
+  "floor": 30,
+  "skills": [
+    "python",
+    "langchain",
+    "rag",
+    "pytorch",
+    "fastapi",
+    "postgres",
+    "nlp",
+    "mlops"
+  ],
+  "category": "ml_nlp"
+}

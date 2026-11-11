@@ -1,0 +1,1456 @@
+{
+ "profile": "open",
+ "model": "openai/gpt-oss-20b",
+ "n_tasks": 40,
+ "designs": {
+  "fine": {
+   "n_tools": 24,
+   "tool_accuracy": 0.7,
+   "arg_accuracy": 0.7,
+   "prompt_tokens_per_task": 629.4,
+   "rows": [
+    {
+     "task": "Find me new RAG chatbot jobs.",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "limit": 10,
+      "query": "RAG chatbot"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 642
+    },
+    {
+     "task": "Any open React jobs in the web category?",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "category": "web",
+      "limit": 10,
+      "query": "React"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 643
+    },
+    {
+     "task": "Show me data jobs about dashboards.",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "category": "data",
+      "limit": 10,
+      "query": "dashboards"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 641
+    },
+    {
+     "task": "Look for NLP work posted recently.",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "category": "NLP",
+      "limit": 5
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 641
+    },
+    {
+     "task": "Open job a07 so I can read it.",
+     "want": "get_job",
+     "got": "get_job",
+     "args": {
+      "job_id": "a07"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 644
+    },
+    {
+     "task": "What's the budget on job b03?",
+     "want": "get_job",
+     "got": "get_job_budget",
+     "args": {
+      "job_id": "b03"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 642
+    },
+    {
+     "task": "Which skills does job s05 need?",
+     "want": "get_job",
+     "got": "get_job_skills",
+     "args": {
+      "job_id": "s05"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 642
+    },
+    {
+     "task": "Read the full post for job k1a2b3c4d.",
+     "want": "get_job",
+     "got": "get_job",
+     "args": {
+      "job_id": "k1a2b3c4d"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 650
+    },
+    {
+     "task": "Is client c_a12 trustworthy?",
+     "want": "get_client_history",
+     "got": "get_client_reviews",
+     "args": {
+      "client_id": "c_a12"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 641
+    },
+    {
+     "task": "How much has client c_b02 spent before?",
+     "want": "get_client_history",
+     "got": "get_client_spend",
+     "args": {
+      "client_id": "c_b02"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 644
+    },
+    {
+     "task": "What do other freelancers say about client c_s04?",
+     "want": "get_client_history",
+     "got": "get_client_reviews",
+     "args": {
+      "client_id": "c_s04"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 645
+    },
+    {
+     "task": "Is client c_a03's payment verified?",
+     "want": "get_client_history",
+     "got": "get_client_spend",
+     "args": {
+      "client_id": "c_a03"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 643
+    },
+    {
+     "task": "How many Connects do I have left?",
+     "want": "get_connects_balance",
+     "got": "get_connects_balance",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 643
+    },
+    {
+     "task": "Can I afford to bid this week? Check my credits.",
+     "want": "get_connects_balance",
+     "got": "get_connects_balance",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 646
+    },
+    {
+     "task": "What do ML/NLP fixed-price jobs usually pay?",
+     "want": "get_market_stats",
+     "got": "search_jobs",
+     "args": {
+      "category": "ML/NLP",
+      "limit": 5,
+      "query": "fixed-price"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 645
+    },
+    {
+     "task": "Typical hourly rate for web developers?",
+     "want": "get_market_stats",
+     "got": "get_hourly_rates",
+     "args": {
+      "category": "web development"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 641
+    },
+    {
+     "task": "Is $800 a normal budget for a data dashboard job?",
+     "want": "get_market_stats",
+     "got": null,
+     "args": {},
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 0
+    },
+    {
+     "task": "Which client conversations do I have?",
+     "want": "list_threads",
+     "got": "list_threads",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 641
+    },
+    {
+     "task": "Show me my inbox of client chats.",
+     "want": "list_threads",
+     "got": "list_threads",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 642
+    },
+    {
+     "task": "What did the client say in thread t1?",
+     "want": "list_messages",
+     "got": "get_last_message",
+     "args": {
+      "thread_id": "t1"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 644
+    },
+    {
+     "task": "Read the conversation t-sub-d3.",
+     "want": "list_messages",
+     "got": "list_messages",
+     "args": {
+      "thread_id": "t-sub-d3"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 642
+    },
+    {
+     "task": "Did the client in thread t2 reply about the start date?",
+     "want": "list_messages",
+     "got": "get_last_message",
+     "args": {
+      "thread_id": "t2"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 647
+    },
+    {
+     "task": "Save this text as a draft proposal for job a01: 'I built a hybrid search bot.' Use key k-a01-0001.",
+     "want": "create_proposal_draft",
+     "got": "create_proposal_draft",
+     "args": {
+      "idempotency_key": "k-a01-0001",
+      "job_id": "a01",
+      "text": "I built a hybrid search bot."
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 663
+    },
+    {
+     "task": "Draft (don't submit) a proposal to job b04 saying 'Next.js expert here', key k-b04-0001.",
+     "want": "create_proposal_draft",
+     "got": "create_proposal_draft",
+     "args": {
+      "idempotency_key": "k-b04-0001",
+      "job_id": "b04",
+      "text": "Next.js expert here"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 660
+    },
+    {
+     "task": "The user approved draft d7. Submit it with key k-sub-d7-01.",
+     "want": "submit_proposal",
+     "got": "submit_proposal",
+     "args": {
+      "draft_id": "d7",
+      "idempotency_key": "k-sub-d7-01"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 652
+    },
+    {
+     "task": "Approved: send proposal draft d2 now, key k-sub-d2-01.",
+     "want": "submit_proposal",
+     "got": "submit_proposal",
+     "args": {
+      "draft_id": "d2",
+      "idempotency_key": "k-sub-d2-01"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 651
+    },
+    {
+     "task": "Approved: reply 'Monday works' in thread t1, key k-t1-msg-01.",
+     "want": "send_message",
+     "got": "send_message",
+     "args": {
+      "idempotency_key": "k-t1-msg-01",
+      "text": "Monday works",
+      "thread_id": "t1"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 654
+    },
+    {
+     "task": "User approved: tell thread t5 'Thanks, rate is $40/h', key k-t5-msg-01.",
+     "want": "send_message",
+     "got": "send_message",
+     "args": {
+      "idempotency_key": "k-t5-msg-01",
+      "text": "Thanks, rate is $40/h",
+      "thread_id": "t5"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 658
+    },
+    {
+     "task": "Do I have proof of PDF extraction experience?",
+     "want": "search_evidence",
+     "got": "search_evidence",
+     "args": {
+      "requirement": "PDF extraction"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 643
+    },
+    {
+     "task": "Find portfolio evidence for Airflow pipelines.",
+     "want": "search_evidence",
+     "got": "search_evidence",
+     "args": {
+      "requirement": "Airflow pipelines"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 642
+    },
+    {
+     "task": "Have I done Playwright testing before? Check my work.",
+     "want": "search_evidence",
+     "got": "get_client_history",
+     "args": {
+      "client_id": "user"
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 646
+    },
+    {
+     "task": "Which of my past projects used FastAPI?",
+     "want": "search_evidence",
+     "got": "search_evidence",
+     "args": {
+      "k": 10,
+      "requirement": "FastAPI"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 643
+    },
+    {
+     "task": "Open my case study c3.",
+     "want": "get_case_study",
+     "got": "get_case_study",
+     "args": {
+      "id": "c3"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 641
+    },
+    {
+     "task": "Show the full write-up of case study c10.",
+     "want": "get_case_study",
+     "got": "get_case_study",
+     "args": {
+      "id": "c10"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 645
+    },
+    {
+     "task": "What skills can I honestly claim?",
+     "want": "list_skills",
+     "got": "list_skills",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 641
+    },
+    {
+     "task": "List my skills.",
+     "want": "list_skills",
+     "got": "list_skills",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 638
+    },
+    {
+     "task": "When am I free for an interview this week?",
+     "want": "free_slots",
+     "got": "free_slots",
+     "args": {
+      "days": 7
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 644
+    },
+    {
+     "task": "Find interview times in the next 2 days.",
+     "want": "free_slots",
+     "got": "free_slots",
+     "args": {
+      "days": 2
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 644
+    },
+    {
+     "task": "Hold 2026-11-14T10:00 on my calendar for the client interview.",
+     "want": "create_tentative_hold",
+     "got": "create_tentative_hold",
+     "args": {
+      "start": "2026-11-14T10:00",
+      "title": "Client interview"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 654
+    },
+    {
+     "task": "Write an email draft to thread t3 confirming the call.",
+     "want": "create_email_draft",
+     "got": "create_email_draft",
+     "args": {
+      "body": "Hi [Client Name],\n\nThank you for scheduling the call. I\u2019m looking forward to speaking with you on [Date] at [Time]. Please let me know if anything changes.\n\nBest regards,\n[Your Name]",
+      "to_thread": "t3"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 646
+    }
+   ]
+  },
+  "coarse": {
+   "n_tools": 4,
+   "tool_accuracy": 0.85,
+   "arg_accuracy": 0.675,
+   "prompt_tokens_per_task": 301.1,
+   "rows": [
+    {
+     "task": "Find me new RAG chatbot jobs.",
+     "want": "search_jobs",
+     "got": "marketplace_read",
+     "args": {
+      "action": "search_jobs",
+      "args": {
+       "experience_level": "mid",
+       "keywords": "RAG chatbot",
+       "location": "remote",
+       "sort": "date_posted"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 331
+    },
+    {
+     "task": "Any open React jobs in the web category?",
+     "want": "search_jobs",
+     "got": "marketplace_read",
+     "args": {
+      "action": "search_jobs",
+      "args": {
+       "category": "web",
+       "technology": "React"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 332
+    },
+    {
+     "task": "Show me data jobs about dashboards.",
+     "want": "search_jobs",
+     "got": "marketplace_read",
+     "args": {
+      "action": "search_jobs",
+      "args": {
+       "query": "data jobs dashboards"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "prompt_tokens": 330
+    },
+    {
+     "task": "Look for NLP work posted recently.",
+     "want": "search_jobs",
+     "got": "marketplace_read",
+     "args": {
+      "action": "search_jobs",
+      "args": {
+       "keywords": "NLP",
+       "posted_recently": true
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 330
+    },
+    {
+     "task": "Open job a07 so I can read it.",
+     "want": "get_job",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_job",
+      "args": {
+       "id": "a07"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "prompt_tokens": 333
+    },
+    {
+     "task": "What's the budget on job b03?",
+     "want": "get_job",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_job",
+      "args": {
+       "job_id": "b03"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 331
+    },
+    {
+     "task": "Which skills does job s05 need?",
+     "want": "get_job",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_job",
+      "args": {
+       "job_id": "s05"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 331
+    },
+    {
+     "task": "Read the full post for job k1a2b3c4d.",
+     "want": "get_job",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_job",
+      "args": {
+       "job_id": "k1a2b3c4d"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 339
+    },
+    {
+     "task": "Is client c_a12 trustworthy?",
+     "want": "get_client_history",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_client_history",
+      "args": {
+       "client_id": "c_a12"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 330
+    },
+    {
+     "task": "How much has client c_b02 spent before?",
+     "want": "get_client_history",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_client_history",
+      "args": {
+       "client_id": "c_b02"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 333
+    },
+    {
+     "task": "What do other freelancers say about client c_s04?",
+     "want": "get_client_history",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_client_history",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "prompt_tokens": 334
+    },
+    {
+     "task": "Is client c_a03's payment verified?",
+     "want": "get_client_history",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_client_history",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "prompt_tokens": 332
+    },
+    {
+     "task": "How many Connects do I have left?",
+     "want": "get_connects_balance",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_connects_balance",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 332
+    },
+    {
+     "task": "Can I afford to bid this week? Check my credits.",
+     "want": "get_connects_balance",
+     "got": "marketplace_read",
+     "args": {
+      "action": "get_connects_balance",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 335
+    },
+    {
+     "task": "What do ML/NLP fixed-price jobs usually pay?",
+     "want": "get_market_stats",
+     "got": null,
+     "args": {},
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 0
+    },
+    {
+     "task": "Typical hourly rate for web developers?",
+     "want": "get_market_stats",
+     "got": null,
+     "args": {},
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 0
+    },
+    {
+     "task": "Is $800 a normal budget for a data dashboard job?",
+     "want": "get_market_stats",
+     "got": null,
+     "args": {},
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 0
+    },
+    {
+     "task": "Which client conversations do I have?",
+     "want": "list_threads",
+     "got": "marketplace_read",
+     "args": {
+      "action": "list_threads",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 330
+    },
+    {
+     "task": "Show me my inbox of client chats.",
+     "want": "list_threads",
+     "got": "marketplace_read",
+     "args": {
+      "action": "list_threads",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 331
+    },
+    {
+     "task": "What did the client say in thread t1?",
+     "want": "list_messages",
+     "got": "marketplace_read",
+     "args": {
+      "action": "list_messages",
+      "args": {
+       "thread_id": "t1"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 333
+    },
+    {
+     "task": "Read the conversation t-sub-d3.",
+     "want": "list_messages",
+     "got": "marketplace_read",
+     "args": {
+      "action": "list_threads",
+      "args": {
+       "thread_id": "t-sub-d3"
+      }
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 331
+    },
+    {
+     "task": "Did the client in thread t2 reply about the start date?",
+     "want": "list_messages",
+     "got": "marketplace_read",
+     "args": {
+      "action": "list_messages",
+      "args": {
+       "thread_id": "t2"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 336
+    },
+    {
+     "task": "Save this text as a draft proposal for job a01: 'I built a hybrid search bot.' Use key k-a01-0001.",
+     "want": "create_proposal_draft",
+     "got": "marketplace_write",
+     "args": {
+      "action": "create_proposal_draft",
+      "args": {
+       "draft_text": "I built a hybrid search bot.",
+       "job_id": "a01",
+       "key": "k-a01-0001"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 352
+    },
+    {
+     "task": "Draft (don't submit) a proposal to job b04 saying 'Next.js expert here', key k-b04-0001.",
+     "want": "create_proposal_draft",
+     "got": "marketplace_write",
+     "args": {
+      "action": "create_proposal_draft",
+      "args": {
+       "job_id": "b04",
+       "key": "k-b04-0001",
+       "proposal_text": "Next.js expert here"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 349
+    },
+    {
+     "task": "The user approved draft d7. Submit it with key k-sub-d7-01.",
+     "want": "submit_proposal",
+     "got": "marketplace_write",
+     "args": {
+      "action": "submit_proposal",
+      "args": {
+       "draft_key": "k-sub-d7-01"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "prompt_tokens": 341
+    },
+    {
+     "task": "Approved: send proposal draft d2 now, key k-sub-d2-01.",
+     "want": "submit_proposal",
+     "got": "marketplace_write",
+     "args": {
+      "action": "submit_proposal",
+      "args": {
+       "key": "k-sub-d2-01"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "prompt_tokens": 340
+    },
+    {
+     "task": "Approved: reply 'Monday works' in thread t1, key k-t1-msg-01.",
+     "want": "send_message",
+     "got": "marketplace_write",
+     "args": {
+      "action": "send_message",
+      "args": {
+       "content": "Monday works",
+       "message_id": "k-t1-msg-01",
+       "thread_id": "t1"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 343
+    },
+    {
+     "task": "User approved: tell thread t5 'Thanks, rate is $40/h', key k-t5-msg-01.",
+     "want": "send_message",
+     "got": "marketplace_write",
+     "args": {
+      "action": "send_message",
+      "args": {
+       "key": "k-t5-msg-01",
+       "message": "Thanks, rate is $40/h",
+       "thread_id": "t5"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 347
+    },
+    {
+     "task": "Do I have proof of PDF extraction experience?",
+     "want": "search_evidence",
+     "got": "portfolio",
+     "args": {
+      "action": "search_evidence",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 332
+    },
+    {
+     "task": "Find portfolio evidence for Airflow pipelines.",
+     "want": "search_evidence",
+     "got": "portfolio",
+     "args": {
+      "action": "search_evidence",
+      "args": {
+       "query": "Airflow pipelines"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 331
+    },
+    {
+     "task": "Have I done Playwright testing before? Check my work.",
+     "want": "search_evidence",
+     "got": "marketplace_read",
+     "args": {
+      "action": "list_threads",
+      "args": {}
+     },
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 335
+    },
+    {
+     "task": "Which of my past projects used FastAPI?",
+     "want": "search_evidence",
+     "got": "portfolio",
+     "args": {
+      "action": "search_evidence",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 332
+    },
+    {
+     "task": "Open my case study c3.",
+     "want": "get_case_study",
+     "got": "portfolio",
+     "args": {
+      "action": "get_case_study",
+      "args": {
+       "id": "c3"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 330
+    },
+    {
+     "task": "Show the full write-up of case study c10.",
+     "want": "get_case_study",
+     "got": "portfolio",
+     "args": {
+      "action": "get_case_study",
+      "args": {
+       "id": "c10"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 334
+    },
+    {
+     "task": "What skills can I honestly claim?",
+     "want": "list_skills",
+     "got": "portfolio",
+     "args": {
+      "action": "list_skills",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 330
+    },
+    {
+     "task": "List my skills.",
+     "want": "list_skills",
+     "got": "portfolio",
+     "args": {
+      "action": "list_skills",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 327
+    },
+    {
+     "task": "When am I free for an interview this week?",
+     "want": "free_slots",
+     "got": "workspace",
+     "args": {
+      "action": "free_slots",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 333
+    },
+    {
+     "task": "Find interview times in the next 2 days.",
+     "want": "free_slots",
+     "got": "workspace",
+     "args": {
+      "action": "free_slots",
+      "args": {}
+     },
+     "tool_ok": true,
+     "args_ok": false,
+     "prompt_tokens": 333
+    },
+    {
+     "task": "Hold 2026-11-14T10:00 on my calendar for the client interview.",
+     "want": "create_tentative_hold",
+     "got": "workspace",
+     "args": {
+      "action": "create_tentative_hold",
+      "args": {
+       "end": "2026-11-14T11:00",
+       "start": "2026-11-14T10:00",
+       "title": "Client Interview"
+      }
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 343
+    },
+    {
+     "task": "Write an email draft to thread t3 confirming the call.",
+     "want": "create_email_draft",
+     "got": null,
+     "args": {},
+     "tool_ok": false,
+     "args_ok": false,
+     "prompt_tokens": 0
+    }
+   ]
+  },
+  "best": {
+   "n_tools": 16,
+   "tool_accuracy": 1.0,
+   "arg_accuracy": 1.0,
+   "prompt_tokens_per_task": 696.5,
+   "rows": [
+    {
+     "task": "Find me new RAG chatbot jobs.",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "limit": 10,
+      "query": "RAG chatbot"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 693
+    },
+    {
+     "task": "Any open React jobs in the web category?",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "category": "web",
+      "limit": 10,
+      "query": "React"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 694
+    },
+    {
+     "task": "Show me data jobs about dashboards.",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "category": "data",
+      "limit": 10,
+      "query": "dashboards"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 692
+    },
+    {
+     "task": "Look for NLP work posted recently.",
+     "want": "search_jobs",
+     "got": "search_jobs",
+     "args": {
+      "category": "ml_nlp",
+      "limit": 5,
+      "query": "NLP"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 692
+    },
+    {
+     "task": "Open job a07 so I can read it.",
+     "want": "get_job",
+     "got": "get_job",
+     "args": {
+      "job_id": "a07"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 695
+    },
+    {
+     "task": "What's the budget on job b03?",
+     "want": "get_job",
+     "got": "get_job",
+     "args": {
+      "job_id": "b03"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 693
+    },
+    {
+     "task": "Which skills does job s05 need?",
+     "want": "get_job",
+     "got": "get_job",
+     "args": {
+      "job_id": "s05"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 693
+    },
+    {
+     "task": "Read the full post for job k1a2b3c4d.",
+     "want": "get_job",
+     "got": "get_job",
+     "args": {
+      "job_id": "k1a2b3c4d"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 701
+    },
+    {
+     "task": "Is client c_a12 trustworthy?",
+     "want": "get_client_history",
+     "got": "get_client_history",
+     "args": {
+      "client_id": "c_a12"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 692
+    },
+    {
+     "task": "How much has client c_b02 spent before?",
+     "want": "get_client_history",
+     "got": "get_client_history",
+     "args": {
+      "client_id": "c_b02"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 695
+    },
+    {
+     "task": "What do other freelancers say about client c_s04?",
+     "want": "get_client_history",
+     "got": "get_client_history",
+     "args": {
+      "client_id": "c_s04"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 696
+    },
+    {
+     "task": "Is client c_a03's payment verified?",
+     "want": "get_client_history",
+     "got": "get_client_history",
+     "args": {
+      "client_id": "c_a03"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 694
+    },
+    {
+     "task": "How many Connects do I have left?",
+     "want": "get_connects_balance",
+     "got": "get_connects_balance",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 694
+    },
+    {
+     "task": "Can I afford to bid this week? Check my credits.",
+     "want": "get_connects_balance",
+     "got": "get_connects_balance",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 697
+    },
+    {
+     "task": "What do ML/NLP fixed-price jobs usually pay?",
+     "want": "get_market_stats",
+     "got": "get_market_stats",
+     "args": {
+      "category": "ml_nlp"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 696
+    },
+    {
+     "task": "Typical hourly rate for web developers?",
+     "want": "get_market_stats",
+     "got": "get_market_stats",
+     "args": {
+      "category": "web"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 692
+    },
+    {
+     "task": "Is $800 a normal budget for a data dashboard job?",
+     "want": "get_market_stats",
+     "got": "get_market_stats",
+     "args": {
+      "category": "data"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 697
+    },
+    {
+     "task": "Which client conversations do I have?",
+     "want": "list_threads",
+     "got": "list_threads",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 692
+    },
+    {
+     "task": "Show me my inbox of client chats.",
+     "want": "list_threads",
+     "got": "list_threads",
+     "args": {
+      "": ""
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 693
+    },
+    {
+     "task": "What did the client say in thread t1?",
+     "want": "list_messages",
+     "got": "list_messages",
+     "args": {
+      "thread_id": "t1"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 695
+    },
+    {
+     "task": "Read the conversation t-sub-d3.",
+     "want": "list_messages",
+     "got": "list_messages",
+     "args": {
+      "thread_id": "t-sub-d3"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 693
+    },
+    {
+     "task": "Did the client in thread t2 reply about the start date?",
+     "want": "list_messages",
+     "got": "list_messages",
+     "args": {
+      "thread_id": "t2"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 698
+    },
+    {
+     "task": "Save this text as a draft proposal for job a01: 'I built a hybrid search bot.' Use key k-a01-0001.",
+     "want": "create_proposal_draft",
+     "got": "create_proposal_draft",
+     "args": {
+      "idempotency_key": "k-a01-0001",
+      "job_id": "a01",
+      "text": "I built a hybrid search bot."
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 714
+    },
+    {
+     "task": "Draft (don't submit) a proposal to job b04 saying 'Next.js expert here', key k-b04-0001.",
+     "want": "create_proposal_draft",
+     "got": "create_proposal_draft",
+     "args": {
+      "idempotency_key": "k-b04-0001",
+      "job_id": "b04",
+      "text": "Next.js expert here"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 711
+    },
+    {
+     "task": "The user approved draft d7. Submit it with key k-sub-d7-01.",
+     "want": "submit_proposal",
+     "got": "submit_proposal",
+     "args": {
+      "draft_id": "d7",
+      "idempotency_key": "k-sub-d7-01"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 703
+    },
+    {
+     "task": "Approved: send proposal draft d2 now, key k-sub-d2-01.",
+     "want": "submit_proposal",
+     "got": "submit_proposal",
+     "args": {
+      "draft_id": "d2",
+      "idempotency_key": "k-sub-d2-01"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 702
+    },
+    {
+     "task": "Approved: reply 'Monday works' in thread t1, key k-t1-msg-01.",
+     "want": "send_message",
+     "got": "send_message",
+     "args": {
+      "idempotency_key": "k-t1-msg-01",
+      "text": "Monday works",
+      "thread_id": "t1"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 705
+    },
+    {
+     "task": "User approved: tell thread t5 'Thanks, rate is $40/h', key k-t5-msg-01.",
+     "want": "send_message",
+     "got": "send_message",
+     "args": {
+      "idempotency_key": "k-t5-msg-01",
+      "text": "Thanks, rate is $40/h",
+      "thread_id": "t5"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 709
+    },
+    {
+     "task": "Do I have proof of PDF extraction experience?",
+     "want": "search_evidence",
+     "got": "search_evidence",
+     "args": {
+      "requirement": "PDF extraction"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 694
+    },
+    {
+     "task": "Find portfolio evidence for Airflow pipelines.",
+     "want": "search_evidence",
+     "got": "search_evidence",
+     "args": {
+      "requirement": "Airflow pipelines"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 693
+    },
+    {
+     "task": "Have I done Playwright testing before? Check my work.",
+     "want": "search_evidence",
+     "got": "search_evidence",
+     "args": {
+      "requirement": "Playwright testing"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 697
+    },
+    {
+     "task": "Which of my past projects used FastAPI?",
+     "want": "search_evidence",
+     "got": "search_evidence",
+     "args": {
+      "requirement": "FastAPI"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 694
+    },
+    {
+     "task": "Open my case study c3.",
+     "want": "get_case_study",
+     "got": "get_case_study",
+     "args": {
+      "id": "c3"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 692
+    },
+    {
+     "task": "Show the full write-up of case study c10.",
+     "want": "get_case_study",
+     "got": "get_case_study",
+     "args": {
+      "id": "c10"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 696
+    },
+    {
+     "task": "What skills can I honestly claim?",
+     "want": "list_skills",
+     "got": "list_skills",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 692
+    },
+    {
+     "task": "List my skills.",
+     "want": "list_skills",
+     "got": "list_skills",
+     "args": {},
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 689
+    },
+    {
+     "task": "When am I free for an interview this week?",
+     "want": "free_slots",
+     "got": "free_slots",
+     "args": {
+      "days": 7
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 695
+    },
+    {
+     "task": "Find interview times in the next 2 days.",
+     "want": "free_slots",
+     "got": "free_slots",
+     "args": {
+      "days": 2
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 695
+    },
+    {
+     "task": "Hold 2026-11-14T10:00 on my calendar for the client interview.",
+     "want": "create_tentative_hold",
+     "got": "create_tentative_hold",
+     "args": {
+      "start": "2026-11-14T10:00",
+      "title": "Client interview"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 705
+    },
+    {
+     "task": "Write an email draft to thread t3 confirming the call.",
+     "want": "create_email_draft",
+     "got": "create_email_draft",
+     "args": {
+      "body": "Hi [Client Name],\n\nThank you for scheduling the call. I\u2019m looking forward to speaking with you on [Date] at [Time] (your time). Please let me know if anything changes.\n\nBest regards,\n[Your Name]",
+      "to_thread": "t3"
+     },
+     "tool_ok": true,
+     "args_ok": true,
+     "prompt_tokens": 697
+    }
+   ]
+  }
+ }
+}

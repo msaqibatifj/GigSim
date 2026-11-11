@@ -1,0 +1,65 @@
+# docker compose -f infra/docker-compose.yml --env-file .env up --build
+x-app: &app
+  build: {context: .., dockerfile: infra/docker/python.Dockerfile}
+  env_file: ../.env
+  environment: &env
+    DATABASE_URL: postgresql://gigbid:gigbid@postgres:5432/gigbid
+    APP_DATABASE_URL: postgresql+psycopg://gigbid:gigbid@postgres:5432/gigbid
+    REDIS_URL: redis://redis:6379/0
+    QDRANT_URL: http://qdrant:6333
+    OLLAMA_BASE_URL: http://ollama:11434
+    MARKETPLACE_MCP_URL: http://marketplace-mcp:8002/mcp
+    MARKETPLACE_MCP_TOKEN: ${MARKETPLACE_MCP_TOKEN:-dev-service-token}
+    MARKETPLACE_TOKENS: ${MARKETPLACE_MCP_TOKEN:-dev-service-token}:*
+    FASTMCP_HOST: 0.0.0.0
+    MOCK_GIGSIM_STATE: /data/gigsim.json
+    AUDIT_LOG: /data/audit.jsonl
+    MEMORY_DB: /data/memory.sqlite
+  volumes: ["appdata:/data"]
+  depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_started}}
+services:
+  web:                        # API + built React app on one port (infra/docker/web.Dockerfile)
+    build: {context: .., dockerfile: infra/docker/web.Dockerfile}
+    env_file: ../.env
+    environment: {<<: *env, COOKIE_SECURE: "${COOKIE_SECURE:-false}"}
+    volumes: ["appdata:/data"]
+    ports: ["8000:8000"]
+    depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_started}, marketplace-mcp: {condition: service_started}}
+  api:                        # headless API (same code as web, no static files); for scaling the API separately
+    <<: *app
+    profiles: ["split"]
+    ports: ["8001:8000"]
+  worker:
+    <<: *app
+    command: ["python", "-m", "arq", "worker.main.WorkerSettings"]
+    depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_started}, marketplace-mcp: {condition: service_started}}
+  marketplace-mcp:            # Streamable HTTP, bearer auth, per-user rate limit, audit log
+    <<: *app
+    command: ["python", "-m", "mcp_servers.marketplace.server", "--http"]
+    ports: ["8002:8002"]
+  portfolio-mcp:              # read-only; also runnable on its own: uvx / docker run (see mcp_servers/portfolio/README.md)
+    <<: *app
+    command: ["python", "-m", "mcp_servers.portfolio.server", "--http"]
+    ports: ["8003:8000"]
+  workspace-mcp:
+    <<: *app
+    command: ["python", "-m", "mcp_servers.workspace.server", "--http"]
+    ports: ["8004:8000"]
+  gigsim:                     # simulator = data/mock_market + adapters/gigsim.py, served by marketplace-mcp (course GigSim was not provided)
+    image: busybox
+    command: ["true"]
+    profiles: ["docs"]
+  postgres:
+    image: postgres:16
+    environment: {POSTGRES_USER: gigbid, POSTGRES_PASSWORD: gigbid, POSTGRES_DB: gigbid}
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U gigbid"], interval: 3s, retries: 20}
+  redis: {image: "redis:7"}
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    volumes: ["qdrant:/qdrant/storage"]
+  ollama:                     # local open models; the deployed profile uses a hosted open provider instead
+    image: ollama/ollama:0.5.4
+    volumes: ["ollama:/root/.ollama"]
+    profiles: ["local-llm"]
+volumes: {pgdata: {}, qdrant: {}, ollama: {}, appdata: {}}

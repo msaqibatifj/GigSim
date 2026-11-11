@@ -1,0 +1,322 @@
+{
+ "variant": "v3_rerank",
+ "floor": -8.0,
+ "legit_should_bid": {
+  "n": 30,
+  "min": -6.77,
+  "median": 0.14,
+  "max": 5.72
+ },
+ "legit_should_skip": {
+  "n": 5,
+  "min": -10.83,
+  "median": -10.28,
+  "max": -7.63
+ },
+ "scam_or_injection": {
+  "n": 7,
+  "min": -9.98,
+  "median": -7.72,
+  "max": -6.09
+ },
+ "bid_jobs_below_floor": 0,
+ "skip_jobs_above_floor": 1,
+ "gap": 0.86,
+ "rows": [
+  {
+   "id": "a01",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -0.5285
+  },
+  {
+   "id": "a02",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 0.6835
+  },
+  {
+   "id": "a03",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 3.1902
+  },
+  {
+   "id": "a04",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 4.4151
+  },
+  {
+   "id": "a05",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -5.5713
+  },
+  {
+   "id": "a06",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 0.2838
+  },
+  {
+   "id": "a07",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 0.563
+  },
+  {
+   "id": "a08",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -4.4642
+  },
+  {
+   "id": "a09",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 0.4127
+  },
+  {
+   "id": "a10",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -4.6202
+  },
+  {
+   "id": "a11",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "skip",
+   "best_score": -10.8338
+  },
+  {
+   "id": "a12",
+   "persona": "ayesha_ml",
+   "kind": "scam",
+   "gold": "skip",
+   "best_score": -7.6209
+  },
+  {
+   "id": "a13",
+   "persona": "ayesha_ml",
+   "kind": "injection",
+   "gold": "skip",
+   "best_score": -6.0905
+  },
+  {
+   "id": "a14",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "skip",
+   "best_score": -10.0921
+  },
+  {
+   "id": "b01",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -5.457
+  },
+  {
+   "id": "b02",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -1.7619
+  },
+  {
+   "id": "b03",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -5.5106
+  },
+  {
+   "id": "b04",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 2.7401
+  },
+  {
+   "id": "b05",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -5.2574
+  },
+  {
+   "id": "b06",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -0.2704
+  },
+  {
+   "id": "b07",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 1.2541
+  },
+  {
+   "id": "b08",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 4.9336
+  },
+  {
+   "id": "b09",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -2.747
+  },
+  {
+   "id": "b10",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 3.9989
+  },
+  {
+   "id": "b11",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "skip",
+   "best_score": -10.2816
+  },
+  {
+   "id": "b12",
+   "persona": "bilal_web",
+   "kind": "scam",
+   "gold": "skip",
+   "best_score": -8.7825
+  },
+  {
+   "id": "b13",
+   "persona": "bilal_web",
+   "kind": "injection",
+   "gold": "skip",
+   "best_score": -7.7166
+  },
+  {
+   "id": "b14",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "skip",
+   "best_score": -7.6298
+  },
+  {
+   "id": "s01",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -5.7173
+  },
+  {
+   "id": "s02",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -6.7653
+  },
+  {
+   "id": "s03",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 3.9195
+  },
+  {
+   "id": "s04",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 1.3409
+  },
+  {
+   "id": "s05",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -2.0016
+  },
+  {
+   "id": "s06",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -0.0064
+  },
+  {
+   "id": "s07",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 2.4061
+  },
+  {
+   "id": "s08",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 5.7159
+  },
+  {
+   "id": "s09",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": 2.7693
+  },
+  {
+   "id": "s10",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "bid",
+   "best_score": -5.3705
+  },
+  {
+   "id": "s11",
+   "persona": "sara_data",
+   "kind": "scam",
+   "gold": "skip",
+   "best_score": -7.4283
+  },
+  {
+   "id": "s12",
+   "persona": "sara_data",
+   "kind": "injection",
+   "gold": "skip",
+   "best_score": -9.9791
+  },
+  {
+   "id": "s13",
+   "persona": "sara_data",
+   "kind": "scam",
+   "gold": "skip",
+   "best_score": -8.7449
+  },
+  {
+   "id": "s14",
+   "persona": "sara_data",
+   "kind": "legit",
+   "gold": "skip",
+   "best_score": -10.7011
+  }
+ ],
+ "note": "Scores are cross-encoder logits (higher = more relevant). The floor was chosen by looking at this separation, on these same jobs."
+}

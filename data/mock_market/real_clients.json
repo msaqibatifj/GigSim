@@ -1,0 +1,1204 @@
+[
+ {
+  "client_id": "c_k34cfc227",
+  "total_spent_usd": 6000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.94 from 56 reviews"
+  ],
+  "country": "Canada",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k135c4dd4",
+  "total_spent_usd": 6000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.98 from 29 reviews"
+  ],
+  "country": "Malaysia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k7c60c9d4",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "South Africa",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k820663a1",
+  "total_spent_usd": 2000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.73 from 8 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k81668406",
+  "total_spent_usd": 100000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.60 from 264 reviews"
+  ],
+  "country": "Indonesia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k17cefe14",
+  "total_spent_usd": 50000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.91 from 204 reviews"
+  ],
+  "country": "Nigeria",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ke049b411",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Israel",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k05b9908c",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "China",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kf5b55597",
+  "total_spent_usd": 200.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Egypt",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k9f942968",
+  "total_spent_usd": 4000.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 2 reviews"
+  ],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k61784373",
+  "total_spent_usd": 800.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k1fe875ff",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kf28c9f9c",
+  "total_spent_usd": 9000.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kb7ee29a8",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Turkey",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k4a031d82",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Netherlands",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k6c11e916",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Macedonia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kc7d474ed",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k6802210d",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k402010aa",
+  "total_spent_usd": 3000.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 2 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k2bf834f4",
+  "total_spent_usd": 200.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "Nigeria",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k227a6b24",
+  "total_spent_usd": 9000.0,
+  "hire_rate": 0.7,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 4 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ka22b8888",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k7a62de08",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Oman",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kb13ed20f",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kd93f5f9c",
+  "total_spent_usd": 2000.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "United Arab Emirates",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3e4df9b2",
+  "total_spent_usd": 4000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 7 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k7b623753",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Saudi Arabia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k1f5a928e",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k5ec76fd0",
+  "total_spent_usd": 6000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.78 from 42 reviews"
+  ],
+  "country": "Germany",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kb195c1c2",
+  "total_spent_usd": 100.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Hong Kong",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k5cda295d",
+  "total_spent_usd": 200.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 2 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3a301c50",
+  "total_spent_usd": 90000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.94 from 47 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k439c574d",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "United Kingdom",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k6324270f",
+  "total_spent_usd": 50.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k4ecdb3ad",
+  "total_spent_usd": 40000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.95 from 113 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3f8ea685",
+  "total_spent_usd": 2000.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.68 from 2 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3a1c29c7",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kb33de8a9",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k5bded1f2",
+  "total_spent_usd": 100.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kce2d8bcd",
+  "total_spent_usd": 4000.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k2b2a3ac3",
+  "total_spent_usd": 5000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 3.74 from 11 reviews"
+  ],
+  "country": "Switzerland",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kc2281990",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k6c3f661f",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Kuwait",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kba8b689b",
+  "total_spent_usd": 2000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 26 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ka6542449",
+  "total_spent_usd": 400000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.91 from 151 reviews"
+  ],
+  "country": "Germany",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kd1c71d5f",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3df65595",
+  "total_spent_usd": NaN,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Pakistan",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k23570711",
+  "total_spent_usd": 8000.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 2 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k618667e9",
+  "total_spent_usd": 80000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.33 from 12 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k07792cc5",
+  "total_spent_usd": 20000.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kf8d551e0",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United Arab Emirates",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k40d995f8",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k9962f2e2",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kc4918f1f",
+  "total_spent_usd": 4000.0,
+  "hire_rate": 0.6000000000000001,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 3 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k73fab350",
+  "total_spent_usd": 70000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.98 from 72 reviews"
+  ],
+  "country": "United Kingdom",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k79418627",
+  "total_spent_usd": NaN,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k7525a374",
+  "total_spent_usd": 7000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.97 from 51 reviews"
+  ],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k15e181b7",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Denmark",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kf0b6d67e",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k80a39e73",
+  "total_spent_usd": 4000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.63 from 10 reviews"
+  ],
+  "country": "United Kingdom",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3eedab2f",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Poland",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k29f62f23",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kf33dd3ac",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Denmark",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k5617ccb9",
+  "total_spent_usd": 500.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kd87a40ec",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k0aba3cb4",
+  "total_spent_usd": 1000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.93 from 14 reviews"
+  ],
+  "country": "Pakistan",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k14874814",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k00dd63c0",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Egypt",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kb45ae6aa",
+  "total_spent_usd": 700.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.99 from 7 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kfde1902e",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ke70908b0",
+  "total_spent_usd": 8000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.99 from 20 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k5e0c99f3",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ka528a4cd",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kcc5c24ea",
+  "total_spent_usd": 100.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Switzerland",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kbd49272f",
+  "total_spent_usd": 4000.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 2 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k7bfb1aca",
+  "total_spent_usd": 3000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 3.90 from 20 reviews"
+  ],
+  "country": "United Kingdom",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k13b94655",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Algeria",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ka5036598",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Germany",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k89f51fbf",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k74117d48",
+  "total_spent_usd": 10.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "Pakistan",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kf97483fc",
+  "total_spent_usd": 4000.0,
+  "hire_rate": 0.9000000000000001,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 6 reviews"
+  ],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k765408c9",
+  "total_spent_usd": 10.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k8dfa3620",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k408a41d0",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kef342d13",
+  "total_spent_usd": 1000.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 2 reviews"
+  ],
+  "country": "Canada",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k0f3cc4c8",
+  "total_spent_usd": 500.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "Tanzania",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kea8a2b66",
+  "total_spent_usd": NaN,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k325fb28c",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kcf45883a",
+  "total_spent_usd": 6000.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "Denmark",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k1e692295",
+  "total_spent_usd": 80000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.97 from 226 reviews"
+  ],
+  "country": "United Kingdom",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kd0d5d33d",
+  "total_spent_usd": NaN,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.68 from 67 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k45ce5173",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Pakistan",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k73907da9",
+  "total_spent_usd": 10000.0,
+  "hire_rate": 0.9000000000000001,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.97 from 6 reviews"
+  ],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k72eb4699",
+  "total_spent_usd": 6000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.91 from 90 reviews"
+  ],
+  "country": "Estonia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kf96291d4",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United Kingdom",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k78887d13",
+  "total_spent_usd": 10000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 20 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k1f199489",
+  "total_spent_usd": 9000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.24 from 10 reviews"
+  ],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k8670e97e",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kabb8d12b",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "Peru",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3f7b305b",
+  "total_spent_usd": 70000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.22 from 73 reviews"
+  ],
+  "country": "United Kingdom",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k451acc4b",
+  "total_spent_usd": 6000.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k3687fbb6",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kb8166179",
+  "total_spent_usd": 10000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.69 from 12 reviews"
+  ],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k2619eaf5",
+  "total_spent_usd": 1000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 16 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k459b2f7a",
+  "total_spent_usd": 1000.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kdd1a4063",
+  "total_spent_usd": 8000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.94 from 65 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kebcd9c62",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": true,
+  "reviews": [],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k04e097a6",
+  "total_spent_usd": 1000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.99 from 17 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ke72347cf",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kfbff0d2b",
+  "total_spent_usd": 100.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.28 from 2 reviews"
+  ],
+  "country": "Australia",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k54a40f4b",
+  "total_spent_usd": 100000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.87 from 93 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kbf7b9b3a",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Singapore",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ke654b9a1",
+  "total_spent_usd": 400.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 7 reviews"
+  ],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k92962c86",
+  "total_spent_usd": 6000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 4.95 from 52 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k78dae0fe",
+  "total_spent_usd": 100.0,
+  "hire_rate": 0.4,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 1 reviews"
+  ],
+  "country": "Singapore",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_ke522711f",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Turkey",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k5bf47e0e",
+  "total_spent_usd": 5000.0,
+  "hire_rate": 0.5,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 2 reviews"
+  ],
+  "country": "Israel",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_kb4631ef6",
+  "total_spent_usd": 2000.0,
+  "hire_rate": 1.0,
+  "payment_verified": true,
+  "reviews": [
+   "Average rating 5.00 from 8 reviews"
+  ],
+  "country": "United States",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k52b68535",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "India",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ },
+ {
+  "client_id": "c_k1ff58877",
+  "total_spent_usd": 0.0,
+  "hire_rate": 0.0,
+  "payment_verified": false,
+  "reviews": [],
+  "country": "Albania",
+  "source": "kaggle:ahmedmyalo/upwork-freelance-jobs-60k (hire_rate derived from Feedback_Num)"
+ }
+]

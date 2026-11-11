@@ -1,0 +1,291 @@
+{
+ "profile": "open",
+ "models": {
+  "small": {
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "reasoning_effort": "low"
+  },
+  "strong": {
+   "provider": "groq",
+   "model": "openai/gpt-oss-120b",
+   "reasoning_effort": "low"
+  },
+  "fallback": {
+   "provider": "groq",
+   "model": "qwen/qwen3.8-27b"
+  }
+ },
+ "rag_variant": "v3_rerank",
+ "dataset": "evals\\datasets\\dev_jobs.json",
+ "wall_s": 18.4,
+ "note": "GigSim client behaviour is a synthetic model (mcp_servers/marketplace/adapters/gigsim.py outcome()).",
+ "summary": {
+  "n_jobs": 2,
+  "n_errors": 0,
+  "bid_skip": {
+   "f1_bid": 0.0,
+   "precision_bid": 0.0,
+   "recall_bid": 0.0,
+   "f1_skip": 0.0,
+   "accuracy": 0.0
+  },
+  "scam_detection": {
+   "precision": null,
+   "recall": null,
+   "n_scam_or_injection": 0
+  },
+  "price_in_fair_band": null,
+  "proposals": {
+   "n": 2,
+   "unsupported_claims_before": 0,
+   "unsupported_claims_after": 0,
+   "critic_loops_mean": 0,
+   "compliance_violations_caught": 0,
+   "compliance_blocked": 0,
+   "words_mean": 78
+  },
+  "gigsim": {
+   "sim_reply_rate": 0.5,
+   "sim_hire_rate": 0.5,
+   "mean_p_reply": 0.625
+  },
+  "cost_latency": {
+   "per_job": {
+    "p50_s": 18.03,
+    "p95_s": 17.62,
+    "usd_mean": 0.0006,
+    "tokens_mean": 3011
+   },
+   "per_proposal": {
+    "p50_s": 18.03,
+    "p95_s": 17.62,
+    "usd_mean": 0.0006,
+    "tokens_mean": 3011
+   }
+  },
+  "by_persona": {
+   "ayesha_ml": {
+    "accuracy": 0.0,
+    "sim_reply_rate": 0.0
+   },
+   "bilal_web": {
+    "accuracy": 0.0,
+    "sim_reply_rate": 1.0
+   }
+  },
+  "by_kind": {
+   "legit": {
+    "n": 2,
+    "accuracy": 0.0
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "a14",
+   "persona": "ayesha_ml",
+   "kind": "legit",
+   "gold": "skip",
+   "pred": "bid",
+   "decision": "bid",
+   "status": "awaiting_approval",
+   "flags": [],
+   "fit": 0.2,
+   "error": null,
+   "seconds": 18.44,
+   "usage": {
+    "analyst": {
+     "calls": 1,
+     "prompt_tokens": 199,
+     "completion_tokens": 202,
+     "seconds": 1.4792458999982045,
+     "usd": 7.552499999999999e-05
+    },
+    "risk": {
+     "calls": 1,
+     "prompt_tokens": 280,
+     "completion_tokens": 159,
+     "seconds": 2.1213387999996485,
+     "usd": 6.869999999999999e-05
+    },
+    "matcher": {
+     "calls": 1,
+     "prompt_tokens": 178,
+     "completion_tokens": 90,
+     "seconds": 2.1680314999975963,
+     "usd": 4.035e-05
+    },
+    "writer": {
+     "calls": 1,
+     "prompt_tokens": 327,
+     "completion_tokens": 340,
+     "seconds": 2.357439700001123,
+     "usd": 0.00025305
+    },
+    "verifier": {
+     "calls": 1,
+     "prompt_tokens": 346,
+     "completion_tokens": 436,
+     "seconds": 1.2635160999998334,
+     "usd": 0.00015674999999999996
+    },
+    "critic": {
+     "calls": 1,
+     "prompt_tokens": 692,
+     "completion_tokens": 64,
+     "seconds": 1.512402699998347,
+     "usd": 0.0001422
+    }
+   },
+   "usd": 0.000737,
+   "tokens": 3313,
+   "price": 850.0,
+   "in_band": false,
+   "draft": "I see you need an ERC\u201120 token contract audited and deployed. My recent work included providing deployment guidance that the client highlighted as especially helpful (r3), and building a fully automated CI/CD pipeline that reduced deployment time from manual steps to under 15 minutes (c10). Those experiences give me a solid foundation for both reviewing Solidity code for security issues and handling the end\u2011to\u2011end deployment process on Ethereum. I can apply the same systematic testing and automation practices to ensure your token contract is reliable and launched efficiently.",
+   "claims": [
+    {
+     "text": "I see you need an ERC\u201120 token contract audited and deployed.",
+     "label": "supported",
+     "evidence_ids": []
+    },
+    {
+     "text": "My recent work included providing deployment guidance that the client highlighted as especially helpful (r3), and building a fully automated CI/CD pipeline that reduced deployment time from manual steps to under 15 minutes (c10).",
+     "label": "supported",
+     "evidence_ids": [
+      "r3",
+      "c10"
+     ]
+    },
+    {
+     "text": "Those experiences give me a solid foundation for both reviewing Solidity code for security issues and handling the end\u2011to\u2011end deployment process on Ethereum.",
+     "label": "partial",
+     "evidence_ids": [
+      "r3",
+      "c10"
+     ]
+    },
+    {
+     "text": "I can apply the same systematic testing and automation practices to ensure your token contract is reliable and launched efficiently.",
+     "label": "supported",
+     "evidence_ids": [
+      "c10"
+     ]
+    }
+   ],
+   "verification": {
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "claims": 4,
+    "partial": 1
+   },
+   "critic_loops": 0,
+   "critic_issues": [],
+   "compliance": {
+    "allowed": true,
+    "violations": []
+   },
+   "words": 88,
+   "sim_p_reply": 0.625,
+   "sim_replied": false,
+   "sim_hired": false
+  },
+  {
+   "id": "b14",
+   "persona": "bilal_web",
+   "kind": "legit",
+   "gold": "skip",
+   "pred": "bid",
+   "decision": "bid",
+   "status": "awaiting_approval",
+   "flags": [],
+   "fit": 0.33,
+   "error": null,
+   "seconds": 17.62,
+   "usage": {
+    "risk": {
+     "calls": 1,
+     "prompt_tokens": 282,
+     "completion_tokens": 101,
+     "seconds": 1.4373149999992165,
+     "usd": 5.145e-05
+    },
+    "analyst": {
+     "calls": 1,
+     "prompt_tokens": 201,
+     "completion_tokens": 160,
+     "seconds": 2.130016200000682,
+     "usd": 6.3075e-05
+    },
+    "matcher": {
+     "calls": 1,
+     "prompt_tokens": 180,
+     "completion_tokens": 84,
+     "seconds": 3.147590599997784,
+     "usd": 3.8700000000000006e-05
+    },
+    "writer": {
+     "calls": 1,
+     "prompt_tokens": 292,
+     "completion_tokens": 222,
+     "seconds": 2.379261400001269,
+     "usd": 0.000177
+    },
+    "verifier": {
+     "calls": 1,
+     "prompt_tokens": 282,
+     "completion_tokens": 288,
+     "seconds": 0.9814538999999058,
+     "usd": 0.00010754999999999999
+    },
+    "critic": {
+     "calls": 1,
+     "prompt_tokens": 568,
+     "completion_tokens": 49,
+     "seconds": 0.9897029000021575,
+     "usd": 0.0001146
+    }
+   },
+   "usd": 0.000552,
+   "tokens": 2709,
+   "price": 2125.0,
+   "in_band": false,
+   "draft": "I see you need a native iOS app built in Swift with Core Data. I can deliver a complete iPhone app that meets those requirements quickly\u2014my experience includes building any iOS app in just two days, ensuring the core data layer is set up correctly and integrated with the UI. Let\u2019s discuss the specific features you need so I can tailor the solution to your budget and timeline.",
+   "claims": [
+    {
+     "text": "I see you need a native iOS app built in Swift with Core Data.",
+     "label": "supported",
+     "evidence_ids": []
+    },
+    {
+     "text": "I can deliver a complete iPhone app that meets those requirements quickly\u2014my experience includes building any iOS app in just two days, ensuring the core data layer is set up correctly and integrated with the UI.",
+     "label": "supported",
+     "evidence_ids": [
+      "p5"
+     ]
+    },
+    {
+     "text": "Let\u2019s discuss the specific features you need so I can tailor the solution to your budget and timeline.",
+     "label": "supported",
+     "evidence_ids": []
+    }
+   ],
+   "verification": {
+    "unsupported_before": 0,
+    "unsupported_after": 0,
+    "claims": 3,
+    "partial": 0
+   },
+   "critic_loops": 0,
+   "critic_issues": [],
+   "compliance": {
+    "allowed": true,
+    "violations": []
+   },
+   "words": 68,
+   "sim_p_reply": 0.625,
+   "sim_replied": true,
+   "sim_hired": true
+  }
+ ]
+}

@@ -1,0 +1,253 @@
+{
+ "get_case_study": {
+  "ann": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "in": {
+   "properties": {
+    "id": {
+     "maxLength": 40,
+     "minLength": 1,
+     "title": "Id",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id"
+   ],
+   "title": "get_case_studyArguments",
+   "type": "object"
+  },
+  "out": {
+   "properties": {
+    "date": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Date"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "industry": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Industry"
+    },
+    "skills": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Skills",
+     "type": "array"
+    },
+    "source": {
+     "title": "Source",
+     "type": "string"
+    },
+    "text": {
+     "title": "Text",
+     "type": "string"
+    },
+    "title": {
+     "title": "Title",
+     "type": "string"
+    },
+    "type": {
+     "title": "Type",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "type",
+    "title",
+    "text",
+    "source"
+   ],
+   "title": "CaseStudy",
+   "type": "object"
+  }
+ },
+ "list_skills": {
+  "ann": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "in": {
+   "properties": {},
+   "title": "list_skillsArguments",
+   "type": "object"
+  },
+  "out": {
+   "properties": {
+    "result": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Result",
+     "type": "array"
+    }
+   },
+   "required": [
+    "result"
+   ],
+   "title": "list_skillsOutput",
+   "type": "object"
+  }
+ },
+ "search_evidence": {
+  "ann": {
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false,
+   "readOnlyHint": true
+  },
+  "in": {
+   "properties": {
+    "k": {
+     "default": 5,
+     "maximum": 20,
+     "minimum": 1,
+     "title": "K",
+     "type": "integer"
+    },
+    "outcome": {
+     "anyOf": [
+      {
+       "enum": [
+        "won",
+        "hired",
+        "replied",
+        "no_reply",
+        "rejected"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Outcome"
+    },
+    "requirement": {
+     "description": "One job requirement, e.g. 'hybrid search RAG over PDFs'",
+     "maxLength": 500,
+     "minLength": 3,
+     "title": "Requirement",
+     "type": "string"
+    },
+    "type": {
+     "anyOf": [
+      {
+       "enum": [
+        "case_study",
+        "proposal"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Type"
+    }
+   },
+   "required": [
+    "requirement"
+   ],
+   "title": "search_evidenceArguments",
+   "type": "object"
+  },
+  "out": {
+   "$defs": {
+    "Evidence": {
+     "properties": {
+      "id": {
+       "title": "Id",
+       "type": "string"
+      },
+      "outcome": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "default": null,
+       "title": "Outcome"
+      },
+      "score": {
+       "title": "Score",
+       "type": "number"
+      },
+      "snippet": {
+       "title": "Snippet",
+       "type": "string"
+      },
+      "source": {
+       "title": "Source",
+       "type": "string"
+      },
+      "title": {
+       "title": "Title",
+       "type": "string"
+      },
+      "type": {
+       "title": "Type",
+       "type": "string"
+      }
+     },
+     "required": [
+      "id",
+      "type",
+      "title",
+      "snippet",
+      "source",
+      "score"
+     ],
+     "title": "Evidence",
+     "type": "object"
+    }
+   },
+   "properties": {
+    "result": {
+     "items": {
+      "$ref": "#/$defs/Evidence"
+     },
+     "title": "Result",
+     "type": "array"
+    }
+   },
+   "required": [
+    "result"
+   ],
+   "title": "search_evidenceOutput",
+   "type": "object"
+  }
+ }
+}

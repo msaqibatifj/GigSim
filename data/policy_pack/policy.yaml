@@ -1,0 +1,12 @@
+# Marketplace rules enforced by Compliance Guard. Edit here, not in code (change-request friendly).
+version: 1
+forbid:
+  contact_details: true        # emails, phones, WhatsApp, Skype
+  guarantees: true             # "guaranteed", "100%"
+  invented_claims: true
+  off_platform_payment: true
+limits: {cover_letter_max_words: 250, connects_per_bid: 6}
+fees: {platform_fee_pct: 10}
+# A new rule is added here, never in code. Each: name, regex (case-insensitive), action = remove (cut the matching text) or block (stop the proposal with the reason shown in the UI).
+forbid_patterns: []
+# example (change request): - {name: "no rate quotes in cover letter", regex: "\$\s?\d+(\s?/\s?h(ou)?r)?", action: remove}

@@ -1,0 +1,4 @@
+- Built GigBid, a human-approved freelance-bidding agent (LangGraph, 3 MCP servers, FastAPI, React/TypeScript, open-weight models): parallel job analysis plus claim verification cut unsupported claims per proposal from 0.33 to 0 at p95 27.6 s and $0.0008 per proposal; a 3-layer prompt-injection defence took planted-attack success from 0.67 to 0.0.
+- Ran the evaluations behind each design choice (7 RAG variants, ablation, 40-task tool study, single-agent vs supervisor vs graph) and reported the negative results: requirement decomposition lowered nDCG@10 (0.885 to 0.611) and the tuned fit threshold failed on 2 of 2 held-out low-fit jobs.
+
+<!-- sources: evals/results/decision_eval_open.json, injection_eval.json, rag_eval_all.json, ablation.json, tool_granularity.json, agent_comparison.json, decision_eval_open_extra_lowfit.json -->

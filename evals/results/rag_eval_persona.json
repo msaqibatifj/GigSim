@@ -1,0 +1,4502 @@
+{
+ "llm_profile": "open",
+ "n_jobs": 30,
+ "note": "decomposition uses the matcher node; under MODEL_PROFILE=offline that is a rule-based splitter, not an LLM",
+ "pool": "persona",
+ "variants": {
+  "v0_naive": {
+   "overall": {
+    "recall5": 1.0,
+    "mrr": 0.9,
+    "ndcg10": 0.907
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.918
+    },
+    "sara_data": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.906
+    },
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.896
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.864,
+     "ndcg10": 0.899
+    },
+    "multi_evidence": {
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.927
+    }
+   },
+   "latency_s": {
+    "p50": 0.448,
+    "p95": 0.505
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "p1",
+      "c1",
+      "c6",
+      "p2",
+      "r2",
+      "c5",
+      "r3",
+      "c4",
+      "c8",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "r3",
+      "c6",
+      "c1",
+      "p1",
+      "c5",
+      "p2",
+      "c9",
+      "c8",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p3",
+      "c10",
+      "p1",
+      "c5",
+      "c7",
+      "c6",
+      "c4",
+      "c8",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "c1",
+      "p4",
+      "p1",
+      "c6",
+      "c8",
+      "p3",
+      "c7",
+      "c9",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "p1",
+      "p4",
+      "c1",
+      "p3",
+      "c3",
+      "r3",
+      "c6",
+      "r1",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "p1",
+      "r2",
+      "c1",
+      "c5",
+      "c2",
+      "p2",
+      "r3",
+      "c9",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "p4",
+      "c7",
+      "c5",
+      "p1",
+      "c4",
+      "c6",
+      "c1",
+      "p3",
+      "c2",
+      "c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c8",
+      "c9",
+      "c1",
+      "c4",
+      "c6",
+      "p1",
+      "c10",
+      "p3",
+      "c7",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c1",
+      "c10",
+      "r3",
+      "p1",
+      "c6",
+      "c4",
+      "c8",
+      "c5",
+      "c9",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c3",
+      "p3",
+      "c5",
+      "c6",
+      "p1",
+      "c7",
+      "c1",
+      "r3",
+      "p4",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c1",
+      "r1",
+      "p1",
+      "p4",
+      "c9",
+      "c4",
+      "c8",
+      "c5",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "p3",
+      "c6",
+      "c7",
+      "r2",
+      "c1",
+      "c5",
+      "p1",
+      "r3",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p2",
+      "r3",
+      "p1",
+      "c9",
+      "c1",
+      "p3",
+      "p4",
+      "c6",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c4",
+      "p4",
+      "c10",
+      "p1",
+      "c8",
+      "c1",
+      "c9",
+      "p2",
+      "r1",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "c1",
+      "p1",
+      "r3",
+      "r2",
+      "c2",
+      "c10",
+      "p5",
+      "c7",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p3",
+      "c6",
+      "c2",
+      "p2",
+      "c7",
+      "r3",
+      "r2",
+      "c9",
+      "c8",
+      "p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p5",
+      "c5",
+      "p1",
+      "c1",
+      "c2",
+      "r2",
+      "p3",
+      "c9",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "p2",
+      "r1",
+      "c10",
+      "c4",
+      "r2",
+      "r3",
+      "c1",
+      "p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "c10",
+      "r2",
+      "p1",
+      "c1",
+      "c7",
+      "c3",
+      "c5",
+      "r3",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "p1",
+      "c4",
+      "c1",
+      "c7",
+      "r1",
+      "p4",
+      "c3",
+      "c5",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "c8",
+      "c7",
+      "p4",
+      "c2",
+      "c6",
+      "p3",
+      "p5",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "c10",
+      "c4",
+      "p1",
+      "p4",
+      "c8",
+      "r2",
+      "c5",
+      "c1",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p4",
+      "c8",
+      "p1",
+      "c9",
+      "r3",
+      "c7",
+      "p2",
+      "p5",
+      "c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "p1",
+      "p4",
+      "c8",
+      "c9",
+      "c3",
+      "p3",
+      "p5",
+      "r3",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "r2",
+      "c5",
+      "c2",
+      "p1",
+      "c1",
+      "c10",
+      "r3",
+      "c4",
+      "p4",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "r3",
+      "c8",
+      "p4",
+      "c5",
+      "p5",
+      "p1",
+      "c1",
+      "c7",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c7",
+      "p3",
+      "c2",
+      "r2",
+      "c10",
+      "r3",
+      "c6",
+      "c1",
+      "c8",
+      "p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "p4",
+      "c8",
+      "p1",
+      "c1",
+      "c3",
+      "c2",
+      "c9",
+      "c6",
+      "c7",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c9",
+      "p1",
+      "c1",
+      "p4",
+      "c8",
+      "c4",
+      "c6",
+      "c2",
+      "c7",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c10",
+      "c2",
+      "p3",
+      "c7",
+      "c5",
+      "p4",
+      "p1",
+      "c1",
+      "r2",
+      "c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    }
+   ]
+  },
+  "v1_decompose": {
+   "overall": {
+    "recall5": 1.0,
+    "mrr": 0.806,
+    "ndcg10": 0.838
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.95,
+     "ndcg10": 0.936
+    },
+    "sara_data": {
+     "recall5": 1.0,
+     "mrr": 0.758,
+     "ndcg10": 0.817
+    },
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.708,
+     "ndcg10": 0.759
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.758,
+     "ndcg10": 0.819
+    },
+    "multi_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.938,
+     "ndcg10": 0.889
+    }
+   },
+   "latency_s": {
+    "p50": 3.316,
+    "p95": 4.113
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "c5",
+      "c6",
+      "r3",
+      "c4",
+      "c8",
+      "p4",
+      "p2",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "c2",
+      "c6",
+      "r3",
+      "c5",
+      "p1",
+      "c8",
+      "p2",
+      "c3",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p1",
+      "c1",
+      "c5",
+      "c10",
+      "c4",
+      "p3",
+      "c8",
+      "c6",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "c1",
+      "p4",
+      "p1",
+      "p3",
+      "c8",
+      "c6",
+      "c10",
+      "c3",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "c1",
+      "p4",
+      "c6",
+      "p1",
+      "c7",
+      "c9",
+      "c2",
+      "r3",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "c1",
+      "c5",
+      "c2",
+      "p1",
+      "c9",
+      "c4",
+      "r2",
+      "p5",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p4",
+      "c5",
+      "c1",
+      "c6",
+      "c4",
+      "p1",
+      "c3",
+      "c10",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c8",
+      "c1",
+      "c6",
+      "c9",
+      "c4",
+      "p1",
+      "r3",
+      "p3",
+      "c2",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c1",
+      "c10",
+      "r3",
+      "c5",
+      "c4",
+      "c6",
+      "c8",
+      "p1",
+      "p2",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c5",
+      "p3",
+      "p1",
+      "c6",
+      "c3",
+      "p4",
+      "c1",
+      "r3",
+      "c7",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c1",
+      "r1",
+      "p1",
+      "p4",
+      "r2",
+      "c9",
+      "r3",
+      "c4",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "r2",
+      "r3",
+      "p5",
+      "p1",
+      "c5",
+      "c1",
+      "p2",
+      "c7",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p2",
+      "r3",
+      "c3",
+      "p1",
+      "p4",
+      "c9",
+      "c10",
+      "c1",
+      "r2",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c4",
+      "p4",
+      "c8",
+      "p2",
+      "c10",
+      "c9",
+      "p1",
+      "c1",
+      "p5",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "r3",
+      "c5",
+      "r2",
+      "c10",
+      "c2",
+      "c7",
+      "p5",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.25,
+     "ndcg10": 0.43067655807339306
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p3",
+      "c6",
+      "c9",
+      "p2",
+      "r2",
+      "c7",
+      "c2",
+      "c10",
+      "p4",
+      "p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "c9",
+      "r2",
+      "c5",
+      "p1",
+      "p5",
+      "p4",
+      "c4",
+      "c10",
+      "c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p2",
+      "c8",
+      "p4",
+      "c9",
+      "c10",
+      "r3",
+      "p1",
+      "r1",
+      "c1",
+      "c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "c10",
+      "r2",
+      "p1",
+      "c1",
+      "c5",
+      "r3",
+      "c4",
+      "p2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "p1",
+      "c4",
+      "c9",
+      "c1",
+      "p4",
+      "c3",
+      "r3",
+      "r1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "p1",
+      "c1",
+      "c2",
+      "c3",
+      "c8",
+      "c5",
+      "p4",
+      "p5",
+      "c4",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "c10",
+      "c5",
+      "p1",
+      "p4",
+      "c8",
+      "c6",
+      "p2",
+      "r3",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p1",
+      "r3",
+      "p2",
+      "p5",
+      "c7",
+      "p4",
+      "c1",
+      "c9",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "r3",
+      "p1",
+      "c4",
+      "p2",
+      "c8",
+      "c3",
+      "p4",
+      "p5",
+      "p3",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "p4",
+      "c10",
+      "c8",
+      "c2",
+      "r3",
+      "c6",
+      "p1",
+      "c1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "c8",
+      "r3",
+      "p4",
+      "p1",
+      "c5",
+      "c7",
+      "c4",
+      "c2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c7",
+      "p3",
+      "c2",
+      "r3",
+      "c8",
+      "p4",
+      "p1",
+      "r2",
+      "c10",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "p1",
+      "p2",
+      "c1",
+      "c5",
+      "c2",
+      "c7",
+      "c6",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "p1",
+      "p4",
+      "c8",
+      "c9",
+      "c5",
+      "c7",
+      "c6",
+      "c1",
+      "r3",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.25,
+     "ndcg10": 0.43067655807339306
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "c10",
+      "c7",
+      "p1",
+      "r3",
+      "p3",
+      "c5",
+      "c1",
+      "p4",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6934264036172708
+    }
+   ]
+  },
+  "v2_hybrid": {
+   "overall": {
+    "recall5": 0.983,
+    "mrr": 0.9,
+    "ndcg10": 0.913
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.918
+    },
+    "sara_data": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.91
+    },
+    "bilal_web": {
+     "recall5": 0.95,
+     "mrr": 0.9,
+     "ndcg10": 0.909
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.864,
+     "ndcg10": 0.899
+    },
+    "multi_evidence": {
+     "recall5": 0.938,
+     "mrr": 1.0,
+     "ndcg10": 0.949
+    }
+   },
+   "latency_s": {
+    "p50": 0.416,
+    "p95": 0.449
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "p1",
+      "c1",
+      "c5",
+      "c6",
+      "p2",
+      "r1",
+      "c4",
+      "r2",
+      "c8",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "c6",
+      "r3",
+      "c1",
+      "p1",
+      "c5",
+      "c8",
+      "p4",
+      "c4",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p3",
+      "c5",
+      "c6",
+      "c9",
+      "c10",
+      "p1",
+      "c7",
+      "c4",
+      "c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "c1",
+      "c10",
+      "p4",
+      "p1",
+      "c6",
+      "c8",
+      "p3",
+      "c7",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "p1",
+      "c1",
+      "p4",
+      "c2",
+      "c6",
+      "c8",
+      "c7",
+      "c9",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "p1",
+      "r2",
+      "c1",
+      "p2",
+      "c5",
+      "c9",
+      "c2",
+      "c8",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "p4",
+      "c7",
+      "c5",
+      "p1",
+      "c1",
+      "c4",
+      "c6",
+      "c2",
+      "c8",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c8",
+      "c9",
+      "c1",
+      "p1",
+      "c6",
+      "c3",
+      "c10",
+      "c5",
+      "c7",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c1",
+      "c10",
+      "r3",
+      "c5",
+      "c6",
+      "c8",
+      "p1",
+      "c9",
+      "c7",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c3",
+      "p3",
+      "c5",
+      "c1",
+      "c6",
+      "p1",
+      "c4",
+      "c9",
+      "c7",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c1",
+      "r1",
+      "p1",
+      "p4",
+      "c7",
+      "c5",
+      "c8",
+      "c4",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "p3",
+      "p1",
+      "c7",
+      "c6",
+      "c5",
+      "c10",
+      "c1",
+      "r2",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "r3",
+      "p2",
+      "p1",
+      "c9",
+      "p4",
+      "p3",
+      "c1",
+      "r1",
+      "c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c4",
+      "p4",
+      "c10",
+      "p1",
+      "p5",
+      "c8",
+      "c1",
+      "c5",
+      "c7",
+      "r1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "c1",
+      "c10",
+      "r3",
+      "c2",
+      "r1",
+      "c7",
+      "r2",
+      "p1",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p3",
+      "c6",
+      "c2",
+      "p2",
+      "c7",
+      "c8",
+      "p1",
+      "c1",
+      "p4",
+      "c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p5",
+      "c2",
+      "c1",
+      "c5",
+      "c10",
+      "p1",
+      "r2",
+      "c4",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "p2",
+      "r1",
+      "c10",
+      "c4",
+      "r3",
+      "p1",
+      "r2",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "c1",
+      "r2",
+      "c5",
+      "p3",
+      "c2",
+      "c10",
+      "p1",
+      "c7",
+      "c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "r1",
+      "c4",
+      "c1",
+      "c7",
+      "p1",
+      "r3",
+      "c2",
+      "c5",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "c7",
+      "c6",
+      "c3",
+      "p5",
+      "p3",
+      "c5",
+      "r1",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "c10",
+      "c4",
+      "p1",
+      "c8",
+      "p4",
+      "c1",
+      "r1",
+      "p5",
+      "c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p4",
+      "c8",
+      "p5",
+      "c1",
+      "c6",
+      "r1",
+      "r2",
+      "p1",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "p3",
+      "c3",
+      "c8",
+      "p1",
+      "p4",
+      "c5",
+      "c9",
+      "p5",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "r2",
+      "c5",
+      "c2",
+      "p1",
+      "c1",
+      "p4",
+      "p2",
+      "r1",
+      "c7",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "p4",
+      "r3",
+      "c1",
+      "r2",
+      "c8",
+      "p5",
+      "c4",
+      "c5",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c7",
+      "p3",
+      "c2",
+      "c8",
+      "c1",
+      "c5",
+      "c10",
+      "p1",
+      "p4",
+      "c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "p4",
+      "c8",
+      "p1",
+      "c3",
+      "r1",
+      "c6",
+      "c1",
+      "c2",
+      "c9",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c9",
+      "c1",
+      "c6",
+      "p4",
+      "p5",
+      "p1",
+      "c5",
+      "c8",
+      "c7",
+      "c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c10",
+      "c2",
+      "c7",
+      "p3",
+      "p4",
+      "p1",
+      "c5",
+      "c8",
+      "c1",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    }
+   ]
+  },
+  "v3_rerank": {
+   "overall": {
+    "recall5": 1.0,
+    "mrr": 0.911,
+    "ndcg10": 0.916
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.988
+    },
+    "sara_data": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.905
+    },
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.833,
+     "ndcg10": 0.856
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.902,
+     "ndcg10": 0.927
+    },
+    "multi_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.938,
+     "ndcg10": 0.887
+    }
+   },
+   "latency_s": {
+    "p50": 0.992,
+    "p95": 1.587
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "r1",
+      "r2",
+      "c6",
+      "c4",
+      "p2",
+      "p5",
+      "r3",
+      "c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "r3",
+      "c8",
+      "c6",
+      "p5",
+      "r2",
+      "c10",
+      "c7",
+      "p2",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p3",
+      "c6",
+      "c8",
+      "r2",
+      "r3",
+      "p5",
+      "r1",
+      "p2",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "r1",
+      "p1",
+      "c9",
+      "c1",
+      "c5",
+      "r3",
+      "r2",
+      "c7",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "p4",
+      "p5",
+      "r1",
+      "r3",
+      "r2",
+      "p1",
+      "c9",
+      "p2",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "r2",
+      "p1",
+      "c5",
+      "p5",
+      "p2",
+      "r1",
+      "r3",
+      "c8",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p4",
+      "c5",
+      "c9",
+      "r1",
+      "r2",
+      "p5",
+      "r3",
+      "p2",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c8",
+      "c9",
+      "c4",
+      "c7",
+      "p2",
+      "r2",
+      "p5",
+      "r1",
+      "r3",
+      "c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c1",
+      "c10",
+      "r3",
+      "c6",
+      "c4",
+      "p5",
+      "r1",
+      "c9",
+      "c5",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c3",
+      "p3",
+      "c6",
+      "c5",
+      "p5",
+      "r1",
+      "r3",
+      "r2",
+      "p1",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c1",
+      "r1",
+      "r2",
+      "p1",
+      "c9",
+      "r3",
+      "c5",
+      "c8",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "p3",
+      "r2",
+      "r3",
+      "c6",
+      "c7",
+      "p2",
+      "p5",
+      "c8",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "r3",
+      "p2",
+      "c3",
+      "r2",
+      "p4",
+      "p5",
+      "c10",
+      "c9",
+      "r1",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c4",
+      "p4",
+      "c8",
+      "c10",
+      "r2",
+      "r3",
+      "p5",
+      "c9",
+      "r1",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "c1",
+      "r3",
+      "r2",
+      "c10",
+      "p2",
+      "c6",
+      "c7",
+      "c2",
+      "c3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p3",
+      "c6",
+      "c2",
+      "r2",
+      "p2",
+      "r3",
+      "c7",
+      "c8",
+      "r1",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "r2",
+      "r3",
+      "p3",
+      "c8",
+      "c6",
+      "r1",
+      "p1",
+      "c2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "r2",
+      "p2",
+      "r3",
+      "c4",
+      "r1",
+      "c10",
+      "c1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "r2",
+      "c5",
+      "c1",
+      "r3",
+      "p2",
+      "c8",
+      "c4",
+      "p4",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c2",
+      "c4",
+      "r2",
+      "r3",
+      "c1",
+      "c7",
+      "p1",
+      "c8",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "r1",
+      "p5",
+      "r2",
+      "r3",
+      "c3",
+      "c5",
+      "c7",
+      "c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "r2",
+      "c6",
+      "r3",
+      "c10",
+      "c5",
+      "p5",
+      "r1",
+      "p2",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "c8",
+      "p4",
+      "r2",
+      "p5",
+      "c6",
+      "r1",
+      "r3",
+      "p2",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "c3",
+      "r3",
+      "r2",
+      "r1",
+      "p5",
+      "c8",
+      "p2",
+      "p4",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "r2",
+      "c5",
+      "c2",
+      "r1",
+      "r3",
+      "p2",
+      "c6",
+      "p1",
+      "c1",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "p4",
+      "r3",
+      "r1",
+      "c3",
+      "c8",
+      "c4",
+      "p5",
+      "r2",
+      "c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "p3",
+      "c7",
+      "c2",
+      "r2",
+      "r1",
+      "r3",
+      "c10",
+      "p5",
+      "p2",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6934264036172708
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "r1",
+      "c1",
+      "c3",
+      "p1",
+      "r2",
+      "r3",
+      "p2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c9",
+      "p5",
+      "c1",
+      "c6",
+      "r3",
+      "c4",
+      "r2",
+      "r1",
+      "p2",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c10",
+      "c2",
+      "p3",
+      "c7",
+      "r2",
+      "r3",
+      "r1",
+      "c6",
+      "p5",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    }
+   ]
+  },
+  "v4_outcome": {
+   "overall": {
+    "recall5": 0.95,
+    "mrr": 0.894,
+    "ndcg10": 0.901
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 0.95,
+     "mrr": 1.0,
+     "ndcg10": 0.983
+    },
+    "sara_data": {
+     "recall5": 0.95,
+     "mrr": 0.85,
+     "ndcg10": 0.871
+    },
+    "bilal_web": {
+     "recall5": 0.95,
+     "mrr": 0.833,
+     "ndcg10": 0.85
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.902,
+     "ndcg10": 0.927
+    },
+    "multi_evidence": {
+     "recall5": 0.812,
+     "mrr": 0.875,
+     "ndcg10": 0.831
+    }
+   },
+   "latency_s": {
+    "p50": 0.975,
+    "p95": 1.146
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "r1",
+      "r2",
+      "c6",
+      "p3",
+      "p4",
+      "c4",
+      "p2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "r3",
+      "p3",
+      "p4",
+      "p1",
+      "c8",
+      "c6",
+      "p5",
+      "r2",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p3",
+      "p1",
+      "p4",
+      "c6",
+      "c8",
+      "r2",
+      "r3",
+      "p5",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "p1",
+      "p4",
+      "p3",
+      "r1",
+      "c9",
+      "c1",
+      "c5",
+      "r3",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "p4",
+      "p1",
+      "p3",
+      "p5",
+      "r1",
+      "r3",
+      "r2",
+      "c9",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "r2",
+      "p1",
+      "p3",
+      "p4",
+      "c5",
+      "p5",
+      "p2",
+      "r1",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p4",
+      "p1",
+      "p3",
+      "c5",
+      "c9",
+      "r1",
+      "r2",
+      "p5",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c8",
+      "c9",
+      "p1",
+      "p4",
+      "p3",
+      "c4",
+      "c7",
+      "p2",
+      "r2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c1",
+      "c10",
+      "p1",
+      "p3",
+      "p4",
+      "r3",
+      "c6",
+      "c4",
+      "p5",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c3",
+      "p3",
+      "p1",
+      "c6",
+      "p4",
+      "c5",
+      "p5",
+      "r1",
+      "r3",
+      "r2"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8315546295836225
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c1",
+      "p1",
+      "r1",
+      "r2",
+      "p4",
+      "p3",
+      "c9",
+      "r3",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "p3",
+      "p4",
+      "p1",
+      "r2",
+      "r3",
+      "c6",
+      "c7",
+      "p2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "r3",
+      "p2",
+      "c3",
+      "p4",
+      "p1",
+      "p3",
+      "r2",
+      "p5",
+      "c10",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c4",
+      "p4",
+      "c8",
+      "p3",
+      "p1",
+      "c10",
+      "r2",
+      "r3",
+      "p5",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "p1",
+      "p3",
+      "p4",
+      "c1",
+      "r3",
+      "r2",
+      "c10",
+      "p2",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p3",
+      "c6",
+      "c2",
+      "p4",
+      "p1",
+      "r2",
+      "p2",
+      "r3",
+      "c7",
+      "c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p3",
+      "p1",
+      "p4",
+      "r2",
+      "r3",
+      "c8",
+      "c6",
+      "r1",
+      "c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "p3",
+      "p1",
+      "r2",
+      "p2",
+      "r3",
+      "c4",
+      "r1",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "p4",
+      "p3",
+      "p1",
+      "r2",
+      "c5",
+      "c1",
+      "r3",
+      "p2",
+      "c8"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "p1",
+      "p4",
+      "p3",
+      "c2",
+      "c4",
+      "r2",
+      "r3",
+      "c1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "p4",
+      "p3",
+      "r1",
+      "p5",
+      "r2",
+      "r3",
+      "c3",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "p4",
+      "p3",
+      "p1",
+      "r2",
+      "c6",
+      "r3",
+      "c10",
+      "c5",
+      "p5"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8065735963827293
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p4",
+      "c8",
+      "p1",
+      "p3",
+      "r2",
+      "p5",
+      "c6",
+      "r1",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "p4",
+      "c3",
+      "p1",
+      "p3",
+      "r3",
+      "r2",
+      "r1",
+      "p5",
+      "c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "r2",
+      "c5",
+      "c2",
+      "p1",
+      "p4",
+      "p3",
+      "r1",
+      "r3",
+      "p2",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "p4",
+      "p3",
+      "r3",
+      "p1",
+      "r1",
+      "c3",
+      "c8",
+      "c4",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "p3",
+      "c7",
+      "p4",
+      "p1",
+      "c2",
+      "r2",
+      "r1",
+      "r3",
+      "c10",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6240505200038379
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "r1",
+      "c1",
+      "c3",
+      "p1",
+      "p3",
+      "r2",
+      "r3",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c9",
+      "p4",
+      "p1",
+      "p5",
+      "p3",
+      "c1",
+      "c6",
+      "r3",
+      "c4",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "p3",
+      "c10",
+      "c2",
+      "c7",
+      "r2",
+      "p1",
+      "p4",
+      "r3",
+      "r1",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6509209298071326
+    }
+   ]
+  },
+  "v5_decompose_hybrid_rerank": {
+   "overall": {
+    "recall5": 0.983,
+    "mrr": 0.85,
+    "ndcg10": 0.871
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 1.0,
+     "mrr": 0.9,
+     "ndcg10": 0.911
+    },
+    "sara_data": {
+     "recall5": 0.95,
+     "mrr": 0.883,
+     "ndcg10": 0.897
+    },
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.767,
+     "ndcg10": 0.806
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.818,
+     "ndcg10": 0.865
+    },
+    "multi_evidence": {
+     "recall5": 0.938,
+     "mrr": 0.938,
+     "ndcg10": 0.889
+    }
+   },
+   "latency_s": {
+    "p50": 6.181,
+    "p95": 9.452
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "p1",
+      "c1",
+      "c6",
+      "r2",
+      "c4",
+      "r1",
+      "p2",
+      "c9",
+      "c2",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "r3",
+      "c8",
+      "c10",
+      "p2",
+      "c9",
+      "r2",
+      "c6",
+      "r1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "c6",
+      "p3",
+      "c8",
+      "c1",
+      "p1",
+      "c4",
+      "c7",
+      "c10",
+      "c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "c1",
+      "p1",
+      "r1",
+      "c5",
+      "c9",
+      "c6",
+      "c7",
+      "c3",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "c9",
+      "c1",
+      "c4",
+      "c6",
+      "c7",
+      "r1",
+      "p4",
+      "p1",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "r2",
+      "c10",
+      "p1",
+      "p3",
+      "c1",
+      "c9",
+      "c3",
+      "c8",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "p4",
+      "c7",
+      "p5",
+      "r1",
+      "c10",
+      "c6",
+      "c4",
+      "c9",
+      "c1",
+      "c8"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "c8",
+      "p5",
+      "c10",
+      "c4",
+      "c6",
+      "r3",
+      "r1",
+      "c7",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c1",
+      "c10",
+      "c6",
+      "r3",
+      "c5",
+      "c8",
+      "c4",
+      "c3",
+      "c9",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c3",
+      "p3",
+      "c6",
+      "c10",
+      "c5",
+      "r1",
+      "r2",
+      "p1",
+      "c1",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8503449055347546
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c9",
+      "c10",
+      "c1",
+      "p1",
+      "r1",
+      "r2",
+      "c5",
+      "c8",
+      "c4",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "p3",
+      "c6",
+      "c7",
+      "c1",
+      "c8",
+      "r3",
+      "p4",
+      "r2",
+      "p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "r3",
+      "c3",
+      "p2",
+      "r2",
+      "c4",
+      "c7",
+      "c8",
+      "p4",
+      "r1",
+      "c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c4",
+      "p4",
+      "c10",
+      "c8",
+      "c2",
+      "c1",
+      "r3",
+      "r2",
+      "c7",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "c1",
+      "c10",
+      "c8",
+      "p4",
+      "r3",
+      "c3",
+      "c6",
+      "p1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p3",
+      "c2",
+      "c6",
+      "c7",
+      "r2",
+      "p2",
+      "c9",
+      "c1",
+      "c8",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p3",
+      "p1",
+      "c8",
+      "c2",
+      "r2",
+      "c1",
+      "c10",
+      "c6",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "p2",
+      "c4",
+      "c1",
+      "r3",
+      "r2",
+      "p3",
+      "r1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "r2",
+      "c1",
+      "c5",
+      "c4",
+      "r3",
+      "p4",
+      "c10",
+      "c8",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "c10",
+      "c2",
+      "c3",
+      "p4",
+      "c9",
+      "p3",
+      "c7",
+      "r2",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "r1",
+      "p4",
+      "c8",
+      "c7",
+      "c6",
+      "p5",
+      "c3",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "c10",
+      "c5",
+      "p4",
+      "r1",
+      "c8",
+      "p5",
+      "c1",
+      "c6",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "c8",
+      "p4",
+      "r3",
+      "c9",
+      "c6",
+      "p5",
+      "c1",
+      "p2",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "r3",
+      "r1",
+      "c8",
+      "c6",
+      "c3",
+      "c5",
+      "p2",
+      "p5",
+      "r2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "r2",
+      "c2",
+      "p2",
+      "c3",
+      "c6",
+      "r1",
+      "p5",
+      "r3",
+      "p3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "r3",
+      "c4",
+      "p4",
+      "c7",
+      "c3",
+      "p3",
+      "r2",
+      "c2",
+      "c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "p3",
+      "c7",
+      "c10",
+      "c2",
+      "r2",
+      "c3",
+      "p5",
+      "r1",
+      "c8",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6509209298071326
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "p4",
+      "c3",
+      "c8",
+      "p1",
+      "c1",
+      "r1",
+      "c5",
+      "r2",
+      "r3",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c9",
+      "p5",
+      "c8",
+      "c1",
+      "c5",
+      "c6",
+      "r3",
+      "r2",
+      "c4",
+      "c2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c10",
+      "r2",
+      "p3",
+      "c5",
+      "c1",
+      "c2",
+      "c7",
+      "p5",
+      "c6",
+      "r1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    }
+   ]
+  },
+  "v8_corrective": {
+   "overall": {
+    "recall5": 0.95,
+    "mrr": 0.911,
+    "ndcg10": 0.911
+   },
+   "by_persona": {
+    "ayesha_ml": {
+     "recall5": 0.95,
+     "mrr": 1.0,
+     "ndcg10": 0.982
+    },
+    "sara_data": {
+     "recall5": 0.9,
+     "mrr": 0.9,
+     "ndcg10": 0.896
+    },
+    "bilal_web": {
+     "recall5": 1.0,
+     "mrr": 0.833,
+     "ndcg10": 0.856
+    }
+   },
+   "by_job_type": {
+    "single_evidence": {
+     "recall5": 1.0,
+     "mrr": 0.902,
+     "ndcg10": 0.927
+    },
+    "multi_evidence": {
+     "recall5": 0.812,
+     "mrr": 0.938,
+     "ndcg10": 0.868
+    }
+   },
+   "latency_s": {
+    "p50": 14.366,
+    "p95": 25.275
+   },
+   "rows": [
+    {
+     "job": "a01",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "r1",
+      "c9",
+      "c2",
+      "p3",
+      "r2",
+      "c6",
+      "c4",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a02",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "r3",
+      "c8",
+      "r1",
+      "c6",
+      "p5",
+      "r2",
+      "c10",
+      "c7",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a03",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "p3",
+      "c6",
+      "c4",
+      "p1",
+      "c9",
+      "c8",
+      "r2",
+      "r3",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a04",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "r1",
+      "p1",
+      "c6",
+      "c9",
+      "c1",
+      "c5",
+      "r3",
+      "r2",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a05",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "p4",
+      "p5",
+      "c1",
+      "c4",
+      "c7",
+      "r1",
+      "r3",
+      "r2",
+      "p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a06",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "r2",
+      "p1",
+      "c10",
+      "p3",
+      "c3",
+      "c5",
+      "p5",
+      "p2",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a07",
+     "persona": "ayesha_ml",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "p4",
+      "c5",
+      "c10",
+      "c4",
+      "c1",
+      "c9",
+      "r1",
+      "r2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a08",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c8",
+      "c9",
+      "c4",
+      "c10",
+      "c3",
+      "c6",
+      "c7",
+      "p2",
+      "r2",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a09",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c1",
+      "c10",
+      "r3",
+      "c8",
+      "p1",
+      "c6",
+      "c4",
+      "p5",
+      "r1",
+      "c9"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "a10",
+     "persona": "ayesha_ml",
+     "n_req": 2,
+     "ranked": [
+      "c3",
+      "p3",
+      "c6",
+      "c10",
+      "c4",
+      "c8",
+      "c5",
+      "p5",
+      "r1",
+      "r3"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    },
+    {
+     "job": "b01",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c1",
+      "r1",
+      "c4",
+      "p4",
+      "r2",
+      "p1",
+      "c9",
+      "r3",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b02",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c2",
+      "p3",
+      "r2",
+      "c1",
+      "p4",
+      "p1",
+      "r3",
+      "c6",
+      "c7",
+      "p2"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b03",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "r3",
+      "p2",
+      "c3",
+      "c4",
+      "c7",
+      "c8",
+      "r2",
+      "p4",
+      "p5",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.3333333333333333,
+     "ndcg10": 0.5
+    },
+    {
+     "job": "b04",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c4",
+      "p4",
+      "c8",
+      "c1",
+      "c5",
+      "p3",
+      "c10",
+      "r2",
+      "r3",
+      "p5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.9197207891481876
+    },
+    {
+     "job": "b05",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c5",
+      "c1",
+      "r3",
+      "c8",
+      "p4",
+      "p1",
+      "r2",
+      "c10",
+      "p2",
+      "c6"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b06",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "p3",
+      "c6",
+      "c2",
+      "c9",
+      "c1",
+      "p4",
+      "r2",
+      "p2",
+      "r3",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "b07",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c7",
+      "r2",
+      "r3",
+      "p4",
+      "c1",
+      "c10",
+      "p3",
+      "c8",
+      "c6",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b08",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "r2",
+      "p3",
+      "p2",
+      "r3",
+      "c4",
+      "r1",
+      "c10",
+      "c1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "b09",
+     "persona": "bilal_web",
+     "n_req": 2,
+     "ranked": [
+      "c9",
+      "r2",
+      "c5",
+      "c1",
+      "r3",
+      "p2",
+      "c8",
+      "c4",
+      "p4",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 0.8772153153380493
+    },
+    {
+     "job": "b10",
+     "persona": "bilal_web",
+     "n_req": 1,
+     "ranked": [
+      "c10",
+      "c2",
+      "c4",
+      "c3",
+      "p4",
+      "c9",
+      "r2",
+      "r3",
+      "c1",
+      "c7"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s01",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c1",
+      "p1",
+      "r1",
+      "p4",
+      "c6",
+      "p5",
+      "r2",
+      "r3",
+      "c3",
+      "c5"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s02",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c2",
+      "r2",
+      "c6",
+      "c8",
+      "c1",
+      "r3",
+      "c10",
+      "c5",
+      "p5",
+      "r1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    },
+    {
+     "job": "s03",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c3",
+      "c8",
+      "p4",
+      "c1",
+      "c5",
+      "r2",
+      "p5",
+      "c6",
+      "r1",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s04",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c4",
+      "c3",
+      "r3",
+      "c5",
+      "r2",
+      "r1",
+      "p5",
+      "c8",
+      "p2",
+      "p4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s05",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "r2",
+      "c5",
+      "c2",
+      "c3",
+      "p3",
+      "r1",
+      "r3",
+      "p2",
+      "c6",
+      "p1"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6309297535714575
+    },
+    {
+     "job": "s06",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c6",
+      "p4",
+      "r3",
+      "c7",
+      "p3",
+      "c2",
+      "r1",
+      "c3",
+      "c8",
+      "c4"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s07",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "p3",
+      "c7",
+      "c2",
+      "c3",
+      "c8",
+      "c5",
+      "r2",
+      "r1",
+      "r3",
+      "c10"
+     ],
+     "recall5": 1.0,
+     "mrr": 0.5,
+     "ndcg10": 0.6934264036172708
+    },
+    {
+     "job": "s08",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c8",
+      "p4",
+      "r1",
+      "c9",
+      "c6",
+      "c1",
+      "c3",
+      "p1",
+      "r2",
+      "r3"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s09",
+     "persona": "sara_data",
+     "n_req": 1,
+     "ranked": [
+      "c9",
+      "p5",
+      "c1",
+      "c8",
+      "c2",
+      "c6",
+      "r3",
+      "c4",
+      "r2",
+      "r1"
+     ],
+     "recall5": 1.0,
+     "mrr": 1.0,
+     "ndcg10": 1.0
+    },
+    {
+     "job": "s10",
+     "persona": "sara_data",
+     "n_req": 2,
+     "ranked": [
+      "c10",
+      "c2",
+      "p3",
+      "c1",
+      "c5",
+      "c3",
+      "c7",
+      "r2",
+      "r3",
+      "r1"
+     ],
+     "recall5": 0.5,
+     "mrr": 1.0,
+     "ndcg10": 0.8175295903539445
+    }
+   ]
+  }
+ }
+}
