@@ -34,3 +34,13 @@ Agents never touch GigSim, Upwork, a database or a file directly; every capabili
 |---|---|
 | Official Upwork MCP `https://mcp.upwork.com/mcp` | First-party server from the marketplace itself; per-user OAuth 2.1 (PKCE), tokens encrypted at rest, draft-only writes. |
 | GitHub MCP `@modelcontextprotocol/server-github` (pinned `2025.4.8`) | Maintained in the official `modelcontextprotocol/servers` repo; used read-only with a fine-grained token limited to public-repo read to ingest READMEs for the portfolio. Configured in `agent/config.yaml` (`third_party_mcp`); not run in CI (needs a token). |
+
+## MCP Inspector evidence (A7)
+
+Each server connected over stdio in MCP Inspector v2.13.0, tool list shown and one call made.
+
+| Server | Call | Screenshot |
+|---|---|---|
+| Portfolio (3 tools) | `search_evidence` | [inspector_portfolio_search_evidence.png](images/inspector_portfolio_search_evidence.png) |
+| Marketplace (11 tools) | `search_jobs` | [inspector_marketplace_search_jobs.png](images/inspector_marketplace_search_jobs.png) |
+| Workspace (3 tools) | `free_slots` | [inspector_workspace_free_slots.png](images/inspector_workspace_free_slots.png) |
