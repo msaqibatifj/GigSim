@@ -4,7 +4,7 @@
 
 ![GigBid demo: approving a proposal](docs/images/demo.gif)
 
-> Live app: https://gigbid-yabd.onrender.com · Reviewer login: in the Classroom private comment · Demo video: `TODO` · Technical write-up: [Medium](https://medium.com/@msajanjua87/my-retrieval-never-said-no-how-every-job-looked-like-a-fit-d0a01e499181) ([source](docs/WRITEUP.md)) · Portfolio MCP server: [mcp_servers/portfolio/README.md](mcp_servers/portfolio/README.md)
+> Live app: https://gigbid-yabd.onrender.com · Reviewer login: in the Classroom private comment · Demo video: [Google Drive](https://drive.google.com/file/d/1eZp1l22ywri_pNKwrZVusb6UNrgaq8Hv/view?usp=sharing) · Technical write-up: [Medium](https://medium.com/@msajanjua87/my-retrieval-never-said-no-how-every-job-looked-like-a-fit-d0a01e499181) ([source](docs/WRITEUP.md)) · Portfolio MCP server: [mcp_servers/portfolio/README.md](mcp_servers/portfolio/README.md)
 > Demo GIF (21 s, above): approving a proposal, which then shows as submitted on the pipeline board · Public traces (LangSmith): [Critic loop, sent back twice](https://eu.smith.langchain.com/public/f111394b-46e0-489c-a5a3-14d93ac46b60/r) · [approved proposal after a crash and restart, submitted once](https://eu.smith.langchain.com/public/8cb4bb18-5471-41d1-a7ae-2a85de332e82/r) · skipped scam: `TODO` (the run is skipped with reasons free_work + off_platform, but its trace was dropped by LangSmith rate limits)
 
 ## What it does
