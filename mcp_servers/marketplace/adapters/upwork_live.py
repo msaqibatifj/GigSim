@@ -23,8 +23,27 @@ def _token(user: str) -> str:
     if not tok:
         raise PermissionError("Upwork is not connected for this user (Settings > Connect Upwork)")
     if tok.get("expires_in") and time.time() > tok["obtained_at"] + tok["expires_in"] - 60:
-        raise PermissionError("Upwork token expired: reconnect in Settings")   # shortcut: no silent refresh yet
+        tok = _refresh(user, tok)
     return tok["access_token"]
+
+
+def _refresh(user: str, tok: dict) -> dict:
+    """Silent refresh_token grant; any failure means the user must reconnect (never loop or retry blindly)."""
+    import httpx
+    from apps.api.auth.users import save_token
+    if not tok.get("refresh_token"):
+        raise PermissionError("Upwork token expired: reconnect in Settings")
+    data = {"grant_type": "refresh_token", "refresh_token": tok["refresh_token"], "client_id": tok["client_id"], "resource": URL}
+    if os.getenv("UPWORK_CLIENT_SECRET"):
+        data["client_secret"] = os.environ["UPWORK_CLIENT_SECRET"]
+    try:
+        r = httpx.post(tok["token_url"], data=data, timeout=15)
+        r.raise_for_status()
+    except httpx.HTTPError:
+        raise PermissionError("Upwork token expired and refresh failed: reconnect in Settings") from None
+    new = {**tok, **r.json(), "obtained_at": time.time()}   # keeps the old refresh_token if the server does not rotate it
+    save_token(user, "upwork", new)
+    return new
 
 
 def _run(coro):
@@ -109,6 +128,17 @@ class UpworkLive:
     def send_message(self, thread_id, text, *, idem_key, dry_run=False):
         payload = {"thread_id": thread_id, "text": text, "draft": True}
         return self._write(idem_key, dry_run, payload, lambda: (_run(self._call("create_message_draft", payload)) or {}).get("id", "draft"))
+
+
+def test_expired_token_is_refreshed_and_saved(monkeypatch):
+    import httpx
+    import apps.api.auth.users as users
+    old = {"access_token": "old", "refresh_token": "r1", "expires_in": 10, "obtained_at": 0, "client_id": "c", "token_url": "https://x/token"}
+    saved = {}
+    monkeypatch.setattr(users, "load_token", lambda u: old)
+    monkeypatch.setattr(users, "save_token", lambda u, p, t: saved.update(t))
+    monkeypatch.setattr(httpx, "post", lambda *a, **k: httpx.Response(200, json={"access_token": "new", "expires_in": 3600}, request=httpx.Request("POST", a[0])))
+    assert _token("u1") == "new" and saved["refresh_token"] == "r1"
 
 
 def test_live_never_spends_connects():

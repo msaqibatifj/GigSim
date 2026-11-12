@@ -14,3 +14,11 @@
 **Change request (policy update):** edit `data/policy_pack/policy.yaml` (limits, fees, forbidden content, `connects_per_bid`). No code change: Compliance, Pricing and GigSim read the file at call time.
 
 **Secrets:** environment only; `.env` is git-ignored; OAuth tokens are Fernet-encrypted, never returned by the API or logged; logs and traces mask emails, phones and card/IBAN numbers.
+
+## Going live on Upwork (checklist, not yet run against a real account)
+1. Get API/MCP access at upwork.com/ai/mcp; register the redirect URI `<PUBLIC_URL>/api/auth/upwork/callback`.
+2. Set `UPWORK_CLIENT_ID`, `UPWORK_CLIENT_SECRET`, `PUBLIC_URL` in the environment (never in the repo).
+3. Sign in, Settings > Connect Upwork (OAuth 2.1 + PKCE; the token is stored encrypted; expired tokens refresh silently).
+4. `python -m scripts.localenv scripts.upwork_probe --user <your user id>` lists the real tool names and prints which entries of `agent/config.yaml` `upwork.tools` to fix.
+5. Locally first: `MARKETPLACE_ADAPTER=upwork`, run one read-only search, then one proposal draft with `dry_run`. Only then switch the deployment.
+6. Guarantees that do not change: drafts only, GigBid never spends Connects, reads at most every 6 h.

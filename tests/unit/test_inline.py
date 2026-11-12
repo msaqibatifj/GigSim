@@ -4,7 +4,7 @@ from data.build_market import test_clean_masks_pii  # noqa: F401
 from data.ingest_kaggle import test_ingest  # noqa: F401
 from mcp_servers.marketplace.adapters.gigsim import test_outcome_is_deterministic_and_rewards_relevance  # noqa: F401
 from worker.main import test_due_respects_live_minimum  # noqa: F401
-from mcp_servers.marketplace.adapters.upwork_live import test_live_never_spends_connects  # noqa: F401
+from mcp_servers.marketplace.adapters.upwork_live import test_live_never_spends_connects, test_expired_token_is_refreshed_and_saved  # noqa: F401
 from evals.runners.judge_calibration import test_kappa  # noqa: F401
 from evals.runners.ab_experiment import test_perm_test  # noqa: F401
 
