@@ -16,3 +16,6 @@ data/raw/
 evals/datasets/judge_labels.json.bak
 evals/datasets/scam_external.json
 node_modules/
+
+AgenticA03_Demo.mp4
+*.mp4
