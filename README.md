@@ -2,7 +2,7 @@
 
 **An agent that finds freelance jobs, checks them for risk and fit, and drafts proposals where every claim links to your own portfolio. Nothing is sent until you approve it.**
 
-> Live app: `TODO: add public URL` · Reviewer login: in the Classroom private comment · Demo video: `TODO` · Technical write-up: [Medium](https://medium.com/@msajanjua87/my-retrieval-never-said-no-how-every-job-looked-like-a-fit-d0a01e499181) ([source](docs/WRITEUP.md)) · Portfolio MCP server: [mcp_servers/portfolio/README.md](mcp_servers/portfolio/README.md)
+> Live app: https://gigbid-yabd.onrender.com · Reviewer login: in the Classroom private comment · Demo video: `TODO` · Technical write-up: [Medium](https://medium.com/@msajanjua87/my-retrieval-never-said-no-how-every-job-looked-like-a-fit-d0a01e499181) ([source](docs/WRITEUP.md)) · Portfolio MCP server: [mcp_servers/portfolio/README.md](mcp_servers/portfolio/README.md)
 > Demo GIF (30 s): `TODO: docs/images/demo.gif` · Public traces: `TODO: 3 LangSmith links (skipped scam, approved proposal, critic loop / crash-resume)`
 
 ## What it does

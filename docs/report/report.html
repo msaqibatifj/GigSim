@@ -10,7 +10,7 @@ th { background: #eee; } code { font-family: Consolas, monospace; font-size: 8.4
 .warn { border-left: 3px solid #b35900; background: #fff6ea; padding: 3pt 6pt; margin: 4pt 0; }
 </style></head><body>
 <h1>GigBid: an agent that bids on freelance jobs, with a human in the loop</h1>
-<p class="note">AI-4016 R&amp;D report · engineering design review · every number cites a file in <code>evals/results/</code> (or a commit/doc). Repo: <code>https://github.com/msaqibatifj/GigSim</code> · Live: <code>TODO</code></p>
+<p class="note">AI-4016 R&amp;D report · engineering design review · every number cites a file in <code>evals/results/</code> (or a commit/doc). Repo: <code>https://github.com/msaqibatifj/GigSim</code> · Live: <code>https://gigbid-yabd.onrender.com</code></p>
 <div class="warn"><b>Read first.</b> The evaluation is small (14 compact dev jobs, one run each; 30 for retrieval) and the decision thresholds were tuned on those same 14 jobs. On the two low-fit dev jobs the compact set left out, the system bids wrongly on both (§8). GigSim, the personas and the policy pack were not provided, so they are local mocks, and <b>every GigSim outcome (reply, hire) comes from a client model I wrote</b>: reply rates measure agreement with that model, not real clients. The judge is not yet calibrated against my labels (§4), so no judge scores are reported.</div>
 
 <h2>1. Problem and constraints</h2>
