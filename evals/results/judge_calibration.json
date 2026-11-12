@@ -1,0 +1,354 @@
+{
+ "n_labelled": 30,
+ "weighted_kappa": 0.001,
+ "exact_agreement": 0.1,
+ "mean_human": 3.07,
+ "mean_judge": 4.97,
+ "disagreements": [
+  {
+   "item": "i0",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal is specific to the job, cites concrete performance and SEO results backed by past work, and is likely to get a reply"
+  },
+  {
+   "item": "i1",
+   "arch": "graph",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses churn analysis with specific portfolio examples and concrete, relevant skills, making it highly tailored and compelling"
+  },
+  {
+   "item": "i3",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly cites relevant experience with REST\u2011API to Postgres ETL pipelines, includes concrete reliability results and performance improvements, and ties them to the job requirements."
+  },
+  {
+   "item": "i5",
+   "arch": "writer_B",
+   "human": 2,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the job, cites concrete portfolio examples and measurable impact, and asks a relevant clarification question."
+  },
+  {
+   "item": "i8",
+   "arch": "writer_A",
+   "human": 2,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the job with specific LLM routing experience, background workers, and Postgres usage, and backs claims with concrete results."
+  },
+  {
+   "item": "i9",
+   "arch": "single",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal cites specific, relevant past work with role\u2011based admin interfaces, SQL backend, and automated tests, directly matching the job requirements"
+  },
+  {
+   "item": "i11",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the job, cites concrete past work and accessibility achievements, and directly addresses the requirements."
+  },
+  {
+   "item": "i12",
+   "arch": "writer_B",
+   "human": 2,
+   "judge": 5,
+   "judge_reason": "The proposal is specific to the job, cites relevant past work with measurable results, and asks a targeted question, making it likely to get a reply"
+  },
+  {
+   "item": "i13",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the invoice extraction task with specific OCR and LayoutLM experience, provides measurable results, and asks relevant clarification questions."
+  },
+  {
+   "item": "i14",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses real-time messaging with online status, cites a specific Node.js WebSocket project using Redis for presence, and backs claims with concrete experience, making it highly relevant and likely to get a reply."
+  },
+  {
+   "item": "i16",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the PDF QA task, cites concrete portfolio projects with relevant metrics, and demonstrates containerization and CI/CD experience."
+  },
+  {
+   "item": "i18",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the job with specific past work, measurable results, and clear implementation details, all backed by portfolio claims"
+  },
+  {
+   "item": "i19",
+   "arch": "writer_A",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal directly references a similar logistics REST API with authentication, documentation, and rate limiting, matching the job requirements and providing concrete evidence of relevant experience"
+  },
+  {
+   "item": "i21",
+   "arch": "single",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses churn analysis with specific past work and results, showing clear relevance and backed claims"
+  },
+  {
+   "item": "i24",
+   "arch": "graph",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific, cites a relevant role\u2011based admin panel with SQL backend and automated tests, and backs its claims with a concrete portfolio example."
+  },
+  {
+   "item": "i25",
+   "arch": "graph",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses Urdu sentiment classification with concrete results and deployment details, fully matching the job requirements"
+  },
+  {
+   "item": "i26",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly references relevant LLM routing experience with measurable results and asks a specific question about the knowledge-base, meeting the rubric for a specific, backed, reply\u2011worthy pitch."
+  },
+  {
+   "item": "i27",
+   "arch": "supervisor",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the Urdu sentiment classification task, cites relevant portfolio case studies, and clearly outlines deliverables and deployment on a small GPU"
+  },
+  {
+   "item": "i28",
+   "arch": "graph",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly cites a relevant data warehouse project with specific tools and performance results, matching the job requirements and providing concrete evidence."
+  }
+ ],
+ "rows": [
+  {
+   "item": "i0",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal is specific to the job, cites concrete performance and SEO results backed by past work, and is likely to get a reply"
+  },
+  {
+   "item": "i1",
+   "arch": "graph",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses churn analysis with specific portfolio examples and concrete, relevant skills, making it highly tailored and compelling"
+  },
+  {
+   "item": "i2",
+   "arch": "writer_A",
+   "human": 4,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific, cites a relevant project with measurable results directly matching the job requirements, and provides concrete evidence of capability."
+  },
+  {
+   "item": "i3",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly cites relevant experience with REST\u2011API to Postgres ETL pipelines, includes concrete reliability results and performance improvements, and ties them to the job requirements."
+  },
+  {
+   "item": "i4",
+   "arch": "single",
+   "human": 5,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the Urdu sentiment task, cites concrete portfolio results, and addresses deployment on a small GPU, making it compelling and reply\u2011worthy."
+  },
+  {
+   "item": "i5",
+   "arch": "writer_B",
+   "human": 2,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the job, cites concrete portfolio examples and measurable impact, and asks a relevant clarification question."
+  },
+  {
+   "item": "i6",
+   "arch": "single",
+   "human": 4,
+   "judge": 5,
+   "judge_reason": "The proposal directly references a similar booking system with Stripe and SMS reminders, providing a specific, portfolio-backed claim that matches the job requirements."
+  },
+  {
+   "item": "i7",
+   "arch": "graph",
+   "human": 4,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific, cites a directly relevant contract\u2011processing project with detailed metrics and tech stack, and clearly aligns with the job requirements."
+  },
+  {
+   "item": "i8",
+   "arch": "writer_A",
+   "human": 2,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the job with specific LLM routing experience, background workers, and Postgres usage, and backs claims with concrete results."
+  },
+  {
+   "item": "i9",
+   "arch": "single",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal cites specific, relevant past work with role\u2011based admin interfaces, SQL backend, and automated tests, directly matching the job requirements"
+  },
+  {
+   "item": "i10",
+   "arch": "writer_A",
+   "human": 4,
+   "judge": 5,
+   "judge_reason": "The proposal directly cites relevant Playwright CI experience and specific test suite work, matching the job requirements with concrete evidence"
+  },
+  {
+   "item": "i11",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the job, cites concrete past work and accessibility achievements, and directly addresses the requirements."
+  },
+  {
+   "item": "i12",
+   "arch": "writer_B",
+   "human": 2,
+   "judge": 5,
+   "judge_reason": "The proposal is specific to the job, cites relevant past work with measurable results, and asks a targeted question, making it likely to get a reply"
+  },
+  {
+   "item": "i13",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the invoice extraction task with specific OCR and LayoutLM experience, provides measurable results, and asks relevant clarification questions."
+  },
+  {
+   "item": "i14",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses real-time messaging with online status, cites a specific Node.js WebSocket project using Redis for presence, and backs claims with concrete experience, making it highly relevant and likely to get a reply."
+  },
+  {
+   "item": "i15",
+   "arch": "writer_B",
+   "human": 4,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the double\u2011charge issue with a specific idempotent Stripe webhook solution, cites a concrete past implementation as evidence, and asks relevant clarifying questions, making it highly tailored and likely to get a reply."
+  },
+  {
+   "item": "i16",
+   "arch": "writer_A",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the PDF QA task, cites concrete portfolio projects with relevant metrics, and demonstrates containerization and CI/CD experience."
+  },
+  {
+   "item": "i17",
+   "arch": "single",
+   "human": 4,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the job, cites a relevant portfolio project with metrics and technology stack, and makes clear, actionable claims."
+  },
+  {
+   "item": "i18",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the job with specific past work, measurable results, and clear implementation details, all backed by portfolio claims"
+  },
+  {
+   "item": "i19",
+   "arch": "writer_A",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal directly references a similar logistics REST API with authentication, documentation, and rate limiting, matching the job requirements and providing concrete evidence of relevant experience"
+  },
+  {
+   "item": "i20",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 4,
+   "judge_reason": "Specific and relevant proposal with detailed claims, but lacks portfolio evidence to fully support them"
+  },
+  {
+   "item": "i21",
+   "arch": "single",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses churn analysis with specific past work and results, showing clear relevance and backed claims"
+  },
+  {
+   "item": "i22",
+   "arch": "graph",
+   "human": 5,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the job with a specific, portfolio\u2011backed example of a similar booking, payment, and SMS reminder system."
+  },
+  {
+   "item": "i23",
+   "arch": "writer_A",
+   "human": 4,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the job, cites a comparable 300\u2011SKU forecasting project with concrete results, and directly addresses the client\u2019s needs"
+  },
+  {
+   "item": "i24",
+   "arch": "graph",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific, cites a relevant role\u2011based admin panel with SQL backend and automated tests, and backs its claims with a concrete portfolio example."
+  },
+  {
+   "item": "i25",
+   "arch": "graph",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses Urdu sentiment classification with concrete results and deployment details, fully matching the job requirements"
+  },
+  {
+   "item": "i26",
+   "arch": "writer_B",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly references relevant LLM routing experience with measurable results and asks a specific question about the knowledge-base, meeting the rubric for a specific, backed, reply\u2011worthy pitch."
+  },
+  {
+   "item": "i27",
+   "arch": "supervisor",
+   "human": 1,
+   "judge": 5,
+   "judge_reason": "The proposal is highly specific to the Urdu sentiment classification task, cites relevant portfolio case studies, and clearly outlines deliverables and deployment on a small GPU"
+  },
+  {
+   "item": "i28",
+   "arch": "graph",
+   "human": 3,
+   "judge": 5,
+   "judge_reason": "The proposal directly cites a relevant data warehouse project with specific tools and performance results, matching the job requirements and providing concrete evidence."
+  },
+  {
+   "item": "i29",
+   "arch": "single",
+   "human": 5,
+   "judge": 5,
+   "judge_reason": "The proposal directly addresses the job with specific experience building multi-source warehouses using dbt, BigQuery, and Airflow, providing concrete results."
+  }
+ ]
+}

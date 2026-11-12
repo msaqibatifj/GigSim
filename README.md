@@ -76,7 +76,7 @@ Per-persona-index numbers: [results: rag_eval_persona.json]. Full B5 table with 
 
 **X2 proposal experiment** [results: ab_experiment.json]: deliverable-first vs intro-first openings, +0.065 simulated reply probability (permutation p = 0.0033, 30 jobs), but only 16 vs 17 sampled replies. See [docs/EXTENSION.md](docs/EXTENSION.md).
 
-**Judge calibration:** `TODO: needs the human labels` (30 items prepared in `evals/datasets/judge_items.json`).
+**Judge calibration:** the LLM judge is **not usable**: on 30 blind items my labels and the judge agree at weighted Cohen's kappa 0.001 (exact agreement 0.10; mean human 3.07 vs mean judge 4.97, the judge gives almost everything a 5) [results: judge_calibration.json]. So no judge scores are reported as quality evidence.
 
 **Failure analysis:** [docs/FAILURES.md](docs/FAILURES.md) (14 failures, fixes, and which fixes worked).
 

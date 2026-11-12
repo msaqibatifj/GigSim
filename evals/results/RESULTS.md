@@ -95,4 +95,4 @@ Mean GigSim reply probability {'A_intro_first': 0.514, 'B_deliverable_first': 0.
 
 ## Judge calibration
 
-_Not run: needs the human labels (judge_labels.json)._
+n = 30, quadratic-weighted kappa = 0.001, exact agreement = 0.1, mean human 3.07 vs judge 4.97.
